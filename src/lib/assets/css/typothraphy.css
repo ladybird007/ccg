@@ -1,48 +1,47 @@
 @font-face {
-  font-family: 'Sohne Regular';
-  font-style: normal;
+  font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-buch.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-buch.woff") format("woff");
   font-weight: 400;
-  src: local('Test Söhne'), 
-       url('../../assets/fonts/Sohne.woff2') format('woff2'),
-       url('../../assets/fonts/Sohne.woff') format("woff"),
-       url('../../assets/fonts/Sohne.otf') format("opentype"),;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Sohne Light';
-  font-style: normal;
+  font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-leicht.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-leicht.woff") format("woff");
   font-weight: 300;
-  src: local('Test Söhne Leicht'), 
-       url('../../assets/fonts/Sohne-Light.woff2') format('woff2'),
-       url('../../assets/fonts/Sohne-Light.woff') format("woff"),
-       url('../../assets/fonts/Sohne-Light.otf') format("opentype"),;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Sohne Medium';
-  font-style: normal;
+  font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-kraftig.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-kraftig.woff") format("woff");
   font-weight: 500;
-  src: local('Test Söhne Kräftig'), 
-       url('../../assets/fonts/Sohne-Medium.woff2') format('woff2'),
-       url('../../assets/fonts/Sohne-Medium.woff') format("woff"),
-       url('../../assets/fonts/Sohne-Medium.otf') format("opentype"),;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Sohne Bold';
-  font-style: normal;
+  font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-dreiviertelfett.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-dreiviertelfett.woff") format("woff");
   font-weight: 700;
-  src: local('Test Söhne Fett'), 
-       url('../../assets/fonts/Sohne-Bold.woff2') format('woff2'),
-       url('../../assets/fonts/Sohne-Bold.woff') format("woff"),
-       url('../../assets/fonts/Sohne-Bold.otf') format("opentype"),;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Sohne Extrabold';
-  font-style: normal;
+  font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-fett.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-fett.woff") format("woff");
   font-weight: 800;
-  src: local('Test Söhne Extrafett'), 
-       url('../../assets/fonts/Sohne-Extrabold.woff2') format('woff2'),
-       url('../../assets/fonts/Sohne-Extrabold.woff') format("woff"),
-       url('../../assets/fonts/Sohne-Extrabold.otf') format("opentype"),;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Family";
+  src: url("../../assets/fonts/family-regular.woff2") format("woff2"), 
+       url("../../assets/fonts/family-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Shift Regular';
@@ -65,15 +64,12 @@
 }
 
 .text-light {
-  font-family: 'Sohne Light', sans-serif;
   font-weight: 300;
 }
 .text-bold {
-  font-family: 'Sohne Bold', sans-serif;
   font-weight: 700;
 }
 .text-black {
-  font-family: 'Sohne Extrabold', sans-serif;
   font-weight: 800;
 }
 
@@ -85,7 +81,6 @@
 }
 
 h1 {
-  font-family: 'Sohne Extrabold', sans-serif;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -97,7 +92,6 @@ h2 {
   letter-spacing: -0.02em;
 }
 h3 {
-  font-family: 'Sohne Light', sans-serif;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -127,7 +121,7 @@ p a:not(.btn):not(.logo) {
 }
 
 .text-emphasis {
-  font-family: Family;
+  font-family: 'Family', sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -137,14 +131,12 @@ p a:not(.btn):not(.logo) {
   line-height: 1.4;
 }
 .text-large {
-  font-family: 'Sohne Bold', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.5px;
   color: var(--text-black);
 }
 .text-callout {
-  font-family: 'Sohne Light', sans-serif;
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: -0.01em;
