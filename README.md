@@ -1,0 +1,2 @@
+# ccg
+CCG ideas
