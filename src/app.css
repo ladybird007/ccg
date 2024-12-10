@@ -1,0 +1,62 @@
+@import '../src/lib/assets/css/variables.css';
+@import '../src/lib/assets/css/typothraphy.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sohne Regular', sans-serif;
+  color: var(--deep-navy);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+.direction-flex-colimn {
+  display: flex;
+  flex-direction: column;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  height: 56px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Sohne Medium';
+}
+.btn.btn--primary {
+  background-color: var(--orange);
+  color: var(--text-white-btn);
+}

@@ -1,0 +1,110 @@
+:root {
+  /*  THEME COLORS */
+  --orange:           #f18a00;
+  --orange-dark:      #c16e00;
+  --orange-medium:    #f4a133;
+  --orange-light:     #f9d099;
+  --orange-pale:      #fce8cc;
+
+  --deep-green:       #3c585f;
+  --deep-green-dark:  #223236;
+  --deep-green-medium:#334b51;
+  --deep-green-light: #50757e;
+  --deep-green-pale:  #a2bdc4;
+
+  --teal:             #6dd6d3;
+  --teal-dark:        #25706b;
+  --teal-medium:      #3dbbb3;
+  --teal-light:       #8bd6d1;
+  --teal-pale:        #c5ebe8;
+
+  --cool-gray:        #e5e4e2;
+  --cool-gray-dark:   #707070;
+  --cool-gray-medium: #bababa;
+  --cool-gray-light:  #e0e0e0;
+  --cool-gray-pale:   #efefef;
+
+  --apricot:          #f9b79b;
+  --apricot-dark:     #924f33;
+  --apricot-medium:   #dc997d;
+  --apricot-light:    #fbd4c3;
+  --apricot-pale:     #fde9e1;
+
+  --tan:              #eedebb;
+  --tan-dark:         #998f78;
+  --tan-medium:       #c3b69a;
+  --tan-light:        #f1e5c9;
+  --tan-pale:         #f8f2e4;
+
+  --forest-green:       #535e35;
+  --forest-green-dark:  #30371d;
+  --forest-green-medium:#47512d;
+  --forest-green-light: #79884d;
+  --forest-green-pale:  #9eb365;
+
+  --deep-navy:        #100f08;
+  --deep-navy-dark:   #232327;
+  --deep-navy-medium: #30313b;
+  --deep-navy-light:  #9e9fa6;
+  --deep-navy-pale:   #d8d8d8;
+
+  /* FONT COLORS */
+  --text-dark:        #100F08;
+  --text-white:       #e0e0e0;
+  --text-white-btn:   #fff;
+  --text-black:       #000;
+
+  /* INFORMATION COLORS */
+  --error:            #d92d20;
+  --error-dark:       #6c1610;
+  --error-medium:     #ac251b;
+  --error-light:      #ff9e97;
+  --error-pale:       #fbe9e6;
+
+  --warning:          #f79009;
+  --warning-dark:     #b54708;
+  --warning-medium:   #dc6803;
+  --warning-light:    #fdb022;
+  --warning-pale:     #ffe0b9;
+
+  --success:          #12b76a;
+  --success-dark:     #07492a;
+  --success-medium:   #0a804a;
+  --success-light:    #a0e2c3;
+  --success-pale:     #e7f7f0;
+
+  --info:             #1570ef;
+  --info-dark:        #102A56;
+  --info-medium:      #1849a9;
+  --info-light:       #53b1fd;
+  --info-pale:        #d1e9ff;
+
+  /* SHADOWS */
+  --shadow-focus: 0 0 10px 0 rgba(81, 130, 142, 0.60);
+  --shadow-xs:    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+  --shadow-sm:    0px 1px 3px 0px rgba(10, 13, 18, 0.10), 0px 1px 2px 0px rgba(10, 13, 18, 0.06);
+  --shadow-md:    0px 4px 8px -2px rgba(10, 13, 18, 0.10), 0px 2px 4px -2px rgba(10, 13, 18, 0.06);
+  --shadow-lg:    0px 12px 16px -4px rgba(10, 13, 18, 0.10), 0px 4px 6px -2px rgba(10, 13, 18, 0.05);
+  --shadow-xl:    0px 20px 24px -4px rgba(10, 13, 18, 0.10), 0px 8px 8px -4px rgba(10, 13, 18, 0.04);
+  --shadow-2xl:   0px 24px 48px -12px rgba(10, 13, 18, 0.25);
+  --shadow-3xl:   0px 32px 64px -12px rgba(10, 13, 18, 0.20);
+
+  /* BORDER RADII */
+  --border-radius-input:    8px;
+  --border-radius-card:     12px;
+  --border-radius-container:12px;
+
+  /* SPACING */
+  --spacing-xxs: 8px;
+  --spacing-xs:  16px;
+  --spacing-s:   24px;
+  --spacing-m:   40px;
+  --spacing-l:   80px;
+  --spacing-xl:  88px;
+  --spacing-2xl: 120px;
+}
+
+
+@media (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 1279px) {}
+@media (min-width: 1280px) {}
