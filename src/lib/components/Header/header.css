@@ -4,8 +4,9 @@
   padding-top: var(--spacing-s);
   padding-bottom: var(--spacing-s);
 }
-.header a {
-  color: var(--deep-navy);
+.header a,
+.header span {
+  color: inherit;
 }
 
 .navigation {
@@ -48,6 +49,9 @@
   align-items: center;
   gap: var(--spacing-xxs);
 }
+.navigation svg path {
+  fill: inherit;
+}
 .sub-menu {
   display: none;
   position: absolute;
@@ -71,7 +75,9 @@
   height: 46px;
   padding: 7px 8px 7px 8px;
   border-radius: 24px;
-  border: 2px solid var(--deep-navy);
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--deep-navy);
   cursor: pointer;
   background-color: transparent;
   outline: none;

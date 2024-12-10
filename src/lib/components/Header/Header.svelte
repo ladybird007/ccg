@@ -8,29 +8,18 @@
 
   function switchColorScheme () {
     activeSwitch = !activeSwitch;
+    const htmlTag = document.getElementsByTagName('html');
 
     if (activeSwitch) {
-      html.style.setProperty("color-scheme", "light");
+      htmlTag[0].style.setProperty("color-scheme", "dark");
     } else {
-      html.style.setProperty("color-scheme", "dark");
+      htmlTag[0].style.setProperty("color-scheme", "light");
     }
     
   }
 
   onMount(() => {
-    /*const navItemBtns = document.querySelectorAll('.js-menu-btn');
-          
-    navItemBtns.forEach(function(btn) {
-      const navItemIcon = document.createElement('svg');
-
-      navItemIcon.setAttribute('width', '10');
-      navItemIcon.setAttribute('height', '6');
-      navItemIcon.setAttribute('viewBox', '0 0 10 6');
-      navItemIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-      navItemIcon.innerHTML = `<path fill-rule="evenodd" clip-rule="evenodd" d="M9.31265 1.92778L5.25163 5.56245L0.970703 1.9734L2.25563 0.440768L5.20884 2.91668L7.97883 0.4375L9.31265 1.92778Z" fill="#100F08"/>`;
-      console.log(navItemIcon);
-      btn.appendChild(navItemIcon);
-    });*/
+    
   });
 </script>
 

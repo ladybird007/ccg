@@ -1,8 +1,12 @@
 @import '../src/lib/assets/css/variables.css';
 @import '../src/lib/assets/css/typothraphy.css';
 
-html {
+:root {
   color-scheme: light dark;
+  --light-bg: var(--white);
+  --light-color: var(--text-dark);
+  --dark-bg: var(--text-dark);
+  --dark-color: var(--text-white);
 }
 
 * {
@@ -14,7 +18,9 @@ html {
 body {
   font-family: 'Soehne', sans-serif;
   font-weight: 400;
-  color: var(--deep-navy);
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .container {
@@ -45,7 +51,6 @@ body {
 }
 
 a {
-  transition: all 0.3s;
   text-decoration: none;
 }
 
