@@ -1,3 +1,114 @@
 .header {
-    border: 1px solid red;
+  position: relative;
+  z-index: 10;
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+}
+.header a {
+  color: var(--deep-navy);
+}
+
+.navigation {
+  font-weight: 500;
+}
+.navigation li {
+  position: relative;
+}
+.navigation a:not(.btn):not(.logo),
+.navigation span {
+  position: relative;
+  cursor: pointer;
+}
+.navigation a:not(.btn):not(.logo):after,
+.navigation span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--orange);
+  transition: all 0.3s;
+}
+.navigation a:not(.btn):not(.logo):hover,
+.navigation span:hover {
+  color: var(--orange);
+}
+.navigation a:not(.btn):not(.logo):hover:after,
+.navigation span:hover:after {
+  right: 0;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-s) + var(--spacing-xxs));
+}
+.navigation__sub-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-container);
+  background-color: #fff;
+  box-shadow: var(--shadow-xl);
+}
+.sub-menu li + li {
+  margin-top: var(--spacing-xs);
+}
+.sub-menu a {
+  white-space: nowrap;
+}
+
+.switch-theme {
+  position: relative;
+  width: 70px;
+  height: 46px;
+  padding: 7px 8px 7px 8px;
+  border-radius: 24px;
+  border: 2px solid var(--deep-navy);
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.3s;
+}
+.switch-theme:before,
+.switch-theme:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-position: 50% 50%;
+  transition: all 0.3s;
+}
+.switch-theme:before {
+  background-image: url(../../assets/images/icons/switch-moon.svg);
+  opacity: 0;
+}
+.switch-theme:after {
+  background-image: url(../../assets/images/icons/switch-sun.svg);
+  opacity: 1;
+}
+.switch-theme.dark {
+  border-color: #fff;
+}
+.switch-theme.dark:before,
+.switch-theme.dark:after {
+  left: calc(100% - 8px - 32px);
+}
+
+.switch-theme.dark:before {
+  opacity: 1;
+}
+.switch-theme.dark:after {
+  opacity: 0;
 }
