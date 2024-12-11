@@ -5,6 +5,7 @@
     import Footer from '$lib/components/Footer/Footer.svelte';
 
     import '../app.css';
+    
 </script>
 
 <Header />
