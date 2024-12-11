@@ -3,6 +3,7 @@
   import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
+  
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
   import '../Header/header.css';
