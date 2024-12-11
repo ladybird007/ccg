@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+  .address {
+    text-align: center;
+    margin-top: var(--spacing-s);
+  }
+  .address p:first-child {
+    margin-bottom: var(--spacing-s);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .address {
+    text-align: right;
+  }
+}

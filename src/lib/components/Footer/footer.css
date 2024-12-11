@@ -88,13 +88,7 @@
     margin-top: var(--spacing-m);
     justify-content: center;
   }
-  .address {
-    text-align: center;
-    margin-top: var(--spacing-s);
-  }
-  .address p:first-child {
-    margin-bottom: var(--spacing-s);
-  }
+  
 
   .footer__menu {
     max-width: 390px;
@@ -121,9 +115,6 @@
   }
   .socials {
     justify-content: flex-end;
-  }
-  .address {
-    text-align: right;
   }
   .footer__menu {
     column-count: 2;
