@@ -59,7 +59,6 @@ ul {
 }
 
 .btn {
-  height: 56px;
   padding-left: 24px;
   padding-right: 24px;
   display: inline-flex;
@@ -74,4 +73,18 @@ ul {
 .btn.btn--primary {
   background-color: var(--orange);
   color: var(--text-white-btn);
+}
+
+@media (max-width: 1279px) {
+  .desktop-visible {
+    display: none;
+  }
+  .btn {
+    height: 45px;
+  }
+}
+@media (min-width: 1280px) {
+  .btn {
+    height: 56px;
+  }
 }

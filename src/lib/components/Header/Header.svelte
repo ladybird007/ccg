@@ -1,10 +1,13 @@
 <script>
   import {onMount} from 'svelte';
-  import '../Header/header.css';
+  
+  import Address from '../Address/Address.svelte';
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
+  import '../Header/header.css';
 
   let activeSwitch = false;
+  let menuVisible = false;
 
   function switchColorScheme () {
     activeSwitch = !activeSwitch;
@@ -23,17 +26,15 @@
   });
 </script>
 
-<header class="header">
+<header class="header" class:fixed={menuVisible}>
   <div class="container">
     <div class="row justify-space-between align-center">
-      <div class="col">
-        <div class="navigation">
+      <div class="header__col">
+        <a href="/" class="logo">
+          <img src={Logo} alt="CCG" />
+        </a>
+        <div class="navigation navigation--dropdown">
           <ul class="navigation__list">
-            <li>
-              <a href="/" class="logo">
-                <img src={Logo} alt="CCG" />
-              </a>
-            </li>
             <li>
               <span class="navigation__sub-menu-btn js-menu-btn">
                 Services
@@ -80,19 +81,26 @@
             <li><a href="/blog">Blog</a></li>
           </ul>
         </div>
-        
       </div>
       
-      <div class="col">
+      <div class="header__col header__col--absolute">
         <div class="navigation">
           <ul class="navigation__list">
-            <li><a href="/contact-us">Contact Us</a></li>
-            <li><a class="btn btn--primary" href="/book-a-call">Book a Strategy Call</a></li>
+            <li class="desktop-visible"><a href="/contact-us">Contact Us</a></li>
+            <li><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
             <li>
               <button class="switch-theme" class:dark={activeSwitch} on:click="{() => switchColorScheme () }" aria-label='switch'></button>
             </li>
+            <li class="header__mobile-btn">
+              <button class="mobile-menu-btn" aria-label="button" on:click="{() => menuVisible = !menuVisible }"><em></em></button>
+            </li>
           </ul>
         </div>
+      </div>
+
+      <div class="header__mobile-contacts">
+        <a href="/book-a-call" class="btn btn--primary">Book a Strategy Call</a>
+        <Address />
       </div>
     </div>
   </div>
