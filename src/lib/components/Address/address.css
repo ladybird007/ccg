@@ -1,3 +1,17 @@
+@media (max-width: 991px) {
+  .header .address {
+    margin-top: var(--spacing-m);
+    text-align: center;
+  }
+  .header .address .text-black {
+    font-weight: 500;
+  }
+  .header .address p {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .address {
     text-align: center;

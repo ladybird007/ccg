@@ -1,14 +1,16 @@
 <script>
   import {onMount} from 'svelte';
+  import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
   import '../Header/header.css';
 
-  let activeSwitch = false;
+  
   let menuVisible = false;
 
+  let activeSwitch = false;
   function switchColorScheme () {
     activeSwitch = !activeSwitch;
     const htmlTag = document.getElementsByTagName('html');
@@ -20,6 +22,11 @@
     }
     
   }
+
+  let isExpanded = false
+	function clickHandler() {
+		isExpanded = !isExpanded
+	}
 
   onMount(() => {
     
@@ -36,27 +43,31 @@
         <div class="navigation navigation--dropdown">
           <ul class="navigation__list">
             <li>
-              <span class="navigation__sub-menu-btn js-menu-btn">
+              <button class="navigation__sub-menu-btn" class:opened={isExpanded} on:click={clickHandler}>
                 Services
                 <SmallArrow />
-              </span>
-              <div class="sub-menu">
-                <ul>
-                  <li><a href="/services/digital-marketing">Digital Marketing</a></li>
-                  <li><a href="/services/strategy">Strategy</a></li>
-                  <li><a href="/services/marketing">Marketing</a></li>
-                  <li><a href="/services/web-design">Web Design</a></li>
-                  <li><a href="/services/ux-design">UX Design</a></li>
-                  <li><a href="/services/enterprise-software">Enterprise Software</a></li>
-                </ul>
-              </div>
+              </button>
+	
+              {#if isExpanded}            
+                <div class="sub-menu" transition:slide>
+                  <ul>
+                    <li><a href="/services/digital-marketing">Digital Marketing</a></li>
+                    <li><a href="/services/strategy">Strategy</a></li>
+                    <li><a href="/services/marketing">Marketing</a></li>
+                    <li><a href="/services/web-design">Web Design</a></li>
+                    <li><a href="/services/ux-design">UX Design</a></li>
+                    <li><a href="/services/enterprise-software">Enterprise Software</a></li>
+                  </ul>
+                </div>
+              {/if}
             </li>
             <li>
-              <span class="navigation__sub-menu-btn js-menu-btn">
+              <button class="navigation__sub-menu-btn" class:opened={isExpanded} on:click={clickHandler}>
                 Industries
                 <SmallArrow />
-              </span>
-              <div class="sub-menu">
+              </button>
+              {#if isExpanded} 
+              <div class="sub-menu" transition:slide>
                 <ul>
                   <li><a href="/industries/b2b">B2B</a></li>
                   <li><a href="/industries/b2c">B2C</a></li>
@@ -64,19 +75,22 @@
                   <li><a href="/industries/medicare">Medicare</a></li>
                 </ul>
               </div>
+              {/if}
             </li>
             <li><a href="/our-work">Our Work</a></li>
             <li>
-              <span class="navigation__sub-menu-btn js-menu-btn">
+              <button class="navigation__sub-menu-btn" class:opened={isExpanded} on:click={clickHandler}>
                 About
                 <SmallArrow />
-              </span>
-              <div class="sub-menu">
+              </button>
+              {#if isExpanded} 
+              <div class="sub-menu" transition:slide>
                 <ul>
                   <li><a href="/about/about">About</a></li>
                   <li><a href="/about/team">Team</a></li>
                 </ul>
               </div>
+              {/if}
             </li>
             <li><a href="/blog">Blog</a></li>
           </ul>

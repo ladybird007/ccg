@@ -21,6 +21,13 @@
 }
 @font-face {
   font-family: "Soehne";
+  src: url("../../assets/fonts/soehne-halbfett.woff2") format("woff2"), 
+       url("../../assets/fonts/soehne-halbfet.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Soehne";
   src: url("../../assets/fonts/soehne-dreiviertelfett.woff2") format("woff2"), 
        url("../../assets/fonts/soehne-dreiviertelfett.woff") format("woff");
   font-weight: 700;
