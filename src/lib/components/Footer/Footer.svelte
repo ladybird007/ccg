@@ -6,7 +6,7 @@
   import Facebook from '$lib/assets/images/socials/Facebook.svelte';
   import BigArrow from '$lib/assets/images/icons/BigArrow.svelte';
 
-  import '../Footer/footer.css'
+  import './footer.css';
 </script>
 
 <footer class="footer">

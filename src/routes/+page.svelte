@@ -1,8 +1,9 @@
 <script>  
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
+  import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
 
-  let sectionDetails ={
+  let topSectionDetails ={
     preHeadeline: `Performance Marketing Agency`,
     mainHeadline: `Grow and evolve your business with strategies that `,
     headlineHighlight: `stick.`,
@@ -21,9 +22,25 @@
     ],
     imgUrl: VideoPlay,
     popupBtnUrl: 'modal-link'
+  };
+
+  let resultsSectionProps = {
+    runningText: `Real Results. No Glitter.`,
+    mainHeadline: `Just Marketing That Works.`,
+    preHeadeline: `Our Process`,
+    mainText: `We're not here to sell you shiny new trends. And as much as we love a little flair, our approach combines research, data, and tried-and-true marketing to elevate businesses from potential to exceptional.`,
+    buttons: [
+      {
+        url: '/our-work',
+        text: 'Our Approach',
+        type: 'outline'
+      }
+    ],
   }
+
 </script>
 
 <div class="home">
-  <TopSection {...sectionDetails} />
+  <TopSection {...topSectionDetails} />
+  <ResultsSection {...resultsSectionProps} />
 </div>

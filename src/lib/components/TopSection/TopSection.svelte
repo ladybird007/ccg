@@ -17,7 +17,7 @@
 
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, popupBtnUrl }:TopSectionProps = $props();
 
-  import '../TopSection/top-section.css'
+  import './top-section.css';
 </script>
 
 <div class="section top-section">

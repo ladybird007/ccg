@@ -6,7 +6,7 @@
   
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
-  import '../Header/header.css';
+  import './header.css';
   
   let menuVisible = false;
 

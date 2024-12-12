@@ -98,7 +98,10 @@ img {
   align-items: center;
 }
 
-
+.section--green {
+  background-color: var(--deep-green);
+  color: var(--white);
+}
 .section__content {
   display: flex;
   flex-direction: column;

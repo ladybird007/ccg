@@ -1,0 +1,42 @@
+@keyframes infiniteScroll {
+  0% {transform: translateX(0)}
+  100% {transform: translateX(-50%)}
+}
+
+.running-string {
+  width: 100%;
+  overflow: hidden;
+  color: var(--teal);
+  font-weight: 300;
+  line-height: 1; 
+}
+.running-string__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 144px;
+  animation-name: infiniteScroll;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.running-string__item {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .running-string {
+    font-size: 47px;
+    margin-bottom: var(--spacing-s);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .running-string {
+    font-size: 80px;
+    margin-bottom: var(--spacing-l);
+  }
+}
+@media (min-width: 1280px) {
+  .running-string {
+    font-size: 99px;
+    margin-bottom: var(--spacing-2xl);
+  }
+}
