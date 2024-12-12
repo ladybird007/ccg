@@ -10,7 +10,7 @@
       buttons: [
         {
           url: '/book-a-call',
-          text: 'Book a Strategy Call',
+          text: 'Book a <span class="mobile-hidden">Strategy</span> Call',
           type: 'secondary'
         },
         {
@@ -19,7 +19,8 @@
           type: 'outline'
         }
       ],
-      imgUrl: VideoPlay
+      imgUrl: VideoPlay,
+      popupBtnUrl: 'modal-link'
     }
   </script>
   

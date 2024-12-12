@@ -1,5 +1,5 @@
 <script>
-  import {onMount} from 'svelte';
+  import { getContext, setContext, onMount } from 'svelte';
   import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
@@ -7,13 +7,13 @@
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
   import '../Header/header.css';
-
   
   let menuVisible = false;
 
   let activeSwitch = false;
   function switchColorScheme () {
     activeSwitch = !activeSwitch;
+
     const htmlTag = document.getElementsByTagName('html');
 
     if (activeSwitch) {
@@ -24,7 +24,7 @@
     
   }
 
-  let isExpanded = false
+  let isExpanded = false;
 	function clickHandler() {
 		isExpanded = !isExpanded
 	}

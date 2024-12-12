@@ -1,6 +1,5 @@
-<script>
+<script>  
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
-
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
 
   let sectionDetails ={
@@ -20,8 +19,11 @@
         type: 'outline'
       }
     ],
-    imgUrl: VideoPlay
+    imgUrl: VideoPlay,
+    popupBtnUrl: 'modal-link'
   }
 </script>
 
-<TopSection {...sectionDetails} />
+<div class="home">
+  <TopSection {...sectionDetails} />
+</div>
