@@ -1,5 +1,5 @@
-<script>
-  import { getContext, setContext, onMount } from 'svelte';
+<script>  
+  import {counter} from '../../store';
   import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
@@ -7,6 +7,7 @@
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
   import './header.css';
+
   
   let menuVisible = false;
 
@@ -18,20 +19,18 @@
 
     if (activeSwitch) {
       htmlTag[0].style.setProperty("color-scheme", "dark");
+      counter.update(v => v ='dark');
     } else {
       htmlTag[0].style.setProperty("color-scheme", "light");
-    }
-    
+      counter.update(v => v = 'light');
+    }        
   }
 
   let isExpanded = false;
 	function clickHandler() {
 		isExpanded = !isExpanded
 	}
-
-  onMount(() => {
-    
-  });
+  
 </script>
 
 <header class="header" class:fixed={menuVisible}>

@@ -1,4 +1,8 @@
 <script lang=ts>
+  // import { counter } from '../../store';
+  import { counter } from '$lib/store';
+
+  import { onDestroy } from 'svelte';
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
 
   interface TopSectionProps {
@@ -20,14 +24,15 @@
   import './top-section.css';
 </script>
 
-<div class="section top-section">
+<div class={`section top-section ${$counter}`}>
   <div class="container">
     <div class="row top-section__row">
       <div class="section__content top-section__text">
         {#if preHeadeline}
           <p class="text-simple">
             <img src={SmallOrangeCircle} alt="">
-            {preHeadeline}
+            {preHeadeline}            
+            {$counter}
           </p>
         {/if}
         {#if mainHeadline}

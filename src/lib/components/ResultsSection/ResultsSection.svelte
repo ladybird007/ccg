@@ -14,20 +14,22 @@
     }[]
 	}
 
-  let { runningText, mainHeadline, preHeadeline, mainText, buttons }:ResultsSectionProps = $props();
+  //let { runningText, mainHeadline, preHeadeline, mainText, buttons }:ResultsSectionProps = $props();
+  const resultsProps:ResultsSectionProps = $props();
 
-  let resultsProps = {
-    runningText: runningText,
-    mainHeadline: mainHeadline,
-    preHeadeline: preHeadeline, 
-    mainText: mainText, 
-    buttons:buttons
-  }
+  // let resultsProps = {
+  //   runningText,
+  //   mainHeadline,
+  //   preHeadeline, 
+  //   mainText, 
+  //   buttons
+  // }
 
 </script>
 
 <div class="section section--green"> 
-    <RunningString { runningText } />
+    <RunningString runningText={resultsProps.runningText} />
+
     <div class="container">
       <div class="row">
         <TextBlock { ...resultsProps } />
