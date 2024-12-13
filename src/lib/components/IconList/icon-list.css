@@ -1,0 +1,10 @@
+.icon-list {
+    display: flex;
+}
+.icon-list__text {
+    width: 325px;
+}
+.icon-list__list {
+    flex: 1;
+    column-count: 2;
+}

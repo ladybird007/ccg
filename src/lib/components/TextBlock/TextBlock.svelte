@@ -18,14 +18,14 @@
 
 <div class="section__content text-block">
   {#if preHeadeline}
-    <p class="text-simple">
+    <p class="text-simple in-line">
       <img src={SmallOrangeCircle} alt="">
       {preHeadeline}
     </p>
   {/if}
   {#if mainHeadline}
     <h2>
-      {mainHeadline}
+      {@html mainHeadline}
     </h2>
   {/if}
   {#if mainText}

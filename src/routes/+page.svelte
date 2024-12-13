@@ -3,6 +3,8 @@
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
   import TextBlock from "$lib/components/TextBlock/TextBlock.svelte";
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
+  import IconList from "$lib/components/IconList/IconList.svelte";
+
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
   import WhyPeople from '$lib/assets/images/home/WhyPeople.svg';
   import WhyExperience from '$lib/assets/images/home/WhyExperience.svg';
@@ -67,7 +69,7 @@
 
   let whyCCGText = {
     preHeadeline: `Why CCG?`,
-    mainHeadline: `We challenge the notion of big box agencies.`,
+    mainHeadline: `We challenge the notion of <span class="headline-highlight">big box</span> agencies.`,
     mainText: `At CCG, our relationships aren't transactional; they're collaborative and built for the long-term. We're about understanding your needs and working together to transform your business. What makes us different?`,
   }
 
@@ -112,10 +114,43 @@
     ]
   }
 
+  let solvedPropblemsList = {
+    preHeadeline: `How We Can Help`,
+    mainHeadline: `Problems We Solve`,
+    type: `arrow`,
+    listItems: [
+      {
+        text: `Fixing Siloed Marketing Approaches`
+      },
+      {
+        text: `Addressing Fragmented Systems`
+      },
+      {
+        text: `Aligning Sales & Marketing`
+      },
+      {
+        text: `Increasing Visibility`
+      },
+      {
+        text: `Creating Demand Generation`
+      },
+      {
+        text: `Improving Customer Retention`
+      },
+      {
+        text: `Reducing Operational Inefficiencies`
+      },
+      {
+        text: `Maximizing ROI`
+      }
+    ]
+  }
+
 </script>
 
 <div class="home">
   <TopSection {...topSectionDetails} />
+
   <ResultsSection {...resultsSectionDetails} />
 
   <div class="section why-ccg">
@@ -126,6 +161,12 @@
       <div class="row">
         <IconTextCard {...whyCCGCards} />
       </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <IconList {...solvedPropblemsList} />
     </div>
   </div>
 </div>

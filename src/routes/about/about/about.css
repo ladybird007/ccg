@@ -1,14 +1,7 @@
 .section.intro {
   padding-bottom: 0;
 }
-.intro .two-columns {
-  display: flex;
-}
 @media (max-width: 991px) {
-  .intro .two-columns {
-    flex-direction: column;
-    gap: var(--spacing-s);
-  }
   .mission__cards {
     display: flex;
     flex-direction: column;
@@ -22,12 +15,6 @@
   }
 }
 @media (min-width: 992px) {
-  .intro .two-columns {
-    gap: var(--spacing-l);
-  }
-  .intro .two-columns p {
-    flex: 1;
-  }
   .mission__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

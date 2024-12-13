@@ -68,7 +68,7 @@
         <h2>
           Since 1991, CCG has been at the forefront of business evolution, blending the best of consulting and marketing.
         </h2>
-        <div class="two-columns">
+        <div class="two-columns-text">
           <p>
             With a proven track record of creating results-first strategies, we bring together 
             a team of dynamic problem solvers with expertise across digital, traditional, web design, 

@@ -1,0 +1,4 @@
+.services .top-section {
+  transition: all 0.3s;
+  background-color: light-dark(var(--white-pale), var(--dark-bg));
+}
