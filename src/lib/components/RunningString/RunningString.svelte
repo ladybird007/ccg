@@ -1,5 +1,6 @@
 <script lang=ts>
   import { onMount } from 'svelte';
+  import './running-string.css';
 
   interface Props {
     runningText?: string
@@ -22,9 +23,6 @@
       }
     }); */
   });
-  
-
-  import './running-string.css';
 </script>
 
 <div class="running-string">

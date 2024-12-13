@@ -37,6 +37,28 @@
         type: 'outline'
       }
     ],
+    accordionItems: [
+      {
+        key: `01`,
+        title: `Evaluate`,
+        text: `Some text`
+      },
+      {
+        key: `02`,
+        title: `Understand`,
+        text: `We synthesize the data to create smart, goal-focused strategies.`
+      },
+      {
+        key: `03`,
+        title: `Grow`,
+        text: `Some text`
+      },
+      {
+        key: `04`,
+        title: `Evolve`,
+        text: `Some text`
+      }
+    ]
   }
 
 </script>

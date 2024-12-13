@@ -1,5 +1,4 @@
 <script lang=ts>
-  import { colorScheme } from '$lib/store';
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import './top-section.css';
 
@@ -20,7 +19,7 @@
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, popupBtnUrl }:TopSectionProps = $props();
 </script>
 
-<div class={`section top-section ${$colorScheme}`}>
+<div class="section top-section">
   <div class="container">
     <div class="row top-section__row">
       <div class="section__content top-section__text">
@@ -28,7 +27,6 @@
           <p class="text-simple">
             <img src={SmallOrangeCircle} alt="">
             {preHeadeline}            
-            {$colorScheme}
           </p>
         {/if}
         {#if mainHeadline}

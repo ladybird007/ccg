@@ -1,6 +1,8 @@
 <script lang=ts>
   import RunningString from "../RunningString/RunningString.svelte";
   import TextBlock from "../TextBlock/TextBlock.svelte";
+  import Accordion from "../Accordion/Accordion.svelte";
+  import './results-section.css';
 
   interface ResultsSectionProps {
     runningText?: string,
@@ -11,6 +13,11 @@
       url: string,
       text: string,
       type: string
+    }[],
+    accordionItems?:{
+      key: string,
+      title: string,
+      text: string
     }[]
 	}
 
@@ -18,14 +25,16 @@
 
 </script>
 
-<div class="section section--green"> 
+<div class="section section--green results-section"> 
     <RunningString runningText={resultsProps.runningText} />
 
     <div class="container">
       <div class="row">
-        <TextBlock { ...resultsProps } />
+        <div class="col results-section__text">
+          <TextBlock { ...resultsProps } />
+        </div>
         <div class="col">
-
+          <Accordion accordionItems={resultsProps.accordionItems} />
         </div>
       </div>
     </div>

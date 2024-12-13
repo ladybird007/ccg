@@ -1,5 +1,6 @@
 <script lang=ts>
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
+  import './text-block.css';
 
   interface TextBlockProps {
     mainHeadline?:string, 
@@ -13,11 +14,9 @@
 	}
 
   let { mainHeadline, preHeadeline, mainText, buttons }:TextBlockProps = $props();
-
-  import './text-block.css';
 </script>
 
-<div class="section__content">
+<div class="section__content text-block">
   {#if preHeadeline}
     <p class="text-simple">
       <img src={SmallOrangeCircle} alt="">

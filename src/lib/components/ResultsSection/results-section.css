@@ -1,0 +1,25 @@
+.results-section {
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .results-section .row {
+    gap: var(--spacing-m);
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .results-section .col {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1279px) {
+  .results-section__text {
+    padding-right: var(--spacing-s);
+  }
+}
+@media (min-width: 1280px) {
+  .results-section__text {
+    padding-right: var(--spacing-2xl);
+  }
+}
