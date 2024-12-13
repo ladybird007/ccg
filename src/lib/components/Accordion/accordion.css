@@ -25,6 +25,7 @@
   position: relative;
   display: inline-flex;
   width: 100%;
+  padding-right: 40px;
 }
 .accordion-item .text-large {
   color: inherit;

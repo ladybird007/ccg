@@ -2,7 +2,6 @@
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
-  import Accordion from "$lib/components/Accordion/Accordion.svelte";
 
   let topSectionDetails ={
     preHeadeline: `Performance Marketing Agency`,

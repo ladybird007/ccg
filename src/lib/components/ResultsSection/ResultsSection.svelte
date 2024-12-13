@@ -33,7 +33,7 @@
         <div class="col results-section__text">
           <TextBlock { ...resultsProps } />
         </div>
-        <div class="col">
+        <div class="col results-section__accordion">
           <Accordion accordionItems={resultsProps.accordionItems} />
         </div>
       </div>

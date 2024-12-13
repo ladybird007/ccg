@@ -37,5 +37,15 @@
         { runningText }
       {/if}
     </span>
+    <span class="running-string__item">
+      {#if runningText}
+        { runningText }
+      {/if}
+    </span>
+    <span class="running-string__item">
+      {#if runningText}
+        { runningText }
+      {/if}
+    </span>
   </div>
 </div>

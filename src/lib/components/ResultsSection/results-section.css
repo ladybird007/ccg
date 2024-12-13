@@ -22,4 +22,10 @@
   .results-section__text {
     padding-right: var(--spacing-2xl);
   }
+  .industries .results-section__accordion {
+    min-width: 620px;
+  }
+  .industries .results-section__text {
+    padding-right: calc(var(--spacing-2xl) - 5px);
+  }
 }
