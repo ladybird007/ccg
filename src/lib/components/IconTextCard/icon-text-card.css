@@ -1,0 +1,27 @@
+.section__content.card {
+  gap: var(--spacing-s);
+  display: flex;
+  flex-direction: column;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--spacing-s);
+}
+
+@media (max-width: 767px) {
+  .why-ccg .card p {
+    display: none;
+  }
+  .card {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1279px) {
+  .why-ccg .card {
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
+  }
+}

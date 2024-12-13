@@ -3,8 +3,8 @@
   import './text-block.css';
 
   interface TextBlockProps {
-    mainHeadline?:string, 
     preHeadeline?:string,  
+    mainHeadline?:string, 
     mainText?:string, 
     buttons?:{
       url: string,
@@ -30,7 +30,7 @@
   {/if}
   {#if mainText}
     <p class="text-emphasis">
-      {mainText}
+      {@html mainText}
     </p>
   {/if}
   {#if buttons}

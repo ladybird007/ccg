@@ -1,0 +1,54 @@
+.section.intro {
+  padding-bottom: 0;
+}
+.intro .two-columns {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .intro .two-columns {
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
+  .mission__cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .about .hero-section__img {
+    width: 240px;
+  }
+}
+@media (min-width: 992px) {
+  .intro .two-columns {
+    gap: var(--spacing-l);
+  }
+  .intro .two-columns p {
+    flex: 1;
+  }
+  .mission__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-m);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .about .hero-section__img {
+    width: 420px;
+  }
+}
+@media (min-width: 1280px) {
+  .intro .section__content {
+    gap: var(--spacing-l);
+  }
+  .mission__cards {
+    display: grid;
+    gap: var(--spacing-l) var(--spacing-2xl);
+  }
+
+  .about .hero-section__img {
+    width: 540px;
+  }
+}

@@ -25,18 +25,15 @@
 @media (max-width: 767px) {
   .running-string {
     font-size: 47px;
-    margin-bottom: var(--spacing-s);
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .running-string {
     font-size: 80px;
-    margin-bottom: var(--spacing-l);
   }
 }
 @media (min-width: 1280px) {
   .running-string {
     font-size: 99px;
-    margin-bottom: var(--spacing-2xl);
   }
 }

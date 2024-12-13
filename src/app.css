@@ -1,6 +1,5 @@
 @import '../src/lib/assets/css/variables.css';
 @import '../src/lib/assets/css/typothraphy.css';
-
 :root {
   color-scheme: light dark;
   --light-bg: var(--white);
@@ -30,6 +29,9 @@ body {
   margin-right: auto;
   padding-left: var(--spacing-s);
   padding-right: var(--spacing-s);
+}
+.container--small {
+  max-width: 923px;
 }
 
 .row {
@@ -102,21 +104,38 @@ img {
   background-color: var(--deep-green);
   color: var(--white);
 }
+.section {
+  display: flex;
+  flex-direction: column;
+}
 .section__content {
   display: flex;
   flex-direction: column;
 }
+.text-center .section__content {
+  align-items: center;
+}
 
+.hero-section {
+  position: relative;
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+.hero-section__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 @media (max-width: 1279px) {
   .desktop-visible {
-    display: none;
+      display: none;
   }
   .btn {
-    height: 45px;
+      height: 45px;
   }
 
   .section__content {
-    gap: var(--spacing-s)
+      gap: var(--spacing-s);
   }
 }
 @media (max-width: 767px) {
@@ -124,6 +143,11 @@ img {
     display: none !important;
   }
   .section {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    gap: var(--spacing-s);
+  }
+  .hero-section {
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-m);
   }
@@ -141,20 +165,28 @@ img {
   .section {
     padding-top: var(--spacing-l);
     padding-bottom: var(--spacing-l);
+    gap: var(--spacing-l);
+  }
+  .hero-section {
+    padding-top: calc(1.5 * var(--spacing-m));
+    padding-bottom: var(--spacing-xl);
   }
 }
 @media (min-width: 1280px) {
   .btn {
-    height: 56px;
+      height: 56px;
   }
 
+  .hero-section {
+      padding-top: var(--spacing-l);
+      padding-bottom: var(--spacing-2xl);
+  }
   .section {
-    padding-top: var(--spacing-2xl);
-    padding-bottom: var(--spacing-2xl);
+      padding-top: var(--spacing-2xl);
+      padding-bottom: var(--spacing-2xl);
+      gap: var(--spacing-2xl);
   }
   .section__content {
-    gap: var(--spacing-m)
+      gap: var(--spacing-m);
   }
 }
-
-
