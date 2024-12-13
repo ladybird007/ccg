@@ -42,8 +42,6 @@
 </script>
 
 <div class="home">
-
-  <Accordion />
   <TopSection {...topSectionDetails} />
   <ResultsSection {...resultsSectionProps} />
 </div>

@@ -14,16 +14,7 @@
     }[]
 	}
 
-  //let { runningText, mainHeadline, preHeadeline, mainText, buttons }:ResultsSectionProps = $props();
   const resultsProps:ResultsSectionProps = $props();
-
-  // let resultsProps = {
-  //   runningText,
-  //   mainHeadline,
-  //   preHeadeline, 
-  //   mainText, 
-  //   buttons
-  // }
 
 </script>
 

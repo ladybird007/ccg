@@ -1,5 +1,5 @@
 <script>  
-  import {counter} from '../../store';
+  import { colorScheme } from '$lib/store';
   import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
@@ -19,10 +19,10 @@
 
     if (activeSwitch) {
       htmlTag[0].style.setProperty("color-scheme", "dark");
-      counter.update(v => v ='dark');
+      colorScheme.update(v => v ='dark');
     } else {
       htmlTag[0].style.setProperty("color-scheme", "light");
-      counter.update(v => v = 'light');
+      colorScheme.update(v => v = 'light');
     }        
   }
 

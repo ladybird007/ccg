@@ -1,9 +1,7 @@
 <script lang=ts>
-  // import { counter } from '../../store';
-  import { counter } from '$lib/store';
-
-  import { onDestroy } from 'svelte';
+  import { colorScheme } from '$lib/store';
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
+  import './top-section.css';
 
   interface TopSectionProps {
     mainHeadline?:string, 
@@ -20,11 +18,9 @@
 	}
 
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, popupBtnUrl }:TopSectionProps = $props();
-
-  import './top-section.css';
 </script>
 
-<div class={`section top-section ${$counter}`}>
+<div class={`section top-section ${$colorScheme}`}>
   <div class="container">
     <div class="row top-section__row">
       <div class="section__content top-section__text">
@@ -32,7 +28,7 @@
           <p class="text-simple">
             <img src={SmallOrangeCircle} alt="">
             {preHeadeline}            
-            {$counter}
+            {$colorScheme}
           </p>
         {/if}
         {#if mainHeadline}
