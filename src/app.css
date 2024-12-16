@@ -100,13 +100,17 @@ img {
   align-items: center;
 }
 
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
 .section--green {
   background-color: var(--deep-green);
   color: var(--white);
 }
-.section {
-  display: flex;
-  flex-direction: column;
+.section--solved {
+  background: url(./lib/assets/images/bg/sovled-section.svg) no-repeat 0 100%;
 }
 .section__content {
   display: flex;

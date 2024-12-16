@@ -4,6 +4,8 @@
   import TextBlock from "$lib/components/TextBlock/TextBlock.svelte";
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
   import IconList from "$lib/components/IconList/IconList.svelte";
+  import RunningString from "$lib/components/RunningString/RunningString.svelte";
+  import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
 
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
   import WhyPeople from '$lib/assets/images/home/WhyPeople.svg';
@@ -116,7 +118,7 @@
 
   let solvedPropblemsList = {
     preHeadeline: `How We Can Help`,
-    mainHeadline: `Problems We Solve`,
+    mainHeadline: `Problems <br> We Solve`,
     type: `arrow`,
     listItems: [
       {
@@ -164,9 +166,16 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section section--solved">
     <div class="container">
       <IconList {...solvedPropblemsList} />
+    </div>
+  </div>
+
+  <div class="section">
+    <RunningString runningText={'Trusted by'} />
+    <div class="container">
+      <RunningIcons />
     </div>
   </div>
 </div>

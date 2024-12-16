@@ -29,12 +29,16 @@
       </h2>
     {/if}
   </div>
-  <ul class="icon-list__list icon-list__list--{type}">
-    {#each listItems as liItem}
-      <li>
-        {liItem.text}
-      </li>
-    {/each}
-  </ul>
+  {#if listItems}
+  <div class="icon-list__list-wrap">
+    <ul class="icon-list__list icon-list__list--{type} h4">
+      {#each listItems as item}
+        <li>
+          {item.text}
+        </li>
+      {/each}
+    </ul>
+  </div>
+  {/if}
 </div>
 

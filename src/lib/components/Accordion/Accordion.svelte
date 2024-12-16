@@ -14,10 +14,9 @@
 
   let { accordionItems }:Props = $props();
 
-  console.log(accordionItems);
- 
 </script>
 
+{#if accordionItems}
 <Accordion>
 	
 	{#each accordionItems as item}
@@ -43,3 +42,4 @@
 	{/each}
 
 </Accordion>
+{/if}

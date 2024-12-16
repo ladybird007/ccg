@@ -1,34 +1,21 @@
 <script>
-  import { get } from 'svelte/store'
-  import { colorScheme } from '$lib/store';
+  import { colorScheme } from '$lib/store';  
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
 
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import TopImageLight from '$lib/assets/images/digitalMarketing/topImageLight.svg';
   import TopImageDark from '$lib/assets/images/digitalMarketing/topImageDark.svg';
-
   import '../services.css';
 
-  let topImg = '',
-      test = '';
-  
-
-  colorScheme.subscribe(value => {
-    test = value
-  });
-
-  console.log(test);
-  // {$colorScheme} 'light' ? TopImageLight : TopImageDark
 
   let sectionDetails = {
     preHeadeline: `Digital Marketing`,
     mainHeadline: `Turn ad spend into revenue. `,
-    subHeadline:  `We focus on precise targeting to connect with your highest-value prospects exactly where they are.`,
-    imgUrl: TopImageLight
+    subHeadline:  `We focus on precise targeting to connect with your highest-value prospects exactly where they are.`,    
   }
 </script>
 <div class="services">
-  <TopSection {...sectionDetails} />
+  <TopSection {...sectionDetails} imgUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
 
   <div class="section">
     <div class="container">

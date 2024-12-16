@@ -1,6 +1,9 @@
 .section.intro {
   padding-bottom: 0;
 }
+.mission__values {
+  max-width: 950px;
+}
 @media (max-width: 991px) {
   .mission__cards {
     display: flex;

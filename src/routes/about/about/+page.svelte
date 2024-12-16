@@ -5,8 +5,8 @@
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
   
   import HeroBg from '$lib/assets/images/about/HeroBg.svg';
-  import VisionLight from '$lib/assets/images/about/VisionLight.svg';
-  import VisionDark from '$lib/assets/images/about/VisionDark.svg';
+  import ValuesLight from '$lib/assets/images/about/ValuesLight.png';
+  import ValuesDark from '$lib/assets/images/about/ValuesDark.png';
   import MissionRadicallyHonest from '$lib/assets/images/about/MissionRadicallyHonest.svg';
   import MissionRelationships from '$lib/assets/images/about/MissionRelationships.svg';
   import MissionOneSize from '$lib/assets/images/about/MissionOneSize.svg';
@@ -89,11 +89,11 @@
     <div class="container container--small text-center">
       <TextBlock {...MissionText} />
     </div>
-    <div class="container">
+    <div class="container mission__values">
       {#if $colorScheme === 'dark' }
-        <img src={VisionDark} alt="Our Vision">
+        <img src={ValuesDark} alt="Values">
       {:else}
-        <img src={VisionLight} alt="Our Vision">
+        <img src={ValuesLight} alt="VAlues">
       {/if}
     </div>
     <div class="container">
