@@ -22,6 +22,12 @@
 .icon-list__list--arrow li:before {
   background-image: url(../../assets/images/icons/list-arrow.svg);
 }
+.icon-list__list--chart li:before {
+  background-image: url(../../assets/images/icons/list-chart.svg);
+}
+.icon-list__list--chart li.icon-list__li-chart2:before {
+  background-image: url(../../assets/images/icons/list-chart-2.svg);
+}
 @media (max-width: 991px) {
   .icon-list__text {
     margin-bottom: var(--spacing-m);

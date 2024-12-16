@@ -1,6 +1,7 @@
 <script>
   import { colorScheme } from '$lib/store';  
-  import TopSection from "$lib/components/TopSection/TopSection.svelte";
+  import TopSection from '$lib/components/TopSection/TopSection.svelte';
+  import IconList from '$lib/components/IconList/IconList.svelte';
 
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import TopImageLight from '$lib/assets/images/digitalMarketing/topImageLight.svg';
@@ -13,6 +14,43 @@
     mainHeadline: `Turn ad spend into revenue. `,
     subHeadline:  `We focus on precise targeting to connect with your highest-value prospects exactly where they are.`,    
   }
+
+  let whatWeDoList = {
+    preHeadeline: `Services`,
+    mainHeadline: `What We Do`,
+    type: `chart`,
+    listItems: [
+      {
+        text: `Search Engine Optimization`
+      },
+      {
+        text: `Pay-Per-Click Advertising (PPC)`
+      },
+      {
+        text: `Social Media Marketing`
+      },
+      {
+        text: `Email Marketing`
+      },
+      {
+        icon: `chart-2`,
+        text: `Digital Out-of-Home (DOOH)`
+      },
+      {
+        icon: `chart-2`,
+        text: `Connected TV (CTV)`
+      },
+      {
+        icon: `chart-2`,
+        text: `Over-the-Top Advertising (OTT)`
+      },
+      {
+        icon: `chart-2`,
+        text: `Data Analytics`
+      }
+    ]
+  }
+
 </script>
 <div class="services">
   <TopSection {...sectionDetails} imgUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
@@ -38,6 +76,9 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="container">
+      <IconList {...whatWeDoList} />
     </div>
   </div>
 </div>

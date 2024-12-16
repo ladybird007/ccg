@@ -7,6 +7,7 @@
     mainHeadline?:string, 
     type?:string,
     listItems?:{
+      icon?: string,
       text: string,
     }[]
 	}
@@ -33,9 +34,15 @@
   <div class="icon-list__list-wrap">
     <ul class="icon-list__list icon-list__list--{type} h4">
       {#each listItems as item}
-        <li>
-          {item.text}
-        </li>
+        {#if item.icon}
+          <li class="icon-list__li-chart2">
+            {item.text}
+          </li>
+        {:else}
+          <li>
+            {item.text}
+          </li>
+        {/if}
       {/each}
     </ul>
   </div>
