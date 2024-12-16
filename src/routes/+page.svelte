@@ -172,9 +172,9 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section section--small-gap">
     <RunningString runningText={'Trusted by'} />
-    <div class="container">
+    <div class="container container--no-side-spacing">
       <RunningIcons />
     </div>
   </div>

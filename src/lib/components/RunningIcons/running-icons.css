@@ -1,0 +1,58 @@
+@keyframes infiniteScroll {
+  0% {transform: translateX(0)}
+  100% {transform: translateX(-50%)}
+}
+
+.running-icons {
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.running-icons--light {
+  opacity: 0.3;
+}
+.running-icons--dark {
+  opacity: 0.4;
+}
+.running-icons svg {
+  display: block;
+}
+.running-icons svg path {
+  transition: all 0.3s;
+}
+.running-icons--dark svg path {
+  fill: var(--white);
+}
+.running-icons__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .running-icons {
+    margin-top: var(--spacing-m);
+  }
+  .running-icons__inner {
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-m) - var(--spacing-xxs));
+  }
+  .running-icons__item {
+    max-width: calc(50% - var(--spacing-xs));
+  }
+  .running-icons__item svg {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .running-icons__inner {
+    animation-name: infiniteScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    gap: calc(2 * var(--spacing-s));
+  }
+}
+
+
