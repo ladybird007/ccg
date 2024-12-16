@@ -33,6 +33,9 @@ body {
 .container--small {
   max-width: 923px;
 }
+.container--wide {
+  max-width: 1512px;
+}
 
 .row {
   display: flex;
@@ -66,8 +69,8 @@ img {
 }
 
 .btn {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -104,6 +107,10 @@ img {
 .section {
   display: flex;
   flex-direction: column;
+}
+.section--light-grey {
+  transition: all 0.3s;
+  background-color: light-dark(var(--white-pale), var(--dark-bg));
 }
 .section--green {
   background-color: var(--deep-green);
@@ -220,4 +227,9 @@ img {
   .section__content {
       gap: var(--spacing-m);
   }
+}
+
+.section--no-vertical-spacing {
+  padding-top: 0;
+  padding-bottom: 0;
 }

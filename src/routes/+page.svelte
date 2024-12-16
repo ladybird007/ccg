@@ -6,11 +6,14 @@
   import IconList from "$lib/components/IconList/IconList.svelte";
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
   import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
+  import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
 
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
   import WhyPeople from '$lib/assets/images/home/WhyPeople.svg';
   import WhyExperience from '$lib/assets/images/home/WhyExperience.svg';
   import WhyWork from '$lib/assets/images/home/WhyWork.svg';
+  import RowChoosePlan from '$lib/assets/images/home/RowChoosePlan.png';
+  import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
 
   let topSectionDetails ={
     preHeadeline: `Performance Marketing Agency`,
@@ -148,6 +151,39 @@
     ]
   }
 
+  let imageTextRows = {
+    rows: [
+      {
+        addClassCol: `teal`,
+        imgUrl: RowChoosePlan,
+        preHeadeline: `Medicare Advantage Marketing`,
+        mainHeadline: `We speak Medicare Advantage.`,
+        mainText: `With over a decade of experience in MA, we understand the complexities of navigating regulatory compliance and a competitive marketplace. Not only do we speak the same language as you do, but our goal-focused strategies go beyond the funnel, using data-driven insights to find and keep your next best members.`,
+        buttons: [
+          {
+            url: '/industries/medicare',
+            text: 'More About Medicare',
+            type: 'outline'
+          }
+        ]
+      },
+      {
+        addClassCol: `green`,
+        imgUrl: RowPartnership,
+        preHeadeline: `B2B Marketing`,
+        mainHeadline: `Where Precision Meets Partnership`,
+        mainText: `B2B marketing for industrial spaces comes with its own set of challenges—specialized needs, a focused audience, and high stakes. The relationships matter more, and the margin for error is smaller. That's where we come in. Ultimately, we deliver the results you need for sustainable growth.`,
+        buttons: [
+          {
+            url: '/industries/b2b',
+            text: 'More About B2B Marketing',
+            type: 'outline'
+          }
+        ]
+      },
+    ]
+  }
+
 </script>
 
 <div class="home">
@@ -176,6 +212,16 @@
     <RunningString runningText={'Trusted by'} />
     <div class="container container--no-side-spacing">
       <RunningIcons />
+    </div>
+  </div>
+
+  <div class="section section--light-grey section--no-vertical-spacing">
+    <div class="container container--wide">
+      {#if imageTextRows}
+        {#each imageTextRows.rows as rowItem}
+          <ImageTextRow {...rowItem} />
+        {/each}
+      {/if}
     </div>
   </div>
 </div>

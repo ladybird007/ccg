@@ -98,13 +98,14 @@
   --border-radius-container:12px;
 
   /* SPACING */
-  --spacing-xxs: 8px;
-  --spacing-xs:  16px;
-  --spacing-s:   24px;
-  --spacing-m:   40px;
-  --spacing-l:   80px;
-  --spacing-xl:  88px;
-  --spacing-2xl: 120px;
+  --spacing-xxs:    8px;
+  --spacing-xs:     16px;
+  --spacing-s:      24px;
+  --spacing-s-neg: -24px;
+  --spacing-m:      40px;
+  --spacing-l:      80px;
+  --spacing-xl:     88px;
+  --spacing-2xl:    120px;
 }
 
 
