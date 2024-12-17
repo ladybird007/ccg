@@ -2,7 +2,7 @@
   display: flex;
   margin-left: var(--spacing-s-neg);
   margin-right: var(--spacing-s-neg);
-  background-color: light-dark(var(--white-pale), var(--dark-bg));
+  background-color: light-dark(var(--white-pale), var(--deep-navy-medium));
 }
 .image-text__col {
   background-repeat: no-repeat;

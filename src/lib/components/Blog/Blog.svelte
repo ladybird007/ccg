@@ -2,6 +2,7 @@
   import './blog.css';
   
   import BlogArrow from "$lib/assets/images/icons/BlogArrow.svelte";
+  
   interface Props {
     imgUrl?:string,
     blogList?:{

@@ -9,6 +9,7 @@
     preHeadeline?: string, 
     mainHeadline?: string,
     mainText?: string, 
+    colImgBgUrl?: string,
     buttons?:{
       url: string,
       text: string,
@@ -21,7 +22,7 @@
 
 <div class="image-text">
   {#if rowItemProps.imgUrl}
-    <div class="image-text__col image-text__col--img image-text__col--{rowItemProps.addClassCol}">
+    <div class="image-text__col image-text__col--img image-text__col--{rowItemProps.addClassCol}" style="background-image: url('{rowItemProps.colImgBgUrl}')">
       <img src={rowItemProps.imgUrl} alt="">
     </div>
   {/if}

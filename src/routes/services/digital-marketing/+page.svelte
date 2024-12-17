@@ -16,6 +16,8 @@
   import Icon4 from '$lib/assets/images/digitalMarketing/logos/Icon4.svg';
   import SocialMedia from '$lib/assets/images/digitalMarketing/SocialMedia.png';
   import BlogImg from '$lib/assets/images/blog/DigitalBlog.png';
+  import ImageTextRowLight from '$lib/assets/images/digitalMarketing/ImageTextBgLight.png';
+  import ImageTextRowDark from '$lib/assets/images/digitalMarketing/ImageTextBgDark.png';
 
   let sectionDetails = {
     preHeadeline: `Digital Marketing`,
@@ -187,7 +189,7 @@
     <div class="container container--wide">
       {#if imageTextRow}
         {#each imageTextRow.rows as rowItem}
-          <ImageTextRow {...rowItem} />
+          <ImageTextRow {...rowItem} colImgBgUrl={$colorScheme === 'dark' ? ImageTextRowDark : ImageTextRowLight} />
         {/each}
       {/if}
     </div>
