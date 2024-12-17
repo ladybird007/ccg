@@ -3,6 +3,7 @@
   import './counter-section.css';
 
   interface Props {
+    sectionClass?:string,
     preHeadeline?:string,  
     mainHeadline?:string, 
     mainText?:string, 
@@ -13,10 +14,10 @@
     }[]
 	}
 
-  let { preHeadeline, mainHeadline,  mainText, numbers }:Props = $props();
+  let { sectionClass, preHeadeline, mainHeadline,  mainText, numbers }:Props = $props();
 </script>
 
-<div class="section">
+<div class="section {sectionClass}">
   <div class="container">
     <div class="counter">
       <div class="counter__text section__content">
