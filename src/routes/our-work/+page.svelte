@@ -1,23 +1,24 @@
 <script>
     import CounterSection from '$lib/components/CounterSection/CounterSection.svelte';
+    import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
 
     import HeroBg from '$lib/assets/images/work/HeroBg.svg';
 
     let CounterSectionDetails = {
-        sectionClass: `section--light-grey`,
-        mainText: `Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.`,
-        numbers: [
-            {
-                number: 6,
-                text: `Years in new profit from improved order management`
-            }, {
-                number: 140,
-                text: `Years in new profit from improved order management`
-            }, {
-                number: 20,
-                text: `Projects in new profit from improved order management`
-            }
-        ]
+      sectionClass: `section--light-grey`,
+      mainText: `Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.`,
+      numbers: [
+        {
+          number: 6,
+          text: `Years in new profit from improved order management`
+        }, {
+          number: 140,
+          text: `Years in new profit from improved order management`
+        }, {
+          number: 20,
+          text: `Projects in new profit from improved order management`
+        }
+      ]
     }
 </script>
 
@@ -35,5 +36,5 @@
 
   <CounterSection {...CounterSectionDetails}/>
 
-  
+
 </div>

@@ -142,7 +142,20 @@ p a:not(.btn):not(.logo) {
   margin-bottom: 0;
   display: inline-flex;
   align-items: center;
+  gap: 12px; 
+}
+.text-simple.pre-headline {
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
   gap: 12px;
+}
+.text-simple.pre-headline:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: url(../images/icons/SmallOrangeCircle.svg) no-repeat 50% 50%;
 }
 .text-large {
   font-weight: 700;

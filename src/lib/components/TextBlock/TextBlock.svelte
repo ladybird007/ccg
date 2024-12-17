@@ -1,5 +1,4 @@
 <script lang=ts>
-  import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import './text-block.css';
 
   interface Props {
@@ -18,8 +17,7 @@
 
 <div class="section__content text-block">
   {#if preHeadeline}
-    <p class="text-simple in-line">
-      <img src={SmallOrangeCircle} alt="">
+    <p class="text-simple pre-headline">
       {preHeadeline}
     </p>
   {/if}

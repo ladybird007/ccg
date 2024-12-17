@@ -14,6 +14,7 @@
   import WhyWork from '$lib/assets/images/home/WhyWork.svg';
   import RowChoosePlan from '$lib/assets/images/home/RowChoosePlan.png';
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
+  import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
 
   let topSectionDetails ={
     preHeadeline: `Performance Marketing Agency`,
@@ -224,12 +225,46 @@
       {/if}
     </div>
   </div>
+
+  <div class="section case-studies">
+    <RunningString runningText={"Don't take our word for it."} />
+    <div class="container section__content">
+      <p class="text-simple pre-headline">Case Studies</p>
+      <h2>Don't just take our word for it.</h2>
+      
+      <div class="row align-center">
+        <div class="col">
+          <img src={RowCaseStudies} alt="">
+        </div>
+        <div class="col col--text section__content">
+          <h3>
+            310% Increase in YOY AEP Lead Volume for Viva Medicare 
+          </h3>
+          <p>
+            Learn how we drove remarkable lead volume despite navigating an unprecedented economy.
+          </p>
+          <a href="/our-work" class="btn btn--outline">View Case Study</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
 </div>
 
 <style>
+  .case-studies .col--text {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    align-items: flex-start;
+  }
   @media (max-width: 991px) {
     .why-ccg .row {
       gap: var(--spacing-s);
+    }
+    .case-studies .row {
+      flex-direction: column;
     }
   }
   @media (max-width: 767px) {
@@ -245,9 +280,21 @@
       flex-direction: column;
     }
   }
+  @media (min-width: 992px) {
+    .case-studies .col {
+      flex: 1;
+      flex-shrink: 0;
+    }
+    .case-studies .col--text {
+      padding-left: var(--spacing-l);
+    }
+  }
   @media (min-width: 1280px) {
     .why-ccg .row {
       gap: var(--spacing-2xl);
+    }
+    .case-studies .row {
+      margin-top: var(--spacing-m);
     }
   }
   
