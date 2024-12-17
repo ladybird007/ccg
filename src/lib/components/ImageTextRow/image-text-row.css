@@ -19,6 +19,11 @@
   background-position: 100% 0;
   background-size: auto 96%;
 }
+.image-text__col--light-grey {
+  background-image: url(../../assets/images/digitalMarketing/row-img-text-bg.svg);
+  background-position: 0 0;
+  background-size: auto 70%;
+}
 .image-text__col--img {
   display: flex;
   align-items: center;

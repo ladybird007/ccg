@@ -2,12 +2,18 @@
   import { colorScheme } from '$lib/store';  
   import TopSection from '$lib/components/TopSection/TopSection.svelte';
   import IconList from '$lib/components/IconList/IconList.svelte';
+  import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
+  import RunningString from "$lib/components/RunningString/RunningString.svelte";
+  import '../services.css';
 
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import TopImageLight from '$lib/assets/images/digitalMarketing/topImageLight.svg';
   import TopImageDark from '$lib/assets/images/digitalMarketing/topImageDark.svg';
-  import '../services.css';
-
+  import Icon1 from '$lib/assets/images/digitalMarketing/logos/Icon1.svg';
+  import Icon2 from '$lib/assets/images/digitalMarketing/logos/Icon2.svg';
+  import Icon3 from '$lib/assets/images/digitalMarketing/logos/Icon3.svg';
+  import Icon4 from '$lib/assets/images/digitalMarketing/logos/Icon4.svg';
+  import SocialMedia from '$lib/assets/images/digitalMarketing/SocialMedia.png';
 
   let sectionDetails = {
     preHeadeline: `Digital Marketing`,
@@ -51,6 +57,46 @@
     ]
   }
 
+  let logosList = [
+    {
+      url: Icon1,
+      alt: `google`
+    },
+    {
+      url: Icon2,
+      alt: `meta`
+    },
+    {
+      url: Icon3,
+      alt: `salesforce`
+    },
+    {
+      url: Icon4,
+      alt: `klaviyo`
+    },
+  ]
+
+  let imageTextRow = {
+    rows: [
+      {
+        addClassCol: `light-grey`,
+        imgUrl: SocialMedia,
+        preHeadeline: `Our Work`,
+        mainHeadline: `Global Health  Medicare AEP`,
+        mainText: `GlobalHealth, a regional health insurance plan offering Medicare Advantage products in Oklahoma, came to CCG in need of a fresh approach. Despite their prior efforts and an ambitious lead generation plan, results had fallen short, leaving them with limited growth and an investment that didn't deliver. GlobalHealth turned to CCG to help achieve the impact they'd been striving for.`,
+        buttons: [
+          {
+            url: '/our-work',
+            text: 'View Case Study',
+            type: 'outline'
+          }
+        ]
+      }
+    ]
+  }
+
+
+
 </script>
 <div class="services">
   <TopSection {...sectionDetails} imgUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
@@ -77,8 +123,49 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <IconList {...whatWeDoList} />
     </div>
+
+    {#if logosList}
+      <div class="container">
+        <div class="text-center">
+          <h4>We only use the best to power our data.</h4>
+        </div>
+        <div class="logos">
+          {#each logosList as logo }
+            <div class="logos__item">
+              <div class="logos__img">
+                <img src={logo.url} alt={logo.alt}>
+              </div>
+            </div>
+          {/each}
+          {#each logosList as logo }
+            <div class="logos__item">
+              <div class="logos__img">
+                <img src={logo.url} alt={logo.alt}>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
   </div>
+
+  <div class="section section--light-grey section--no-vertical-spacing">
+    <div class="container container--wide">
+      {#if imageTextRow}
+        {#each imageTextRow.rows as rowItem}
+          <ImageTextRow {...rowItem} />
+        {/each}
+      {/if}
+    </div>
+  </div>
+
+  <div class="section">
+    <RunningString runningText={'Latest From Our Blog'} />
+  </div>
+
+
 </div>
