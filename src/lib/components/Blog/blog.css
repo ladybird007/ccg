@@ -1,0 +1,107 @@
+.blog-block {
+  display: flex;
+}
+.blog-block__item a:hover {
+  color: var(--orange);
+}
+.blog-block__item--img {
+  flex-shrink: 0;
+}
+
+.blog-list__title {
+  display: inline-block;
+}
+.blog-list__title,
+.blog-list a {
+  transition: all 0.3s;
+  color: inherit;
+}
+
+.blog-list__title:hover {
+  text-decoration: underline;
+}
+.blog-list__title:hover .blog-list__arrow svg path {
+  fill: var(--orange);
+}
+.blog-list__item {
+  position: relative;
+  padding-top: calc(var(--spacing-s) + var(--spacing-xxs));
+  padding-bottom: calc(var(--spacing-s) + var(--spacing-xxs));
+} 
+
+.blog-list__arrow {
+  position: absolute;
+  right: 0;
+  transition: all 0.5s;
+}
+.blog-list__arrow svg path {
+  transition: all 0.3s;
+}
+.blog-list__item + .blog-list__item {
+  border-top: 1px solid var(--cool-gray);
+}
+.blog-list__meta {
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-m);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--meta-text);
+}
+.blog-list__date {
+  display: flex;
+  gap: var(--spacing-s);
+}
+@media (max-width: 1279px) {
+  .blog-list__meta {
+    gap: var(--spacing-s);
+  }
+  .blog-list__arrow {
+    top: var(--spacing-m);
+  }
+  .blog-list__arrow svg {
+    width: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .blog-block__item--img {
+    display: none;
+  }
+  .blog-list__title {
+    padding-right: 70px;
+  }
+  
+}
+@media (min-width: 992px) and (max-width: 1279px) {
+  .blog-block {
+    gap: var(--spacing-l);
+  }
+  .blog-list__title {
+    padding-right: 165px;
+  }
+  .blog-block__item--img {
+    max-width: 388px;
+    width: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  .blog-block {
+    gap: var(--spacing-xl);
+  }
+  .blog-block__item--img {
+    width: 480px;
+  }
+  .blog-list__title {
+    padding-right: 165px;
+  }
+  .blog-list__meta {
+    gap: var(--spacing-l);
+  }
+  .blog-list__title:hover .blog-list__arrow {
+    top: var(--spacing-s);
+    right: -10px;
+  }
+  .blog-list__arrow {
+    top: calc(var(--spacing-s) + var(--spacing-xxs));
+  }
+}

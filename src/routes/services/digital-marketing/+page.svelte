@@ -4,6 +4,7 @@
   import IconList from '$lib/components/IconList/IconList.svelte';
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
+  import Blog from '$lib/components/Blog/Blog.svelte';
   import '../services.css';
 
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
@@ -14,6 +15,7 @@
   import Icon3 from '$lib/assets/images/digitalMarketing/logos/Icon3.svg';
   import Icon4 from '$lib/assets/images/digitalMarketing/logos/Icon4.svg';
   import SocialMedia from '$lib/assets/images/digitalMarketing/SocialMedia.png';
+  import BlogImg from '$lib/assets/images/blog/DigitalBlog.png';
 
   let sectionDetails = {
     preHeadeline: `Digital Marketing`,
@@ -95,7 +97,35 @@
     ]
   }
 
-
+  let blogListDetails = {
+    imgUrl: BlogImg,
+    blogList: [
+      {
+        title: `From Concept to Reality: Showcasing Impactful Design Case Studies`,
+        linkToPage: `#`,
+        category: `Digital Marketing`,
+        categoryLink: ``,
+        date: `Oct 21`,
+        time: `2 min read`
+      },
+      {
+        title: `Designing for Humans: UX/UI Insights from Our Expert Team`,
+        linkToPage: `#`,
+        category: `Social Media`,
+        categoryLink: ``,
+        date: `Oct 14`,
+        time: `2 min read`
+      },
+      {
+        title: `Future-Proofing Web Development: Navigating the Latest Trends`,
+        linkToPage: `#`,
+        category: `Analytics`,
+        categoryLink: ``,
+        date: `Oct 2`,
+        time: `2 min read`
+      }
+    ]
+  }
 
 </script>
 <div class="services">
@@ -165,7 +195,8 @@
 
   <div class="section">
     <RunningString runningText={'Latest From Our Blog'} />
+    <div class="container">
+      <Blog {...blogListDetails} />
+    </div>
   </div>
-
-
 </div>
