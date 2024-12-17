@@ -26,16 +26,16 @@
 </script>
 
 <div class="section section--green results-section"> 
-    <RunningString runningText={resultsProps.runningText} />
+  <RunningString runningText={resultsProps.runningText} />
 
-    <div class="container">
-      <div class="row">
-        <div class="col results-section__text">
-          <TextBlock { ...resultsProps } />
-        </div>
-        <div class="col results-section__accordion">
-          <Accordion accordionItems={resultsProps.accordionItems} />
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col results-section__text">
+        <TextBlock { ...resultsProps } />
+      </div>
+      <div class="col results-section__accordion">
+        <Accordion accordionItems={resultsProps.accordionItems} />
       </div>
     </div>
+  </div>
 </div>

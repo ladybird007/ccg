@@ -15,7 +15,7 @@
   import Icon3 from '$lib/assets/images/digitalMarketing/logos/Icon3.svg';
   import Icon4 from '$lib/assets/images/digitalMarketing/logos/Icon4.svg';
   import SocialMedia from '$lib/assets/images/digitalMarketing/SocialMedia.png';
-  import BlogImg from '$lib/assets/images/blog/DigitalBlog.png';
+  import DigitalBlog from '$lib/assets/images/blog/DigitalBlog.png';
   import ImageTextRowLight from '$lib/assets/images/digitalMarketing/ImageTextBgLight.png';
   import ImageTextRowDark from '$lib/assets/images/digitalMarketing/ImageTextBgDark.png';
 
@@ -100,29 +100,29 @@
   }
 
   let blogListDetails = {
-    imgUrl: BlogImg,
+    imgUrl: DigitalBlog,
     blogList: [
       {
         title: `From Concept to Reality: Showcasing Impactful Design Case Studies`,
-        linkToPage: `#`,
+        linkToPage: `/blog`,
         category: `Digital Marketing`,
-        categoryLink: ``,
+        categoryLink: `/blog`,
         date: `Oct 21`,
         time: `2 min read`
       },
       {
         title: `Designing for Humans: UX/UI Insights from Our Expert Team`,
-        linkToPage: `#`,
+        linkToPage: `/blog`,
         category: `Social Media`,
-        categoryLink: ``,
+        categoryLink: `/blog`,
         date: `Oct 14`,
         time: `2 min read`
       },
       {
         title: `Future-Proofing Web Development: Navigating the Latest Trends`,
-        linkToPage: `#`,
+        linkToPage: `/blog`,
         category: `Analytics`,
-        categoryLink: ``,
+        categoryLink: `/blog`,
         date: `Oct 2`,
         time: `2 min read`
       }

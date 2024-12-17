@@ -90,11 +90,7 @@
       <TextBlock {...MissionText} />
     </div>
     <div class="container mission__values">
-      {#if $colorScheme === 'dark' }
-        <img src={ValuesDark} alt="Values">
-      {:else}
-        <img src={ValuesLight} alt="VAlues">
-      {/if}
+      <img src={$colorScheme === 'dark' ? ValuesDark : ValuesLight} alt="Values">
     </div>
     <div class="container">
       <div class="mission__cards">

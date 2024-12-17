@@ -2,7 +2,7 @@
   import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import './text-block.css';
 
-  interface TextBlockProps {
+  interface Props {
     preHeadeline?:string,  
     mainHeadline?:string, 
     mainText?:string, 
@@ -13,7 +13,7 @@
     }[]
 	}
 
-  let { mainHeadline, preHeadeline, mainText, buttons }:TextBlockProps = $props();
+  let { mainHeadline, preHeadeline, mainText, buttons }:Props = $props();
 </script>
 
 <div class="section__content text-block">
