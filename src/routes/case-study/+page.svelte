@@ -1,8 +1,20 @@
 <script>
+  import { colorScheme } from '$lib/store';
+
   import CounterSection from '$lib/components/CounterSection/CounterSection.svelte';
   import Tags from '$lib/components/Tags/Tags.svelte';
+  import ImageTextRow from '$lib/components/ImageTextRow/ImageTextRow.svelte';
+  import TextBlock from '$lib/components/TextBlock/TextBlock.svelte';
 
-  import HeroBg from '$lib/assets/images/work/HeroBg.svg';
+  import './case-study.css';
+
+  import HeroBg from '$lib/assets/images/case-study/HeroBg.svg';
+  import ChallengeImgLight from '$lib/assets/images/case-study/ChallengeImgLight.png';
+  import ChallengeImgDark from '$lib/assets/images/case-study/ChallengeImgDark.png';
+  import SolutionImgLight from '$lib/assets/images/case-study/SolutionImgLight.png';
+  import SolutionImgDark from '$lib/assets/images/case-study/SolutionImgDark.png';
+  import LaptopLight from '$lib/assets/images/case-study/LaptopDark.png';
+  import LaptopDark from '$lib/assets/images/case-study/LaptopDark.png';
 
   let counterSectionDetails = {
     sectionClass: `section--light-grey`,
@@ -35,18 +47,83 @@
       }
     ]
   }
+
+  let challengeImageTextRow = {
+    imgUrl: ChallengeImgLight,
+    preHeadeline: `The Challenge`,
+    mainHeadline: `Outdated website led to poor engagement.`,
+    mainText: `Legacy Cabinets' previous website was outdated, lacking the functionality to showcase their full product range. User testing confirmed that visitors struggled with navigation and accessing product details, resulting in a poor user experience and lost engagement opportunities.`
+  }
+
+  let transformationsText = {
+    preHeadeline: `The Transformation`,
+    mainHeadline: `Created strategic site architecture and intuitive product detail pages`,
+    mainText: `CCG began prototyping an intuitive user experience for Legacy, starting with a streamlined navigation system that categorized their complex cabinet lines. We also designed detailed product wireframes to effectively organize Legacy’s extensive offerings, including wood species, door styles, and finish options.`,
+  }
+
+  let solutionImageTextRow = {
+    imgUrl: SolutionImgLight,
+    preHeadeline: `The Solution`,
+    mainHeadline: `Maintaining performance on smaller screens`,
+    mainText: `Once in development, CCG's UX and dev teams worked together to optimize the mobile experience, ensuring the robust site design was fully responsive and easy to navigate across all screen sizes. We focused on maintaining performance without compromising functionality on smaller devices.`
+  }
+
+  let resultsText = {
+    preHeadeline: `The Results`,
+    mainHeadline: `The Final Product`,
+    mainText: `The end result was a site that reflected the quality and aesthetics of the Legacy brand, with a more intuitive user experience that made it easy to explore their expansive cabinet lines. We also integrated advanced tools to enhance functionality and boost user engagement.`,
+  }
 </script>
 
 <div class="our-work">
-<div class="hero-section">
-  <div class="container">
-    <Tags {...tagsList} />
-    <h1>Legacy Cabinets</h1>
+  <div class="hero-section">
+    <div class="container">
+      <Tags {...tagsList} />
+      <h1>Legacy Cabinets</h1>
+    </div>
+    <img class="hero-section__img" src={HeroBg} alt="">
   </div>
-  <img class="hero-section__img" src={HeroBg} alt="">
-</div>
 
-<CounterSection {...counterSectionDetails}/>
+  <CounterSection {...counterSectionDetails}/>
 
+  <div class="section challenge-section">
+    <div class="container">
+      <ImageTextRow {...challengeImageTextRow} imgUrl={$colorScheme === 'dark' ? ChallengeImgDark : ChallengeImgLight} />
+    </div>
+  </div>
 
+  <div class="section">
+    <div class="container">
+      <TextBlock {...transformationsText} />
+
+      <div>Slider</div>
+    </div>
+  </div>
+
+  <div class="section testimonials">
+    <div class="container">
+      <p class="text-callout">
+        Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.”
+      </p>
+      <div class="testimonials__meta">
+        <span class="text-semibold">John</span>
+        <span class="text-light">Marketing Director</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section--no-vertical-spacing seaction--light-grey">
+    <div class="container">
+      <ImageTextRow {...solutionImageTextRow} imgUrl={$colorScheme === 'dark' ? SolutionImgDark : SolutionImgLight} />
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <TextBlock {...resultsText} />
+    </div>
+    <div class="container">
+      <img src={$colorScheme === 'dark' ? LaptopDark : LaptopLight} alt="">
+    </div>
+  </div>
 </div>

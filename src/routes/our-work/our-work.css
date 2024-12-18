@@ -1,3 +1,7 @@
+.our-work .hero-section__img {
+  top: 18px;
+}
+
 .clients:after {
   content: '';
   display: block;

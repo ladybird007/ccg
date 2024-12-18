@@ -226,7 +226,7 @@
     </div>
   </div>
 
-  <div class="section case-studies">
+  <div class="section case-studies-section">
     <RunningString runningText={"Don't take our word for it."} />
     <div class="container section__content">
       <p class="text-simple pre-headline">Case Studies</p>
@@ -246,15 +246,14 @@
           <a href="/case-study" class="btn btn--outline">View Case Study</a>
         </div>
       </div>
-
     </div>
+
+    <div>Slider</div>
   </div>
-
-
 </div>
 
 <style>
-  .case-studies .col--text {
+  .case-studies-section .col--text {
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-m);
     align-items: flex-start;
@@ -263,7 +262,7 @@
     .why-ccg .row {
       gap: var(--spacing-s);
     }
-    .case-studies .row {
+    .case-studies-section .row {
       flex-direction: column;
     }
   }
@@ -281,11 +280,11 @@
     }
   }
   @media (min-width: 992px) {
-    .case-studies .col {
+    .case-studies-section .col {
       flex: 1;
       flex-shrink: 0;
     }
-    .case-studies .col--text {
+    .case-studies-section .col--text {
       padding-left: var(--spacing-l);
     }
   }

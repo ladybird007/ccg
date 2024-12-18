@@ -72,6 +72,9 @@
 .text-light {
   font-weight: 300;
 }
+.text-semibold {
+  font-weight: 600;
+}
 .text-bold {
   font-weight: 700;
 }

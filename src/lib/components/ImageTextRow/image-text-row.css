@@ -2,24 +2,23 @@
   display: flex;
   margin-left: var(--spacing-s-neg);
   margin-right: var(--spacing-s-neg);
-  background-color: light-dark(var(--white-pale), var(--deep-navy-medium));
 }
 .image-text__col {
   background-repeat: no-repeat;
 }
-.image-text__col--teal {
+.image-text__col.teal {
   background-color: var(--teal);
   background-image: url(../../assets/images/home/row-teal-bg.svg);
   background-position: 0 0;
   background-size: 76% auto;
 }
-.image-text__col--green {
+.image-text__col.green {
   background-color: var( --deep-green);
   background-image: url(../../assets/images/home/row-green-bg.svg);
   background-position: 100% 0;
   background-size: auto 96%;
 }
-.image-text__col--light-grey {
+.image-text__col.light-grey {
   background-image: url(../../assets/images/digitalMarketing/row-img-text-bg.svg);
   background-position: 0 0;
   background-size: auto 70%;

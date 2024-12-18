@@ -22,7 +22,7 @@
 
 <div class="image-text">
   {#if rowItemProps.imgUrl}
-    <div class="image-text__col image-text__col--img image-text__col--{rowItemProps.addClassCol}" style="background-image: url('{rowItemProps.colImgBgUrl}')">
+    <div class="image-text__col image-text__col--img {rowItemProps.addClassCol}" style="background-image: url('{rowItemProps.colImgBgUrl}')">
       <img src={rowItemProps.imgUrl} alt="">
     </div>
   {/if}

@@ -217,7 +217,7 @@
       <h2>Marketing strategies that drive evolution.</h2>
 
       <div class="filters-button-group button-group tags">
-        <button class="button tag tag--grey is-checked" data-filter="*">all</button>
+        <button class="button tag tag--grey is-checked" data-filter="*">All</button>
         <button class="button tag tag--grey" data-filter=".traditional-marketing">Traditional Marketing</button>
         <button class="button tag tag--grey" data-filter=".digital-marketing">Digital Marketing</button>
         <button class="button tag tag--grey" data-filter=".medicare">Medicare</button>

@@ -1,0 +1,43 @@
+.challenge-section .image-text {
+  flex-direction: row-reverse;
+}
+
+
+.section.testimonials {
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+  background-color: var(--deep-green);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-image: url(../../lib/assets/images/case-study/testtimonials-bg.svg);
+  color: var(--white);
+}
+.testimonials__meta {
+  margin-top: var(--spacing-s);
+  font-size: 18px;
+  display: inline-flex;
+  gap: var(--spacing-s);
+}
+
+@media (max-width: 991px) {
+  .challenge-section .image-text {
+    flex-direction: column-reverse;
+  }
+  .challenge-section .image-text__col--text {
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .challenge-section .image-text__col--text {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .challenge-section .image-text {
+    flex-direction: row-reverse;
+  }
+  .challenge-section .image-text__col--text {
+    padding-left: var(--spacing-s);
+    padding-right: 0;
+  }
+}
