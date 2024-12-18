@@ -231,7 +231,7 @@ img {
   }
 }
 
-.section--no-vertical-spacing {
+.section.section--no-vertical-spacing {
   padding-top: 0;
   padding-bottom: 0;
 }

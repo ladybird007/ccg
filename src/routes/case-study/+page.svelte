@@ -86,7 +86,7 @@
 
   <CounterSection {...counterSectionDetails}/>
 
-  <div class="section challenge-section">
+  <div class="section section--no-vertical-spacing challenge-section">
     <div class="container">
       <ImageTextRow {...challengeImageTextRow} imgUrl={$colorScheme === 'dark' ? ChallengeImgDark : ChallengeImgLight} />
     </div>
