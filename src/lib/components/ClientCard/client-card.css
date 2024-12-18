@@ -40,6 +40,9 @@
 .client-card__logo-wrap svg path {
   fill: var(--white);
 }
+.client-card:hover {
+  cursor: url(../../assets/images/icons/cursor.svg) 2 2, pointer;
+}
 .client-card:hover .client-card__banner:after {
   opacity: 1;
 }

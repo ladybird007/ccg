@@ -41,6 +41,11 @@ body {
   display: flex;
 }
 
+.col--flex-1 {
+  flex: 1;
+  flex-shrink: 0;
+}
+
 .justify-space-between {
   justify-content: space-between;
 }
@@ -50,6 +55,9 @@ body {
 }
 .align-flex-end {
   align-items: flex-end;
+}
+.align-flex-start {
+  align-items: flex-start;
 }
 .align-center {
   align-items: center;

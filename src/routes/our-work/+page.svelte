@@ -21,131 +21,129 @@
   import ClientLegacy from '$lib/assets/images/work/ClientLegacy.png';
   import Legacy from '$lib/assets/images/clients/Legacy.svelte';
 
-  let clientCards = {
-    cards: [
-      {
-        class: `traditional-marketing strategic-consulting`,
-        imgUrl: ClientMiMotion,
-        logo: MiMotion,
-        headline: `75th Anniversary Branding`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/services/marketing`,
-            text: `Traditional Marketing`
-          },
-          {
-            type: `grey`,
-            url: `/services/strategy`,
-            text: `Strategic Consulting`
-          }
-        ]
-      },
-      {
-        class: `medicare traditional-marketing digital-marketing ui-ux`,
-        imgUrl: ClientVivaHealth,
-        logo: VivaHealth,
-        headline: `VIVA MEDICARE AEP Marketing`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/industries/medicare`,
-            text: `Medicare`
-          },
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Traditional Marketing`
-          },
-          {
-            type: `grey`,
-            url: `/services/digital-marketing`,
-            text: `Digital Marketing`
-          },
-          {
-            type: `grey`,
-            url: `/services/ux-design`,
-            text: `UI/UX`
-          }
-        ]
-      },
-      {
-        class: `digital-marketing strategic-consulting`,
-        imgUrl: ClientGlobalHealth,
-        logo: VivaHealth,
-        headline: `Global Health AEP Marketing`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Digital Marketing`
-          }, 
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Strategic Consultiing`
-          },
-        ]
-      },
-      {
-        class: `Strategic Consulting ui-ux`,
-        imgUrl: ClientIndustrialSupplier,
-        logo: MiMotion,
-        headline: `Industrial Supplier Website Redesign`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/services/strategy`,
-            text: `Strategic Consulting`
-          },
-          {
-            type: `grey`,
-            url: `/services/ux-design`,
-            text: `UI/UX`
-          }
-        ]
-      },
-      {
-        class: `strategic-consulting video`,
-        imgUrl: ClientMedicareCosmetics,
-        logo: VivaHealth,
-        headline: `Medicare Commercials Spots`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Strategic Consultiing`
-          },
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Video`
-          }
-        ]
-      },
-      {
-        class: `strategic-consulting ui-ux`,
-        imgUrl: ClientLegacy,
-        logo: Legacy,
-        headline: `Legacy Cabinets Website`,
-        tags: [
-          {
-            type: `grey`,
-            url: `/`,
-            text: `Strategic Consultiing`
-          },
-          {
-            type: `grey`,
-            url: `/services/ux-design`,
-            text: `UI/UX`
-          }
-        ]
-      },
-    ]
-  }
+  let clientCards = [
+    {
+      class: `traditional-marketing strategic-consulting`,
+      imgUrl: ClientMiMotion,
+      logo: MiMotion,
+      headline: `75th Anniversary Branding`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/services/marketing`,
+          text: `Traditional Marketing`
+        },
+        {
+          type: `grey`,
+          url: `/services/strategy`,
+          text: `Strategic Consulting`
+        }
+      ]
+    },
+    {
+      class: `medicare traditional-marketing digital-marketing ui-ux`,
+      imgUrl: ClientVivaHealth,
+      logo: VivaHealth,
+      headline: `VIVA MEDICARE AEP Marketing`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/industries/medicare`,
+          text: `Medicare`
+        },
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Traditional Marketing`
+        },
+        {
+          type: `grey`,
+          url: `/services/digital-marketing`,
+          text: `Digital Marketing`
+        },
+        {
+          type: `grey`,
+          url: `/services/ux-design`,
+          text: `UI/UX`
+        }
+      ]
+    },
+    {
+      class: `digital-marketing strategic-consulting`,
+      imgUrl: ClientGlobalHealth,
+      logo: VivaHealth,
+      headline: `Global Health AEP Marketing`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Digital Marketing`
+        }, 
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Strategic Consultiing`
+        },
+      ]
+    },
+    {
+      class: `Strategic Consulting ui-ux`,
+      imgUrl: ClientIndustrialSupplier,
+      logo: MiMotion,
+      headline: `Industrial Supplier Website Redesign`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/services/strategy`,
+          text: `Strategic Consulting`
+        },
+        {
+          type: `grey`,
+          url: `/services/ux-design`,
+          text: `UI/UX`
+        }
+      ]
+    },
+    {
+      class: `strategic-consulting video`,
+      imgUrl: ClientMedicareCosmetics,
+      logo: VivaHealth,
+      headline: `Medicare Commercials Spots`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Strategic Consultiing`
+        },
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Video`
+        }
+      ]
+    },
+    {
+      class: `strategic-consulting ui-ux`,
+      imgUrl: ClientLegacy,
+      logo: Legacy,
+      headline: `Legacy Cabinets Website`,
+      tags: [
+        {
+          type: `grey`,
+          url: `/`,
+          text: `Strategic Consultiing`
+        },
+        {
+          type: `grey`,
+          url: `/services/ux-design`,
+          text: `UI/UX`
+        }
+      ]
+    },
+  ]
 
   onMount(() => {
-    const grid = document.querySelector('.clients');
+    const grid = document.querySelector('.grid');
     let iso = new Isotope( grid, {
       itemSelector: '.client-card',
       layoutMode: 'fitRows',
@@ -228,9 +226,9 @@
 
 
       {#if clientCards}
-        <div class="clients">
+        <div class="clients grid">
           <div class="grid-sizer"></div>
-          {#each clientCards.cards as card}
+          {#each clientCards as card}
             <ClientCard {...card} />
           {/each}
         </div>

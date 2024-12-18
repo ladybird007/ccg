@@ -172,6 +172,10 @@ p a:not(.btn):not(.logo) {
   letter-spacing: -0.01em;
 }
 
+.text-family {
+  font-family: 'Family', sans-serif;
+}
+
 .headline-highlight {
   position: relative;
 }

@@ -99,4 +99,18 @@
     </div>
   </div>
 
+  <div class="section">
+    <div class="container section__content">
+      <p class="text-simple pre-headline">
+        Meet the Team
+      </p>
+      <div class="row justify-space-between">
+        <h2>Meet our team of problem-solvers.</h2>
+        <a href="/about/team" class="btn btn--outline">Meet the Team</a>
+      </div>
+
+      <div>Slider</div>
+    </div>
+  </div>
+
 </div>
