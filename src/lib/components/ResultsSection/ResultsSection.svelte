@@ -4,7 +4,7 @@
   import Accordion from "../Accordion/Accordion.svelte";
   import './results-section.css';
 
-  interface ResultsSectionProps {
+  interface Props {
     runningText?: string,
     mainHeadline?: string,
     preHeadeline?: string, 
@@ -21,7 +21,7 @@
     }[]
 	}
 
-  const resultsProps:ResultsSectionProps = $props();
+  const resultsProps:Props = $props();
 
 </script>
 

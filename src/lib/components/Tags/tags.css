@@ -1,0 +1,44 @@
+.tags {
+  margin-bottom: var(--spacing-s);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+.tag {
+  border-radius: 28px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
+  border-width: 1px;
+  border-style: solid;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tag--orange {
+  color: var(--white);
+  background-color: rgba(241, 138, 0, 0.15);
+  border-color: rgba(241, 138, 0, 0.7);
+}
+.tag--orange:hover {
+  background-color: rgba(241, 138, 0, 0.6);
+}
+
+.tag--grey {
+  color: var(--cool-gray-dark);
+  background-color: rgba(112, 112, 112, 0.08);
+  border-color: rgba(112, 112, 112, 0.08);
+}
+.tag--grey:hover {
+  background-color: rgba(112, 112, 112, 0.2);
+  border-color: rgba(112, 112, 112, 0.2);
+}
+
+.tag.is-checked {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}

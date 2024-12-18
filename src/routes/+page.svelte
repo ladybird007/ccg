@@ -243,7 +243,7 @@
           <p>
             Learn how we drove remarkable lead volume despite navigating an unprecedented economy.
           </p>
-          <a href="/our-work" class="btn btn--outline">View Case Study</a>
+          <a href="/case-study" class="btn btn--outline">View Case Study</a>
         </div>
       </div>
 
