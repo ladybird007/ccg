@@ -1,0 +1,108 @@
+.simple-accordion {
+  width: 100%;
+}
+.simple-accordion .accordion-item {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--cool-gray-medium);
+}
+.simple-accordion .accordion-item-header {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-right: var(--spacing-m);
+}
+.simple-accordion .accordion-item-header:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(../../../lib/assets/images/accordion/small-plus.svg) no-repeat 50% 50%;
+  transition: all 0.3s;
+}
+.simple-accordion .open .accordion-item-header:after {
+  transform: translateY(-50%) rotate(45deg);
+}
+.simple-accordion .accordion-item-body {
+  padding-top: var(--spacing-xxs);
+}
+
+.team-single__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+.team-single__socials {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+}
+.team-single__socials a {
+  color: inherit;
+}
+.team-single__socials a:hover {
+  color: var(--orange);
+}
+.team-single__socials a:first-of-type {
+  margin-left: var(--spacing-xs);
+}
+.team-single__photo {
+  flex-shrink: 0;
+}
+@media (max-width: 1279px) {
+  .team-single__details,
+  .team-single__add-details {
+    gap: var(--spacing-m);
+  }
+}
+@media (max-width: 991px) {
+  .team-single__details,
+  .team-single__add-details {
+    flex-direction: column;
+  }
+  .team-single__photo,
+  .team-single__pre-accordion br {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .team-single__photo-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .team-single__text {
+    position: relative;
+  }
+  .team-single__photo-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 250px;
+  }
+  .team-single__photo-mobile img {
+    height: 100%;
+    width: auto;
+  }
+} 
+@media (min-width: 992px) {
+  .team-single__pre-accordion {
+    width: 325px;
+    flex-shrink: 0;
+  }
+  .team-single__photo-mobile {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .team-single__details,
+  .team-single__add-details {
+    gap: var(--spacing-l);
+  }
+}

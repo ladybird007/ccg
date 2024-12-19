@@ -68,6 +68,10 @@ a {
   text-decoration: none;
 }
 
+svg path {
+  transition: all 0.3s;
+}
+
 ul {
   list-style: none;
 }

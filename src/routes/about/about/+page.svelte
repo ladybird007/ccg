@@ -14,11 +14,6 @@
 
   import './about.css';
 
-
-  let RunningText ={
-    runningText: 'Radically Honest, Creative, & Smart, Not Smug'
-  }
-
   let MissionText = {
     preHeadeline: `Our Mission, Vision & Core Values`,
     mainHeadline: `We've put a lot of thought into what it is that makes us who we are.`,
@@ -85,7 +80,7 @@
   </div>
 
   <div class="section mission">
-    <RunningString {...RunningText} />
+    <RunningString runningText={'Radically Honest, Creative, & Smart, Not Smug'} />
     <div class="container container--small text-center">
       <TextBlock {...MissionText} />
     </div>

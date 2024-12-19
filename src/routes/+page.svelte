@@ -8,6 +8,8 @@
   import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
 
+  import './index.css';
+
   import VideoPlay from '$lib/assets/images/home/VideoPlay.jpg';
   import WhyPeople from '$lib/assets/images/home/WhyPeople.svg';
   import WhyExperience from '$lib/assets/images/home/WhyExperience.svg';
@@ -251,50 +253,3 @@
     <div>Slider</div>
   </div>
 </div>
-
-<style>
-  .case-studies-section .col--text {
-    padding-top: var(--spacing-m);
-    padding-bottom: var(--spacing-m);
-    align-items: flex-start;
-  }
-  @media (max-width: 991px) {
-    .why-ccg .row {
-      gap: var(--spacing-s);
-    }
-    .case-studies-section .row {
-      flex-direction: column;
-    }
-  }
-  @media (max-width: 767px) {
-    .why-ccg {
-      gap: var(--spacing-m);
-    }
-    .why-ccg .row {
-      gap: var(--spacing-m);
-    }
-  }
-  @media (max-width: 480px) {
-    .why-ccg .row {
-      flex-direction: column;
-    }
-  }
-  @media (min-width: 992px) {
-    .case-studies-section .col {
-      flex: 1;
-      flex-shrink: 0;
-    }
-    .case-studies-section .col--text {
-      padding-left: var(--spacing-l);
-    }
-  }
-  @media (min-width: 1280px) {
-    .why-ccg .row {
-      gap: var(--spacing-2xl);
-    }
-    .case-studies .row {
-      margin-top: var(--spacing-m);
-    }
-  }
-  
-</style>

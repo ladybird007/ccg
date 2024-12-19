@@ -13,13 +13,13 @@
     link?:string
   }
 
-  let cards:Props = $props();
+  let card:Props = $props();
 </script>
   
-<div class="team-card {cards.class}">
-  {#if cards.imgUrl}
+<a href={card.link} class="team-card {card.class}">
+  {#if card.imgUrl}
     <div class="team-card__photo">
-      <img src={cards.imgUrl} alt={cards.name}>
+      <img src={card.imgUrl} alt={card.name}>
       <div class="team-card__details">
         <span class="text-simple">View Details</span>
         <span class="team-card__arrow">
@@ -30,16 +30,16 @@
   {/if}
 
   <div class="team-card__content">
-    {#if cards.name}
+    {#if card.name}
       <h3 class="team-card__name">
-        {cards.name}
+        {card.name}
       </h3>
     {/if}
-    {#if cards.position}
+    {#if card.position}
       <p class="text-simple team-card__position">
-        {cards.position}
+        {card.position}
       </p>
     {/if}
   </div>
-</div>
+</a>
   

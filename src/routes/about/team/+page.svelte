@@ -76,7 +76,8 @@
       class: `leadership digital creative`,
       imgUrl: SamHumphries,
       name: `Sam Humphries`, 
-      position: `Digital Creative Director`
+      position: `Digital Creative Director`,
+      link: `/about/SamHumphries`
     },
     {
       class: `digital`,
