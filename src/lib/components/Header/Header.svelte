@@ -88,6 +88,7 @@
                 <ul>
                   <li><a href="/about/about">About</a></li>
                   <li><a href="/about/team">Team</a></li>
+                  <li><a href="/about/approach">Our Approach</a></li>
                 </ul>
               </div>
               {/if}

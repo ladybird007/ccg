@@ -28,6 +28,13 @@
 .icon-list__list--chart li.icon-list__li-chart2:before {
   background-image: url(../../assets/images/icons/list-chart-2.svg);
 }
+.icon-list__list a {
+  color: inherit;
+}
+.icon-list__list a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
 @media (max-width: 991px) {
   .icon-list__text {
     margin-bottom: var(--spacing-m);

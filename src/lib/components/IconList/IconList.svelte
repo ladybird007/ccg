@@ -1,5 +1,4 @@
 <script lang=ts>
-  import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import './icon-list.css';
 
   interface Props {
@@ -8,7 +7,8 @@
     type?:string,
     listItems?:{
       icon?: string,
-      text: string,
+      text?: string,
+      link?: string
     }[]
 	}
 
@@ -17,30 +17,37 @@
 </script>
 
 <div class="icon-list">
+  {#if mainHeadline}
   <div class="icon-list__text section__content">
     {#if preHeadeline}
-      <p class="text-simple in-line">
-        <img src={SmallOrangeCircle} alt="">
+      <p class="text-simple pre-headline">
         {preHeadeline}
       </p>
     {/if}
-    {#if mainHeadline}
-      <h2>
-        {@html mainHeadline}
-      </h2>
-    {/if}
+    <h2>
+      {@html mainHeadline}
+    </h2>
   </div>
+  {/if}
   {#if listItems}
   <div class="icon-list__list-wrap">
     <ul class="icon-list__list icon-list__list--{type} h4">
       {#each listItems as item}
         {#if item.icon}
           <li class="icon-list__li-chart2">
-            {item.text}
+            {#if item.link}
+              <a href={item.link}>{item.text}</a>
+            {:else}
+              {item.text}
+            {/if}
           </li>
         {:else}
           <li>
-            {item.text}
+            {#if item.link}
+              <a href={item.link}>{item.text}</a>
+            {:else}
+              {item.text}
+            {/if}
           </li>
         {/if}
       {/each}

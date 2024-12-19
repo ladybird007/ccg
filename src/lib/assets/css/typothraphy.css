@@ -178,6 +178,7 @@ p a:not(.btn):not(.logo) {
 
 .headline-highlight {
   position: relative;
+  display: inline-flex;
 }
 .headline-highlight:before {
   content: '';

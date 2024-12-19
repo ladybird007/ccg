@@ -192,6 +192,10 @@ img {
   .buttons {
     gap: var(--spacing-xs);
   }
+
+  .row {
+    flex-direction: column;
+  }
 }
 @media (min-width: 768px) {
   .buttons {

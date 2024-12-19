@@ -1,14 +1,26 @@
 <script lang=ts>
   import { Accordion, AccordionItem } from 'svelte-collapsible';
-  import Plus from '$lib/assets/images/accordion/Plus.svelte';
-  import Arrow from '$lib/assets/images/accordion/Arrow.svelte';
+  import IconList from "$lib/components/IconList/IconList.svelte";
+
   import './accordion.css';
 
+  import Plus from '$lib/assets/images/accordion/Plus.svelte';
+  import Arrow from '$lib/assets/images/accordion/Arrow.svelte';
+  
   interface Props { 
     accordionItems?:{
       key: string,
       title: string,
-      text: string
+      text: string,
+      image?: string,
+      iconList?: {
+        type?:string,
+        listItems:{
+          icon?: string,
+          text?: string,
+          link?: string
+        }[]
+      }
     }[]
 	}
 
@@ -33,9 +45,22 @@
         </div>
 			</div>
 			
-			<p slot='body'>
-				{ item.text }
-			</p>
+			<div slot='body' class="accordion-content">
+        {#if item.image}
+          <div class="accordion-img">
+            <img src={item.image} alt="">
+          </div>
+        {/if}
+				<div class="section__content accordion-desc">
+          <div class="text-family accordion-text">
+            {@html item.text}
+          </div>
+          {#if item.iconList}
+            <h3>Here’s how we do it:</h3>
+            <IconList type={item.iconList.type} listItems={item.iconList.listItems} />
+          {/if}
+        </div>
+			</div>
 
 		</AccordionItem>
 	
