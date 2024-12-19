@@ -60,4 +60,7 @@
   .form {
     width: 550px;
   }
+  .form--wide {
+    width: 650px;
+  }
 }
