@@ -1,6 +1,5 @@
 <script>
-  import { colorScheme } from '$lib/store';
-  import RunningIcons from '$lib/components/RunningIcons/RunningIcons.svelte';
+  import ClientsSection from '$lib/components/ClientsSection/ClientsSection.svelte';
   import Accordion from '$lib/components/Accordion/Accordion.svelte';
 
   import './approach.css';
@@ -100,13 +99,5 @@
     </div>
   </div>
 
-  <div class="section text-center">
-    <div class="container container--small section__content">
-      <p class="text-simple pre-headline">Our Clients</p>
-      <h2>Join the team of brands that trust CCG. You'll be in great company. </h2>
-    </div>
-    <div class="container">
-      <RunningIcons />
-    </div>
-  </div>
+  <ClientsSection />
 </div>

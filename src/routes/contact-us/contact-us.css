@@ -1,0 +1,36 @@
+.contact-data li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-m);
+}
+.contact-data a {
+  position: relative;
+  font-weight: 800;
+  color: inherit;
+  font-size: 24px;
+}
+.contact-data a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  background-color: var(--orange);
+  transition: right 0.3s;
+  height: 2px;
+  bottom: 0;
+}
+.contact-data a:hover {
+  color: var(--orange);
+}
+.contact-data a:hover:after {
+  right: 0;
+}
+.contact-data__icon {
+  width: 24px;
+  display: flex;
+  align-items: center;
+}
+.contact-data__icon img {
+  display: block;
+}

@@ -1,0 +1,63 @@
+.form {
+  background-color: var(--deep-green);
+  color: var(--white);
+  padding: var(--spacing-m);
+}
+
+.form input:not([type='submit']):not([type='checkbox']):not([type='radio']),
+.form textarea {
+  width: 100%;
+  border-radius: var(--border-radius-input);
+  background-color: var(--white);
+  border: 1px solid var(--deep-navy);
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text-dark);
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
+  outline: none;
+  transition: all 0.3s;
+}
+.form input:not([type='submit']):not([type='checkbox']):not([type='radio']) {
+  height: 52px;
+}
+.form textarea {
+  height: 163px;
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+  resize: none;
+  line-height: 1.3;
+}
+.form input:not([type='submit']):not([type='checkbox'])::placeholder,
+.form textarea::placeholder {
+  width: 100%;
+  color: #A4A4A4;
+}
+.form input:not([type='submit']):not([type='checkbox']):not([type='radio']):focus,
+.form textarea:focus {
+  border-color: #5CBCB9;
+  box-shadow: var(--shadow-focus), 0 0 1px 1px #5CBCB9;
+}
+.from__headline {
+  margin-bottom: var(--spacing-m);
+}
+.form__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+.form label {
+  display: block;
+  margin-bottom: var(--spacing-xxs);
+}
+
+@media (max-width: 991px) {
+  .form {
+    width: 100%;
+  }
+}
+@Media (min-width: 992px) {
+  .form {
+    width: 550px;
+  }
+}
