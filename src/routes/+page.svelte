@@ -1,4 +1,6 @@
-<script>  
+<script>
+// @ts-nocheck
+  
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
   import TextBlock from "$lib/components/TextBlock/TextBlock.svelte";
@@ -7,6 +9,8 @@
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
   import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
+
+  import Carousel from '$lib/components/Carousel/Carousel.svelte';
 
   import './index.css';
 
@@ -187,6 +191,25 @@
     ]
   }
 
+  let carouselDetails = {
+    testimonials: [
+      {
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        author: `John`,
+        position: `Marketing Director`
+      },
+      {
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor`,
+        author: `Jill`,
+        position: `VP, Global Sales`
+      },
+      {
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        author: `Jack`,
+        position: `Director, e-Commerce`
+      }
+    ]
+  }
 </script>
 
 <div class="home">
@@ -250,6 +273,6 @@
       </div>
     </div>
 
-    <div>Slider</div>
+    <Carousel {...carouselDetails} />
   </div>
 </div>

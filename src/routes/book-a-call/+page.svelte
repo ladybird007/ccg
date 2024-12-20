@@ -1,6 +1,6 @@
 <script>
-  import '../contact-us/contact-us.css';
   import '$lib/assets/css/form.css';
+  import '../contact-us/contact-us.css';
 
   import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
   import Brianna from '$lib/assets/images/book-call/Brianna.png';
