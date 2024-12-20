@@ -7,7 +7,6 @@
   import Blog from '$lib/components/Blog/Blog.svelte';
   import '../services.css';
 
-  import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import TopImageLight from '$lib/assets/images/digitalMarketing/topImageLight.svg';
   import TopImageDark from '$lib/assets/images/digitalMarketing/topImageDark.svg';
   import Icon1 from '$lib/assets/images/digitalMarketing/logos/Icon1.svg';
@@ -136,7 +135,7 @@
   <div class="section">
     <div class="container">
       <div class="section__content">
-        <p class="text-simple in-line"><img src={SmallOrangeCircle} alt=""> How We Stand Out</p>
+        <p class="text-simple pre-headline">How We Stand Out</p>
         <h2>
           Create scroll-stopping content.
         </h2>

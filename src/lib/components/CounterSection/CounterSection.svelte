@@ -1,5 +1,4 @@
 <script lang=ts>
-  import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
   import './counter-section.css';
 
   interface Props {
@@ -22,8 +21,7 @@
     <div class="counter">
       <div class="counter__text section__content">
         {#if preHeadeline}
-          <p class="text-simple in-line">
-            <img src={SmallOrangeCircle} alt="">
+          <p class="text-simple pre-headline">
             {preHeadeline}
           </p>
         {/if}
