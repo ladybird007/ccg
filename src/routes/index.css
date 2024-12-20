@@ -5,10 +5,8 @@
 }
 @media (max-width: 991px) {
   .why-ccg .row {
+    flex-direction: row;
     gap: var(--spacing-s);
-  }
-  .case-studies-section .row {
-    flex-direction: column;
   }
 }
 @media (max-width: 767px) {

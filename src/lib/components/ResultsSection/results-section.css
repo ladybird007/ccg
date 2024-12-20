@@ -1,12 +1,7 @@
 .results-section {
   overflow: hidden;
 }
-@media (max-width: 991px) {
-  .results-section .row {
-    gap: var(--spacing-m);
-    flex-direction: column;
-  }
-}
+
 @media (min-width: 992px) {
   .results-section .col {
     flex: 1;

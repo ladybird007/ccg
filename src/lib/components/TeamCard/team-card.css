@@ -46,6 +46,10 @@
 .team-card:hover {
   cursor: url(../../assets/images/icons/cursor.svg) 2 2, pointer;
 }
+.team-card__photo img {
+  width: 100%;
+  display: block;
+}
 .team-card__photo:hover img {
   filter: grayscale(0);
 }

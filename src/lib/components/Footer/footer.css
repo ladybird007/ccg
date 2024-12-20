@@ -148,6 +148,9 @@
     font-size: 24px;
   }
   
+  .footer .row {
+    flex-direction: row;
+  }
 }
 @media (min-width: 1280px) {
   .footer {
