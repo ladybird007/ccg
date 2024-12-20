@@ -3,9 +3,9 @@
 
   interface Props {
     tags: {
-      type:string,
-      text:string
-      url:string,
+      type: string,
+      text: string
+      url: string,
     }[]
   }
 

@@ -42,19 +42,19 @@
         text: `Email Marketing`
       },
       {
-        icon: `chart-2`,
+        chart2icon: true,
         text: `Digital Out-of-Home (DOOH)`
       },
       {
-        icon: `chart-2`,
+        chart2icon: true,
         text: `Connected TV (CTV)`
       },
       {
-        icon: `chart-2`,
+        chart2icon: true,
         text: `Over-the-Top Advertising (OTT)`
       },
       {
-        icon: `chart-2`,
+        chart2icon: true,
         text: `Data Analytics`
       }
     ]

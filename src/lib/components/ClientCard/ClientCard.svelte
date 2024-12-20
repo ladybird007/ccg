@@ -7,14 +7,14 @@
   import BlogArrow from '$lib/assets/images/icons/BigArrow.svelte';
 
   interface Props {
-    class?:string,
-    imgUrl?:string,
-    logo?:Component,
-    headline?:string, 
+    class?: string,
+    imgUrl?: string,
+    logo?: Component,
+    headline?: string, 
     tags?:{
-      type:string,
-      url:string,
-      text:string
+      type: string,
+      url: string,
+      text: string
     }[]
   }
 

@@ -14,7 +14,7 @@
       text: string,
       image?: string,
       iconList?: {
-        type?:string,
+        type?: string,
         listItems:{
           icon?: string,
           text?: string,

@@ -2,10 +2,10 @@
   import './text-block.css';
 
   interface Props {
-    preHeadeline?:string,  
-    mainHeadline?:string, 
-    mainText?:string, 
-    buttons?:{
+    preHeadeline?: string,  
+    mainHeadline?: string, 
+    mainText?: string, 
+    buttons?: {
       url: string,
       text: string,
       type: string

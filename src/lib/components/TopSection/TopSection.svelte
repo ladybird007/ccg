@@ -3,17 +3,17 @@
   import './top-section.css';
 
   interface TopSectionProps {
-    mainHeadline?:string, 
-    preHeadeline?:string,  
-    headlineHighlight?:string, 
-    subHeadline?:string, 
-    buttons?:{
+    mainHeadline?: string, 
+    preHeadeline?: string,  
+    headlineHighlight?: string, 
+    subHeadline?: string, 
+    buttons?: {
       url: string,
       text: string,
       type: string
     }[],
-    imgUrl?:string,
-    popupBtnUrl?:string,
+    imgUrl?: string,
+    popupBtnUrl?: string,
 	}
 
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, popupBtnUrl }:TopSectionProps = $props();

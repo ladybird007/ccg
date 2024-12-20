@@ -4,9 +4,9 @@
   import BlogArrow from "$lib/assets/images/icons/BlogArrow.svelte";
   
   interface Props {
-    imgUrl?:string,
-    addClass?:string,
-    blogList?:{
+    imgUrl?: string,
+    addClass?: string,
+    blogList?: {
       title: string,
       linkToPage: string,
       category: string,

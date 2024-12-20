@@ -6,11 +6,11 @@
   import BlogArrow from '$lib/assets/images/icons/BigArrow.svelte';
 
   interface Props {
-    class?:string,
-    imgUrl?:string,
-    name?:string, 
-    position?:string
-    link?:string
+    class?: string,
+    imgUrl?: string,
+    name?: string, 
+    position?: string
+    link?: string
   }
 
   let card:Props = $props();

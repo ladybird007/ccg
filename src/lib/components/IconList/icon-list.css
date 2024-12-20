@@ -8,6 +8,7 @@
 }
 .icon-list__list li {
   display: flex;
+  align-items: center;
   gap: var(--spacing-xs);
 }
 .icon-list__list li:before {
@@ -25,7 +26,7 @@
 .icon-list__list--chart li:before {
   background-image: url(../../assets/images/icons/list-chart.svg);
 }
-.icon-list__list--chart li.icon-list__li-chart2:before {
+.icon-list__list--chart li.chart2:before {
   background-image: url(../../assets/images/icons/list-chart-2.svg);
 }
 .icon-list__list a {

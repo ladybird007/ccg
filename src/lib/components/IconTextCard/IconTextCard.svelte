@@ -3,9 +3,9 @@
   
     interface Props {
       cards: {
-        icon?:string,
-        headline?:string, 
-        text?:string, 
+        icon?: string,
+        headline?: string, 
+        text?: string, 
         buttons?:{
           url: string,
           text: string,

@@ -2,10 +2,10 @@
   import './counter-section.css';
 
   interface Props {
-    sectionClass?:string,
-    preHeadeline?:string,  
-    mainHeadline?:string, 
-    mainText?:string, 
+    sectionClass?: string,
+    preHeadeline?: string,  
+    mainHeadline?: string, 
+    mainText?: string, 
     numbers?:{
       number?: number,
       suffix?: string, 
