@@ -4,7 +4,8 @@
 
   import './approach.css';
   
-  import HeroBg from '$lib/assets/images/case-study/HeroBg.svg';
+  import HeroBg from '$lib/assets/images/approach/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/approach/HeroBgMobile.svg';
   import ImageUnderstand from '$lib/assets/images/approach/ImageUnderstand.svg';
 
   let accordionItems = [
@@ -69,7 +70,8 @@
       <p class="text-simple pre-headline">About</p>
       <h1>Our Approach</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--lines mobile-hidden" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--diagram mobile-visible" src={HeroBgMobile} alt="">
   </div>
 
   <div class="section">

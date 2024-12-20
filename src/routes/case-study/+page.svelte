@@ -81,7 +81,7 @@
       <Tags {...tagsList} />
       <h1>Legacy Cabinets</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--lines" src={HeroBg} alt="">
   </div>
 
   <CounterSection {...counterSectionDetails}/>

@@ -5,6 +5,7 @@
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
   
   import HeroBg from '$lib/assets/images/about/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/about/HeroBgMobile.svg';
   import ValuesLight from '$lib/assets/images/about/ValuesLight.png';
   import ValuesDark from '$lib/assets/images/about/ValuesDark.png';
   import MissionRadicallyHonest from '$lib/assets/images/about/MissionRadicallyHonest.svg';
@@ -54,7 +55,8 @@
     <div class="container">
       <h1>About</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots2 mobile-hidden" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots2 mobile-visible" src={HeroBgMobile} alt="">
   </div>
 
   <div class="section intro">

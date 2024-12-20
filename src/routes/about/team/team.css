@@ -19,11 +19,6 @@
   .our-team .hero-section .section__content {
     padding-right: 60px;
   }
-  .our-team .hero-section__img {
-    height: 165px;
-    width: auto;
-    top: 80px;
-  }
   .team .grid-sizer,
   .team .team-card {
     width: 50%;

@@ -156,6 +156,10 @@ img {
   background-color: var(--deep-navy);
   color: var(--white);
 }
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
 .hero-section__img {
   position: absolute;
   right: 0;
@@ -201,18 +205,51 @@ img {
     padding-bottom: var(--spacing-m);
     gap: var(--spacing-s);
   }
-  .hero-section {
-    padding-top: var(--spacing-m);
-    padding-bottom: var(--spacing-m);
-  }
 
   .buttons {
     gap: var(--spacing-xs);
+  }
+
+  .hero-section {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    padding-right: var(--spacing-l);
+  }
+  .hero-section__img--dots {
+    height: 120px;
+    width: auto;
+    top: auto;
+    bottom: -35px;
+  }
+  .hero-section__img--dots2 {
+    height: 188px;
+    width: auto;
+    
+  }
+  .hero-section__img--lines {
+    height: 150px;
+    width: auto;
+    top: auto;
+    bottom: -52px;
+  }
+  
+  .hero-section__img--diagrams  {
+    top: auto;
+    bottom: -60px;
+    height: 165px;
+    width: auto;
+  }
+  .hero-section__img--diagram {
+    top: auto;
+    bottom: -40px;
   }
 }
 @media (min-width: 768px) {
   .buttons {
     gap: var(--spacing-s);
+  }
+  .mobile-visible {
+    display: none !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -228,6 +265,20 @@ img {
   .hero-section {
     padding-top: calc(1.5 * var(--spacing-m));
     padding-bottom: var(--spacing-xl);
+  }
+  .hero-section__img--dots {
+    height: 240px;
+    width: auto;
+  }
+  .hero-section__img--dots2,
+  .hero-section__img--lines {
+    height: 330px;
+    width: auto;
+  }
+  
+  .hero-section__img--diagrams  {
+    height: 280px;
+    width: auto;
   }
 }
 @media (min-width: 992px) {

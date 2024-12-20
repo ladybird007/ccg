@@ -223,7 +223,7 @@
       <p class="text-simple pre-headline">About</p>
       <h1>Meet the Team</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--diagrams" src={HeroBg} alt="">
   </div>
 
   <div class="section">

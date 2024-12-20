@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import "./our-work.css";
 
   import ClientCard from '$lib/components/ClientCard/ClientCard.svelte';
 
   import HeroBg from '$lib/assets/images/work/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/work/HeroBgMobile.svg';
 
   import ClientMiMotion from '$lib/assets/images/work/ClientMiMotion.png';
   import MiMotion from '$lib/assets/images/clients/MiMotion.svelte';
@@ -206,7 +207,8 @@
     <div class="container">
       <h1>Our Work</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots mobile-hidden" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots mobile-visible" src={HeroBgMobile} alt="">
   </div>
 
   <div class="section">

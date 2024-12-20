@@ -78,6 +78,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  transition: all 0.3s;
 }
 .header__col {
   display: flex;

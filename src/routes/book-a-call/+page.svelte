@@ -3,6 +3,7 @@
   import '../contact-us/contact-us.css';
 
   import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/contact-us/HeroBgMobile.svg';
   import Brianna from '$lib/assets/images/book-call/Brianna.png';
 </script>
 
@@ -11,7 +12,8 @@
     <div class="container">
       <h1>Book a Strategy Call</h1>
     </div>
-    <img class="hero-section__img" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots mobile-hidden" src={HeroBg} alt="">
+    <img class="hero-section__img hero-section__img--dots mobile-visible" src={HeroBgMobile} alt="">
   </div>
 
   <div class="section">
