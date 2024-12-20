@@ -36,12 +36,12 @@
   let tagsList = {
     tags: [
       {
-        type: `orange`,
+        type: `light-orange`,
         text: `Strategic Consulting`,
         url: `/services/strategy`
       },
       {
-        type: `orange`,
+        type: `light-orange`,
         text: `UI/UX`,
         url: `/services/ux-design`
       }

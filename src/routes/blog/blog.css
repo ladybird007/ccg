@@ -1,0 +1,129 @@
+.post-content {
+  font-family: 'Family', sans-serif; 
+}
+
+.post-content a:not(.tag):not(.btn),
+.post-meta a {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.post-content h2 {
+  margin-bottom: var(--spacing-s);
+}
+
+.post-content ul {
+  padding-left: 30px;
+  list-style: disc;
+  font-size: inherit;
+  line-height: 1.6;
+}
+
+.post-content ul {
+  font-size: inherit;
+}
+
+.post-content p:not(:last-child):not(.text-callout),
+.post-content ul:not(last-child) {
+  margin-bottom: var(--spacing-s);
+}
+
+.post sup {
+  line-height: 1;
+  font-size: 0.6em;
+}
+
+.post-meta {
+  display: flex;
+}
+
+.post-disclaimers {
+  padding-top: var(--spacing-m);
+  border-top: 1px solid var(--cool-gray);
+  font-size: 14px;
+  font-family: 'Soehne', sans-serif;
+  font-weight: 400;
+}
+.post-disclaimers p {
+  font-size: inherit;
+  margin-bottom: 0 !important;
+}
+.post-disclaimers sup {
+  position: relative;
+  top: 1px;
+  font-weight: 600;
+}
+
+.post-tags {
+  padding-top: var(--spacing-m);
+  border-top: 1px solid var(--cool-gray);
+}
+
+.post-hero {
+  position: relative;
+}
+.post-hero:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50%;
+  background-color: light-dark(var(--white-pale), var(--dark-bg));
+}
+.post-hero img,
+.post-img img {
+  display: block;
+  position: relative;
+}
+.post-img img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-caption {
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-xs);
+  font-style: italic;
+  border-bottom: 1px solid var(--cool-gray);
+}
+.post-row {
+  display: flex;
+  gap: var(--spacing-s);
+}
+
+@media (max-width: 767px) {
+  .post-content {
+    font-size: 16px;
+  }
+  .post-row {
+    flex-direction: column;
+  }
+  .post-meta {
+    gap: var(--spacing-xxs);
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .post-meta {
+    gap: var(--spacing-s);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .post-content {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .post-content {
+    font-size: 20px;
+  }
+  .post-quote {
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+    margin-left: -90px;
+    margin-right: -90px;
+  }
+  .post-disclaimers {
+    margin-top: var(--spacing-m);
+  }
+}

@@ -5,6 +5,7 @@
   
   interface Props {
     imgUrl?:string,
+    addClass?:string,
     blogList?:{
       title: string,
       linkToPage: string,
@@ -15,10 +16,10 @@
     }[]
   }
 
-  let { imgUrl, blogList }:Props = $props();
+  let { imgUrl, addClass, blogList }:Props = $props();
 </script>
 
-<div class="blog-block">
+<div class="blog-block {addClass}">
   {#if imgUrl}
     <div class="blog-block__item blog-block__item--img">
       <img src={imgUrl} alt="">

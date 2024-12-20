@@ -17,11 +17,21 @@
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s;
+  font-family: 'Soehne', sans-serif;
 }
-.tag--orange {
+.tag--light-orange {
   color: var(--white);
   background-color: rgba(241, 138, 0, 0.15);
   border-color: rgba(241, 138, 0, 0.7);
+}
+.tag--light-orange:hover {
+  background-color: rgba(241, 138, 0, 0.6);
+}
+
+.tag--orange {
+  color: var(--white);
+  background-color: var(--orange);
+  border-color: var(--orange);
 }
 .tag--orange:hover {
   background-color: rgba(241, 138, 0, 0.6);

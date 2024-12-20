@@ -31,7 +31,7 @@ body {
   padding-right: var(--spacing-s);
 }
 .container--small {
-  max-width: 923px;
+  max-width: calc(850px + 2 * var(--spacing-s));
 }
 .container--wide {
   max-width: 1512px;

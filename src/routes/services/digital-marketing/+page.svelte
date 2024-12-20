@@ -104,7 +104,7 @@
     blogList: [
       {
         title: `From Concept to Reality: Showcasing Impactful Design Case Studies`,
-        linkToPage: `/blog`,
+        linkToPage: `/blog/post`,
         category: `Digital Marketing`,
         categoryLink: `/blog`,
         date: `Oct 21`,
@@ -112,7 +112,7 @@
       },
       {
         title: `Designing for Humans: UX/UI Insights from Our Expert Team`,
-        linkToPage: `/blog`,
+        linkToPage: `/blog/post-with-image`,
         category: `Social Media`,
         categoryLink: `/blog`,
         date: `Oct 14`,
@@ -120,7 +120,7 @@
       },
       {
         title: `Future-Proofing Web Development: Navigating the Latest Trends`,
-        linkToPage: `/blog`,
+        linkToPage: `/blog/post`,
         category: `Analytics`,
         categoryLink: `/blog`,
         date: `Oct 2`,
