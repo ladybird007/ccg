@@ -2,18 +2,18 @@
   import './tags.css';
 
   interface Props {
+    tagsColor?: string,
     tags: {
-      type: string,
       text: string
       url: string,
     }[]
   }
 
-  let { tags }:Props = $props();
+  let { tagsColor = 'grey', tags }:Props = $props();
 </script>
 
-<div class="tags">
+<div class="tags {tagsColor}">
   {#each tags as tag}
-    <a href={tag.url} class="tag tag--{tag.type}">{tag.text}</a>
+    <a href={tag.url} class="tag">{tag.text}</a>
   {/each}
 </div>

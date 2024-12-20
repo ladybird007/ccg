@@ -30,12 +30,10 @@
       headline: `75th Anniversary Branding`,
       tags: [
         {
-          type: `grey`,
           url: `/services/marketing`,
           text: `Traditional Marketing`
         },
         {
-          type: `grey`,
           url: `/services/strategy`,
           text: `Strategic Consulting`
         }
@@ -48,22 +46,18 @@
       headline: `VIVA MEDICARE AEP Marketing`,
       tags: [
         {
-          type: `grey`,
           url: `/industries/medicare`,
           text: `Medicare`
         },
         {
-          type: `grey`,
           url: `/`,
           text: `Traditional Marketing`
         },
         {
-          type: `grey`,
           url: `/services/digital-marketing`,
           text: `Digital Marketing`
         },
         {
-          type: `grey`,
           url: `/services/ux-design`,
           text: `UI/UX`
         }
@@ -76,12 +70,10 @@
       headline: `Global Health AEP Marketing`,
       tags: [
         {
-          type: `grey`,
           url: `/`,
           text: `Digital Marketing`
         }, 
         {
-          type: `grey`,
           url: `/`,
           text: `Strategic Consultiing`
         },
@@ -94,12 +86,10 @@
       headline: `Industrial Supplier Website Redesign`,
       tags: [
         {
-          type: `grey`,
           url: `/services/strategy`,
           text: `Strategic Consulting`
         },
         {
-          type: `grey`,
           url: `/services/ux-design`,
           text: `UI/UX`
         }
@@ -112,12 +102,10 @@
       headline: `Medicare Commercials Spots`,
       tags: [
         {
-          type: `grey`,
           url: `/`,
           text: `Strategic Consultiing`
         },
         {
-          type: `grey`,
           url: `/`,
           text: `Video`
         }
@@ -130,12 +118,10 @@
       headline: `Legacy Cabinets Website`,
       tags: [
         {
-          type: `grey`,
           url: `/`,
           text: `Strategic Consultiing`
         },
         {
-          type: `grey`,
           url: `/services/ux-design`,
           text: `UI/UX`
         }
@@ -216,14 +202,14 @@
       <p class="text-simple pre-headline">Case Studies</p>
       <h2>Marketing strategies that drive evolution.</h2>
 
-      <div class="filters-button-group button-group tags">
-        <button class="button tag tag--grey is-checked" data-filter="*">All</button>
-        <button class="button tag tag--grey" data-filter=".traditional-marketing">Traditional Marketing</button>
-        <button class="button tag tag--grey" data-filter=".digital-marketing">Digital Marketing</button>
-        <button class="button tag tag--grey" data-filter=".medicare">Medicare</button>
-        <button class="button tag tag--grey" data-filter=".strategic-consulting">Strategic Consulting</button>
-        <button class="button tag tag--grey" data-filter=".ui-ux">UI/UX</button>
-        <button class="button tag tag--grey" data-filter=".video">Video</button>
+      <div class="filters-button-group button-group tags grey">
+        <button class="button tag is-checked" data-filter="*">All</button>
+        <button class="button tag" data-filter=".traditional-marketing">Traditional Marketing</button>
+        <button class="button tag" data-filter=".digital-marketing">Digital Marketing</button>
+        <button class="button tag" data-filter=".medicare">Medicare</button>
+        <button class="button tag" data-filter=".strategic-consulting">Strategic Consulting</button>
+        <button class="button tag" data-filter=".ui-ux">UI/UX</button>
+        <button class="button tag" data-filter=".video">Video</button>
       </div>
 
 

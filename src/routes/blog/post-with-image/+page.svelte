@@ -17,12 +17,10 @@
     },
     tags: [
       {
-        type: `orange`,
         text: `Strategic Consulting`,
         url: `/services/strategy`
       },
       {
-        type: `orange`,
         text: `UI/UX`,
         url: `/services/ux-design`
       }
@@ -38,7 +36,7 @@
 
 <div class="section section--light-grey">
   <div class="container container--small section__content">
-    <Tags tags={postDetails.tags} />
+    <Tags tags={postDetails.tags} tagsColor="orange" />
     <h1>{postDetails.title}</h1>
     <div class="post-meta">
       <span>by <a href={postDetails.author.url}>{postDetails.author.name}</a></span>

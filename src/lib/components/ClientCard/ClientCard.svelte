@@ -12,7 +12,6 @@
     logo?: Component,
     headline?: string, 
     tags?:{
-      type: string,
       url: string,
       text: string
     }[]

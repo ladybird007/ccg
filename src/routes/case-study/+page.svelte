@@ -36,12 +36,10 @@
   let tagsList = {
     tags: [
       {
-        type: `light-orange`,
         text: `Strategic Consulting`,
         url: `/services/strategy`
       },
       {
-        type: `light-orange`,
         text: `UI/UX`,
         url: `/services/ux-design`
       }
@@ -78,7 +76,7 @@
 <div class="our-work">
   <div class="hero-section">
     <div class="container">
-      <Tags {...tagsList} />
+      <Tags {...tagsList} tagsColor="light-orange" />
       <h1>Legacy Cabinets</h1>
     </div>
     <img class="hero-section__img hero-section__img--lines" src={HeroBg} alt="">

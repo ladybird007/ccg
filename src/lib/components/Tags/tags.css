@@ -19,35 +19,37 @@
   transition: all 0.3s;
   font-family: 'Soehne', sans-serif;
 }
-.tag--light-orange {
-  color: var(--white);
-  background-color: rgba(241, 138, 0, 0.15);
-  border-color: rgba(241, 138, 0, 0.7);
-}
-.tag--light-orange:hover {
-  background-color: rgba(241, 138, 0, 0.6);
-}
 
-.tag--orange {
-  color: var(--white);
-  background-color: var(--orange);
-  border-color: var(--orange);
-}
-.tag--orange:hover {
-  background-color: rgba(241, 138, 0, 0.6);
-}
-
-.tag--grey {
+.tags.grey .tag {
   color: var(--cool-gray-dark);
   background-color: rgba(112, 112, 112, 0.08);
   border-color: rgba(112, 112, 112, 0.08);
 }
-.tag--grey:hover {
+.tags.grey .tag:hover {
   background-color: rgba(112, 112, 112, 0.2);
   border-color: rgba(112, 112, 112, 0.2);
 }
 
-.tag.is-checked {
+.tags.light-orange .tag {
+  color: var(--white);
+  background-color: rgba(241, 138, 0, 0.15);
+  border-color: rgba(241, 138, 0, 0.7);
+}
+.tags.light-orange .tag:hover {
+  background-color: rgba(241, 138, 0, 0.6);
+}
+
+.tags.orange .tag {
+  color: var(--white);
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+.tags.orange .tag:hover {
+  background-color: rgba(241, 138, 0, 0.6);
+}
+
+
+.tags .tag.is-checked {
   background-color: var(--orange);
   border-color: var(--orange);
   color: var(--white);
