@@ -15,6 +15,8 @@
 
   import './about.css';
 
+  const pageTitle =  `About`;
+
   let MissionText = {
     preHeadeline: `Our Mission, Vision & Core Values`,
     mainHeadline: `We've put a lot of thought into what it is that makes us who we are.`,
@@ -47,13 +49,16 @@
       }
     ]
   }
-
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <div class="about">
   <div class="hero-section">
     <div class="container">
-      <h1>About</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--dots2 mobile-hidden" src={HeroBg} alt="">
     <img class="hero-section__img hero-section__img--dots2 mobile-visible" src={HeroBgMobile} alt="">

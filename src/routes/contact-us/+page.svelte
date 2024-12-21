@@ -2,19 +2,24 @@
   import ClientsSection from '$lib/components/ClientsSection/ClientsSection.svelte';
   import '$lib/assets/css/form.css';
   import './contact-us.css';
- 
 
   import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
   import HeroBgMobile from '$lib/assets/images/contact-us/HeroBgMobile.svg';
   import Location from '$lib/assets/images/contact-us/Location.svg';
   import Phone from '$lib/assets/images/contact-us/Phone.svg';
   import Email from '$lib/assets/images/contact-us/Email.svg';
+
+  const pageTitle = `Contact US`;
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <div class="contact">
   <div class="hero-section">
     <div class="container">
-      <h1>Contact US</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--dots mobile-hidden" src={HeroBg} alt="">
     <img class="hero-section__img hero-section__img--dots mobile-visible" src={HeroBgMobile} alt="">

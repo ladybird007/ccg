@@ -29,6 +29,8 @@
   import AbbyWilliams from '$lib/assets/images/team/AbbyWilliams.png';
   import SpancerDavis from '$lib/assets/images/team/SpancerDavis.png';
 
+  const pageTitle = `Meet the Team`;
+
   let teamCards = [
     {
       class: `leadership`,
@@ -217,11 +219,15 @@
   })
 </script>
 
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
+
 <div class="our-team">
   <div class="hero-section">
     <div class="container section__content">
       <p class="text-simple pre-headline">About</p>
-      <h1>Meet the Team</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--diagrams" src={HeroBg} alt="">
   </div>

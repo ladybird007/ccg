@@ -22,6 +22,8 @@
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
   import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
 
+  const pageTitle =  `CCG`;
+
   let topSectionDetails ={
     preHeadeline: `Performance Marketing Agency`,
     mainHeadline: `Grow and evolve your business with strategies that `,
@@ -211,6 +213,11 @@
     ]
   }
 </script>
+
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <div class="home">
   <TopSection {...topSectionDetails} />

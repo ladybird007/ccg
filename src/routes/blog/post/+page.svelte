@@ -1,5 +1,6 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags/Tags.svelte";
+    import { tick } from "svelte";
 
   let postDetails = {
     title: `A New Age of New-to-Medicare Marketing`,
@@ -23,6 +24,10 @@
     ],
   }
 </script>
+
+<svelte:head>
+  <title>{postDetails.title}</title>
+</svelte:head>
 
 <div class="section section--light-grey">
   <div class="container container--small section__content">

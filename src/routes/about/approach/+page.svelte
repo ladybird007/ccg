@@ -8,6 +8,8 @@
   import HeroBgMobile from '$lib/assets/images/approach/HeroBgMobile.svg';
   import ImageUnderstand from '$lib/assets/images/approach/ImageUnderstand.svg';
 
+  const pageTitle = `Our Approach`;
+
   let accordionItems = [
       {
         key: `01`,
@@ -61,14 +63,18 @@
         title: `Evolve`,
         text: `Some text`
       }
-    ]
+  ]
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <div class="approach">
   <div class="hero-section">
     <div class="container section__content">
       <p class="text-simple pre-headline">About</p>
-      <h1>Our Approach</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--lines mobile-hidden" src={HeroBg} alt="">
     <img class="hero-section__img hero-section__img--diagram mobile-visible" src={HeroBgMobile} alt="">

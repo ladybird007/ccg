@@ -18,6 +18,8 @@
   import ImageTextRowLight from '$lib/assets/images/digitalMarketing/ImageTextBgLight.png';
   import ImageTextRowDark from '$lib/assets/images/digitalMarketing/ImageTextBgDark.png';
 
+  const pageTitle = `Digital Marketing`
+
   let sectionDetails = {
     preHeadeline: `Digital Marketing`,
     mainHeadline: `Turn ad spend into revenue. `,
@@ -129,6 +131,11 @@
   }
 
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
+
 <div class="services">
   <TopSection {...sectionDetails} imgUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
 

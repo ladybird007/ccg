@@ -5,12 +5,18 @@
   import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
   import HeroBgMobile from '$lib/assets/images/contact-us/HeroBgMobile.svg';
   import Brianna from '$lib/assets/images/book-call/Brianna.png';
+
+  const pageTitle = `Book a Strategy Call`;
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <div class="contact">
   <div class="hero-section">
     <div class="container">
-      <h1>Book a Strategy Call</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--dots mobile-hidden" src={HeroBg} alt="">
     <img class="hero-section__img hero-section__img--dots mobile-visible" src={HeroBgMobile} alt="">

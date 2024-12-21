@@ -34,6 +34,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>{postDetails.title}</title>
+</svelte:head>
+
 <div class="section section--light-grey">
   <div class="container container--small section__content">
     <Tags tags={postDetails.tags} tagsColor="orange" />

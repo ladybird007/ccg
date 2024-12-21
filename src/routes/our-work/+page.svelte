@@ -22,6 +22,8 @@
   import ClientLegacy from '$lib/assets/images/work/ClientLegacy.png';
   import Legacy from '$lib/assets/images/clients/Legacy.svelte';
 
+  const pageTitle = `Our Work`;
+
   let clientCards = [
     {
       class: `traditional-marketing strategic-consulting`,
@@ -188,10 +190,14 @@
   
 </script>
 
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
+
 <div class="our-work">
   <div class="hero-section">
     <div class="container">
-      <h1>Our Work</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--dots mobile-hidden" src={HeroBg} alt="">
     <img class="hero-section__img hero-section__img--dots mobile-visible" src={HeroBgMobile} alt="">

@@ -13,6 +13,8 @@
   import RowTicketsLight from '$lib/assets/images/medicare/RowTicketsLight.png';
   import RowTicketsDark from '$lib/assets/images/medicare/RowTicketsDark.png';
 
+  const pageTitle = `Medicare`;
+
   let sectionDetails ={
     preHeadeline: `Medicare Advantage Marketing`,
     mainHeadline: `Real Medicare Advantage Strategies`,
@@ -136,6 +138,10 @@
     ]
   }
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
   
 <div class="industries">
   <TopSection {...sectionDetails} />

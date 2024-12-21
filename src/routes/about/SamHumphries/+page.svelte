@@ -72,6 +72,10 @@
 
 </script>
 
+<svelte:head>
+  <title>{userInfo.firstName} {userInfo.lastName}</title>
+</svelte:head>
+
 <div class="team-single">
   <div class="section">
     <div class="container">

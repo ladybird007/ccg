@@ -16,6 +16,8 @@
   import LaptopLight from '$lib/assets/images/case-study/LaptopDark.png';
   import LaptopDark from '$lib/assets/images/case-study/LaptopDark.png';
 
+  const pageTitle = `Legacy Cabinets`;
+
   let counterSectionDetails = {
     sectionClass: `section--light-grey`,
     mainText: `Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.`,
@@ -73,11 +75,15 @@
   }
 </script>
 
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
+
 <div class="our-work">
   <div class="hero-section">
     <div class="container">
       <Tags {...tagsList} tagsColor="light-orange" />
-      <h1>Legacy Cabinets</h1>
+      <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--lines" src={HeroBg} alt="">
   </div>
