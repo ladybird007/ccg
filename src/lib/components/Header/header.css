@@ -95,6 +95,8 @@
   cursor: pointer;
 }
 
+.navigation .active > a,
+.navigation .active > button,
 .navigation a:not(.btn):not(.logo):hover,
 .navigation__sub-menu-btn:hover,
 .navigation__sub-menu-btn.opened {
@@ -115,6 +117,7 @@
   align-items: center;
   gap: var(--spacing-xxs);
 }
+
 .sub-menu li + li {
   margin-top: var(--spacing-xs);
 }
