@@ -40,6 +40,11 @@
 .client-card__logo-wrap svg path {
   fill: var(--white);
 }
+.client-card .client-card__title {
+  display: inline;
+  box-shadow: 0 0 var(--orange);
+  transition: all 0.3s;
+}
 .client-card:hover {
   cursor: url(../../assets/images/icons/cursor.svg) 2 2, pointer;
 }
@@ -51,7 +56,7 @@
 }
 .client-card:hover .client-card__title {
   color: var(--orange);
-  text-decoration: underline;
+  box-shadow: 0 2px var(--orange);
 }
 
 .client-card__banner img {

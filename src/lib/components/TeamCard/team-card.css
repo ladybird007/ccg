@@ -50,6 +50,25 @@
   width: 100%;
   display: block;
 }
+
+.team-card .team-card__name {
+  position: relative;
+  display: inline-block;
+}
+.team-card .team-card__name:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--orange);
+  transition: all 0.3s;
+}
+.team-card:hover .team-card__name:after {
+  right: 0;
+}
+
 .team-card__photo:hover img {
   filter: grayscale(0);
 }
@@ -62,7 +81,6 @@
 .team-card:hover .team-card__name {
   color: var(--orange);
   font-weight: 400;
-  text-decoration: underline;
 }
 
 @media (max-width: 1279px) {

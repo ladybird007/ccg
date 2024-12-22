@@ -10,15 +10,21 @@
 
 .blog-list__title {
   display: inline-block;
+  transition: 0s;
 }
 .blog-list__title,
 .blog-list a {
-  transition: all 0.3s;
   color: inherit;
 }
 
-.blog-list__title:hover {
-  text-decoration: underline;
+.blog-list__title h3 {
+  display: inline;
+  box-shadow: 0 0 var(--orange);
+  transition: all 0.3s;
+}
+
+.blog-list__title h3:hover {
+  box-shadow: 0 2px var(--orange);
 }
 .blog-list__title:hover .blog-list__arrow svg path {
   fill: var(--orange);

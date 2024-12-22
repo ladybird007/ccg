@@ -16,7 +16,7 @@
   width: 33px;
   height: 32px;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 50%;
   display: block;
   flex-shrink: 0;
 }
@@ -30,11 +30,13 @@
   background-image: url(../../assets/images/icons/list-chart-2.svg);
 }
 .icon-list__list a {
+  display: inline;
   color: inherit;
+  box-shadow: 0 0 var(--orange);
 }
 .icon-list__list a:hover {
   color: var(--orange);
-  text-decoration: underline;
+  box-shadow: 0 2px var(--orange);
 }
 @media (max-width: 991px) {
   .icon-list__text {

@@ -37,9 +37,11 @@
 
   <div class="client-card__content">
     {#if cards.headline}
-      <h3 class="client-card__title">
-        {cards.headline}
-      </h3>
+      <div>
+        <h3 class="client-card__title">
+          {cards.headline}
+        </h3>
+      </div>
     {/if}
   </div>
 
