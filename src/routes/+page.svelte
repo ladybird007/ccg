@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { windowWidth } from '$lib/store';
+  //import { windowWidth } from '$lib/store';
 
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
@@ -22,6 +22,8 @@
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
   import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
 
+  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4'
+
   const pageTitle =  `CCG`;
 
   let topSectionDetails ={
@@ -42,6 +44,7 @@
       }
     ],
     imgUrl: VideoPlay,
+    videoUrl: PartnerWithUs,
     popupBtnUrl: 'modal-link'
   };
 
@@ -193,7 +196,7 @@
     ]
   }
 
-  console.log(windowWidth);
+  //console.log(windowWidth);
 
   let carouselDetails = {
     slideToshow: 3,
@@ -286,7 +289,7 @@
       </div>
     </div>
 
-    {windowWidth}
+  
 
     <div class="container">
       <Carousel 

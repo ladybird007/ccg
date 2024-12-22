@@ -1,5 +1,6 @@
 <script lang=ts>
   // @ts-nocheck
+  import { slidesCount } from '$lib/store';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import Carousel from "svelte-carousel";
@@ -22,20 +23,20 @@
     }[]
   }
 
-  let { images, testimonials, slideToshow }:Props = $props();
-
-  let carousel; 
+  let { images, testimonials, slideToshow }:Props = $props();    
+  
+  let carousel;   
 </script>
 
 
 
-<div class="custom-carousel">
+<div class="custom-carousel">  
   {#if browser}
   <Carousel
     bind:this={carousel}
     let:loaded     
-    dots={false}
-    particlesToShow={slideToshow}
+    dots={false}    
+    particlesToShow={$slidesCount}
   > 
     {#if images}
       {#each images as image}

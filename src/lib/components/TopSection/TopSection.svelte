@@ -13,10 +13,11 @@
       type: string
     }[],
     imgUrl?: string,
+    videoUrl: string,
     popupBtnUrl?: string,
 	}
 
-  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, popupBtnUrl }:TopSectionProps = $props();
+  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, videoUrl, popupBtnUrl }:TopSectionProps = $props();
 </script>
 
 <div class="section top-section">
@@ -52,9 +53,16 @@
       </div>
       {#if imgUrl}
         <div class="top-section__media">
-          <img src={imgUrl} alt="">
-          {#if popupBtnUrl}
-            <span class="top-section__play-btn"></span>
+          {#if videoUrl}
+            <!-- svelte-ignore a11y_media_has_caption -->
+            <video class="js-video" width="100%" poster={imgUrl} controls autoplay>
+              <source src={videoUrl} type="video/mp4" />
+            </video>
+          {:else }
+            <img src={imgUrl} alt="">
+            {#if popupBtnUrl}
+              <span class="top-section__play-btn"></span>
+            {/if}
           {/if}
         </div>
       {/if}
