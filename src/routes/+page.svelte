@@ -1,6 +1,7 @@
 <script>
-// @ts-nocheck
-  
+  import { onMount } from 'svelte';
+  import { windowWidth } from '$lib/store';
+
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
   import TextBlock from "$lib/components/TextBlock/TextBlock.svelte";
@@ -9,7 +10,6 @@
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
   import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
-
   import Carousel from '$lib/components/Carousel/Carousel.svelte';
 
   import './index.css';
@@ -193,7 +193,12 @@
     ]
   }
 
+  console.log(windowWidth);
+
   let carouselDetails = {
+    slideToshow: 3,
+    slideToshowTablet: 2,
+    slideToshowMobile: 1,
     testimonials: [
       {
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
@@ -212,6 +217,7 @@
       }
     ]
   }
+
 </script>
 
 
@@ -280,6 +286,12 @@
       </div>
     </div>
 
-    <Carousel {...carouselDetails} />
+    {windowWidth}
+
+    <div class="container">
+      <Carousel 
+        {...carouselDetails}
+      />
+    </div>
   </div>
 </div>

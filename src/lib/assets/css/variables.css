@@ -106,6 +106,7 @@
   --spacing-m:      40px;
   --spacing-l:      80px;
   --spacing-xl:     88px;
+  --spacing-xl-neg:-88px;
   --spacing-2xl:    120px;
 }
 

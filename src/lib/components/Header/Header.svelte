@@ -153,7 +153,6 @@ import { onMount } from 'svelte';
     });
   });
   
-  
 </script>
 
 <header class="header" class:fixed={menuVisible}>

@@ -1,4 +1,4 @@
-<script lang=ts>
+<script lang="ts">
   import { Accordion, AccordionItem } from 'svelte-collapsible';
   import IconList from "$lib/components/IconList/IconList.svelte";
 

@@ -1,11 +1,17 @@
 <script lang=ts>
-	import emblaCarouselSvelte from 'embla-carousel-svelte';
+  // @ts-nocheck
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
+  import Carousel from "svelte-carousel";
 
   import './carousel.css';
   
   // type EmblaCarouselType = NonNullable<UseEmblaCarouselType[1]>;
 
   interface Props {
+    slideToshow: number,
+    slideToshowTablet?: number,
+    slideToshowMobile?: number,
     images?:{
       imgUrl: string
     }[],
@@ -16,30 +22,41 @@
     }[]
   }
 
-  let { images, testimonials }:Props = $props();
-  
+  let { images, testimonials, slideToshow }:Props = $props();
+
+  let carousel; 
 </script>
-	
-<div class="embla" use:emblaCarouselSvelte>
-  <div class="embla__container">
+
+
+
+<div class="custom-carousel">
+  {#if browser}
+  <Carousel
+    bind:this={carousel}
+    let:loaded     
+    dots={false}
+    particlesToShow={slideToshow}
+  > 
     {#if images}
       {#each images as image}
-        <div class="embla__slide">
-          <img src={image.imgUrl} alt="">
+        <div class="slide">
+          {#if loaded.includes(imageIndex)}
+            <img src={src.url} alt='' />
+          {/if}
         </div>
       {/each}
     {/if}
     {#if testimonials}
       {#each testimonials as item}
-        <div class="embla__slide">
-          <p class="font-family">“{item.text}”</p>
-          <p>
+        <div class="slide">
+          <p class="text-family">“{item.text}”</p>
+          <p class="slide__meta">
             <span class="text-semibold">{item.author}</span>
-            <span class="text-light">{item.position}</span>
+            <span class="text-light text-grey">{item.position}</span>
           </p>
         </div>
       {/each}
     {/if}
-  </div>
-
+  </Carousel>
+  {/if}
 </div>

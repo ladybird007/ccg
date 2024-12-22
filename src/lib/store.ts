@@ -1,10 +1,17 @@
 
-	import { writable } from 'svelte/store';
+import { writable } from 'svelte/store';
 
-	export const colorScheme = writable('light');
-	export const currentNavItem = writable('home');
+export const colorScheme = writable('light');
+export const currentNavItem = writable('home');
 
-	// you can subscribe to a store to react to its changes
-	colorScheme.subscribe(value => {
-		   
-	});
+export let windowWidth = window.innerWidth;
+
+const setWindowWidth = () => {
+  windowWidth = window.innerWidth;
+};
+window.addEventListener('resize', setWindowWidth);
+
+// you can subscribe to a store to react to its changes
+colorScheme.subscribe(value => {
+      
+});
