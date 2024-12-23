@@ -1,6 +1,7 @@
 <script lang="ts">  
+  import { page } from '$app/stores';
   import { onMount } from 'svelte';
-  import { colorScheme, currentNavItem } from '$lib/store';
+  import { colorScheme } from '$lib/store';
   import { slide } from 'svelte/transition';
   
   import Address from '../Address/Address.svelte';
@@ -116,7 +117,7 @@
       isExpanded2 = false,
       isExpanded3 = false;
 
-  function clickHandler(key:number) {
+  function subMenuHandler(key:number) {
     switch (key) {
       case 1:
         isExpanded2 = false,
@@ -139,21 +140,29 @@
         isExpanded3 = false;
     }
   }
+  
+  const darkHeaderPages = [
+    'about/about',
+    'about/team',
+    'about/approach',
+    'book-a-call',
+    'case-study',
+    'contact-us',
+    'our-work'
+  ]
 
-  function setActivePath(name:string) {
-    currentNavItem.update(v => v = name);
+  const setActiveClass = (val: string) => $page.url.pathname.includes(val); 
+
+  const setDarkHeaderBg = (val: string[]) => {
+    const currectPath = val.find(i => $page.url.pathname.includes(i));
+    return Boolean(currectPath)
   }
 
-  let activeItem = '';
-  onMount(() => {
-    currentNavItem.subscribe(value => {
-      activeItem = value;
-    });
-  });
   
+
 </script>
 
-<header class="header" class:fixed={menuVisible}>
+<header class="header" class:fixed={menuVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
   <div class="container">
     <div class="row justify-space-between align-center">
       <div class="header__col">
@@ -162,7 +171,7 @@
         </a>
         <div class="navigation navigation--dropdown">
           <ul class="navigation__list">
-            <li class:active={activeItem === 'services'} on:mouseenter={() => clickHandler(1)}>
+            <li class:active={setActiveClass('services')} on:mouseenter={() => subMenuHandler(1)}>
               <button class="navigation__sub-menu-btn" class:opened={isExpanded1} >
                 Services
                 <SmallArrow />
@@ -172,52 +181,52 @@
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div class="sub-menu" transition:slide>
                   <ul>
-                    <li><a href="/services/digital-marketing" on:click={() => setActivePath('services')}>Digital Marketing</a></li>
-                    <li><a href="/services/strategy" on:click={() => setActivePath('services')}>Strategy</a></li>
-                    <li><a href="/services/marketing" on:click={() => setActivePath('services')}>Marketing</a></li>
-                    <li><a href="/services/web-design" on:click={() => setActivePath('services')}>Web Design</a></li>
-                    <li><a href="/services/ux-design" on:click={() => setActivePath('services')}>UX Design</a></li>
-                    <li><a href="/services/enterprise-software" on:click={() => setActivePath('services')}>Enterprise Software</a></li>
+                    <li><a href="/services/digital-marketing">Digital Marketing</a></li>
+                    <li><a href="/services/strategy">Strategy</a></li>
+                    <li><a href="/services/marketing">Marketing</a></li>
+                    <li><a href="/services/web-design">Web Design</a></li>
+                    <li><a href="/services/ux-design">UX Design</a></li>
+                    <li><a href="/services/enterprise-software">Enterprise Software</a></li>
                   </ul>
                 </div>
               {/if}
             </li>
-            <li class:active={activeItem === 'industries'}>
-              <button class="navigation__sub-menu-btn {activeItem}" class:opened={isExpanded2} on:mouseenter={() => clickHandler(2)}>
+            <li class:active={setActiveClass('industries')}>
+              <button class="navigation__sub-menu-btn" class:opened={isExpanded2} on:mouseenter={() => subMenuHandler(2)}>
                 Industries
                 <SmallArrow />
               </button>
               {#if isExpanded2} 
               <div class="sub-menu" transition:slide>
                 <ul>
-                  <li><a href="/industries/b2b" on:click={() => setActivePath('industries')}>B2B</a></li>
-                  <li><a href="/industries/b2c" on:click={() => setActivePath('industries')}>B2C</a></li>
-                  <li><a href="/industries/medical" on:click={() => setActivePath('industries')}>Medical</a></li>
-                  <li><a href="/industries/medicare" on:click={() => setActivePath('industries')}>Medicare</a></li>
+                  <li><a href="/industries/b2b">B2B</a></li>
+                  <li><a href="/industries/b2c">B2C</a></li>
+                  <li><a href="/industries/medical">Medical</a></li>
+                  <li><a href="/industries/medicare">Medicare</a></li>
                 </ul>
               </div>
               {/if}
             </li>
-            <li class:active={activeItem === 'our-work'}>
-              <a class={activeItem} href="/our-work" on:click={() => setActivePath('our-work')}>Our Work</a>
+            <li class:active={setActiveClass('our-work')}>
+              <a href="/our-work">Our Work</a>
             </li>
-            <li class:active={activeItem === 'about'}>
-              <button class="navigation__sub-menu-btn {activeItem}" class:opened={isExpanded3} on:mouseenter={() => clickHandler(3)}>
+            <li class:active={setActiveClass('about')}>
+              <button class="navigation__sub-menu-btn" class:opened={isExpanded3} on:mouseenter={() => subMenuHandler(3)}>
                 About
                 <SmallArrow />
               </button>
               {#if isExpanded3} 
               <div class="sub-menu" transition:slide>
                 <ul>
-                  <li><a href="/about/about" on:click={() => setActivePath('about')}>About</a></li>
-                  <li><a href="/about/team" on:click={() => setActivePath('about')}>Team</a></li>
-                  <li><a href="/about/approach" on:click={() => setActivePath('about')}>Our Approach</a></li>
+                  <li><a href="/about/about">About</a></li>
+                  <li><a href="/about/team">Team</a></li>
+                  <li><a href="/about/approach">Our Approach</a></li>
                 </ul>
               </div>
               {/if}
             </li>
-            <li class:active={activeItem === 'blog'}>
-              <a class={activeItem} href="/blog/post" on:click={() => setActivePath('blog')}>Blog</a>
+            <li class:active={setActiveClass('blog')}>
+              <a href="/blog/post">Blog</a>
             </li>
           </ul>
         </div>
@@ -226,8 +235,8 @@
       <div class="header__col header__col--absolute">
         <div class="navigation">
           <ul class="navigation__list">
-            <li class="desktop-visible"  class:active={activeItem === 'contact-us'}>
-              <a class={activeItem} href="/contact-us" on:click={() => setActivePath('contact-us')}>Contact Us</a>
+            <li class="desktop-visible" class:active={setActiveClass('contact-us')}>
+              <a href="/contact-us">Contact Us</a>
             </li>
             <li><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
             <li>

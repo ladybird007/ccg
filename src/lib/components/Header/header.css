@@ -64,6 +64,16 @@
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
 }
+.header.dark {
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+.header.dark .switch-theme {
+  border-color: var(--white);
+}
+.header.dark .switch-theme:after {
+  background-image: url(../../assets/images/icons/switch-sun-white.svg);
+}
 .logo img {
   display: block;
 }
@@ -382,7 +392,8 @@
     border-radius: var(--border-radius-container);
     background-color: #fff;
     box-shadow: var(--shadow-xl);
-    border: 1px solid var(--deep-navy-pale)
+    border: 1px solid var(--deep-navy-pale);
+    color: var(--deep-navy);
   }
   .switch-theme:after {
     background-image: url(../../assets/images/icons/switch-sun.svg);

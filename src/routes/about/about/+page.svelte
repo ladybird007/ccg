@@ -6,6 +6,8 @@
   import TextBlock from '$lib/components/TextBlock/TextBlock.svelte';
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
   import Carousel from '$lib/components/Carousel/Carousel.svelte';
+
+  import './about.css';
   
   import HeroBg from '$lib/assets/images/about/HeroBg.svg';
   import HeroBgMobile from '$lib/assets/images/about/HeroBgMobile.svg';
@@ -19,8 +21,6 @@
   import Slide1 from '$lib/assets/images/team/slider/Slide1.png';
   import Slide2 from '$lib/assets/images/team/slider/Slide2.png';
   import Slide3 from '$lib/assets/images/team/slider/Slide3.png';
-
-  import './about.css';
 
   const pageTitle =  `About`;
 
@@ -91,6 +91,8 @@
       }         
       slidesCount.update(v => v = count);
 	};	
+
+  
 
   onMount(() => {		
 		window.addEventListener('resize', setWindowWidth);
