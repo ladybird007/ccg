@@ -1,10 +1,12 @@
 <script>
-  import { colorScheme } from '$lib/store';
+  import { onMount } from 'svelte';
+  import { colorScheme, slidesCount } from '$lib/store';
 
   import CounterSection from '$lib/components/CounterSection/CounterSection.svelte';
   import Tags from '$lib/components/Tags/Tags.svelte';
   import ImageTextRow from '$lib/components/ImageTextRow/ImageTextRow.svelte';
   import TextBlock from '$lib/components/TextBlock/TextBlock.svelte';
+  import Carousel from '$lib/components/Carousel/Carousel.svelte';
 
   import './case-study.css';
 
@@ -15,6 +17,10 @@
   import SolutionImgDark from '$lib/assets/images/case-study/SolutionImgDark.png';
   import LaptopLight from '$lib/assets/images/case-study/LaptopDark.png';
   import LaptopDark from '$lib/assets/images/case-study/LaptopDark.png';
+
+  import Slide1 from '$lib/assets/images/case-study/slider/Slide1.png';
+  import Slide2 from '$lib/assets/images/case-study/slider/Slide2.png';
+  import Slide3 from '$lib/assets/images/case-study/slider/Slide3.png';
 
   const pageTitle = `Legacy Cabinets`;
 
@@ -73,6 +79,49 @@
     mainHeadline: `The Final Product`,
     mainText: `The end result was a site that reflected the quality and aesthetics of the Legacy brand, with a more intuitive user experience that made it easy to explore their expansive cabinet lines. We also integrated advanced tools to enhance functionality and boost user engagement.`,
   }
+
+  let carouselSlides = [
+    {
+      url: Slide1
+    },
+    {
+      url: Slide2
+    },
+    {
+      url: Slide3
+    },
+  ]
+
+  const debounce = (func, delay) => {
+		let timer;
+
+		return function () {
+			const context = this;
+			const args = arguments;
+			clearTimeout(timer);
+			timer = setTimeout(() => func.apply(context, args), delay);
+		};
+	};
+	
+	const setWindowWidth = () => {    		
+    let count = 0
+    if (window.innerWidth < 768) {
+      count = 1
+      } else if (window.innerWidth > 1279) {
+        count = 3
+      } else {
+        count = 2
+      }         
+      slidesCount.update(v => v = count);
+	};	
+
+  onMount(() => {		
+		window.addEventListener('resize', setWindowWidth);
+		
+		return () => {
+			window.removeEventListener('resize', setWindowWidth);
+		}
+	}); 
 </script>
 
 <svelte:head>
@@ -88,7 +137,7 @@
     <img class="hero-section__img hero-section__img--lines" src={HeroBg} alt="">
   </div>
 
-  <CounterSection {...counterSectionDetails}/>
+  <CounterSection {...counterSectionDetails}/> 
 
   <div class="section section--no-vertical-spacing challenge-section">
     <div class="container">
@@ -99,9 +148,8 @@
   <div class="section">
     <div class="container">
       <TextBlock {...transformationsText} />
-
-      <div>Slider</div>
     </div>
+    <Carousel images={carouselSlides} /> 
   </div>
 
   <div class="section testimonials">

@@ -3,18 +3,13 @@
   import { slidesCount } from '$lib/store';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import Carousel from "svelte-carousel";
+  import Carousel from "svelte-carousel";  
 
   import './carousel.css';
-  
-  // type EmblaCarouselType = NonNullable<UseEmblaCarouselType[1]>;
 
   interface Props {
-    slideToshow: number,
-    slideToshowTablet?: number,
-    slideToshowMobile?: number,
     images?:{
-      imgUrl: string
+      url: string
     }[],
     testimonials?:{
       text: string,
@@ -23,15 +18,14 @@
     }[]
   }
 
-  let { images, testimonials, slideToshow }:Props = $props();    
-  
-  let carousel;   
+  let { images, testimonials }:Props = $props();    
+
+  let carousel;  		 
 </script>
 
 
-
-<div class="custom-carousel">  
-  {#if browser}
+<div class="custom-carousel" class:images={images}>  
+  {#if browser} 
   <Carousel
     bind:this={carousel}
     let:loaded     
@@ -41,9 +35,9 @@
     {#if images}
       {#each images as image}
         <div class="slide">
-          {#if loaded.includes(imageIndex)}
-            <img src={src.url} alt='' />
-          {/if}
+          <div class="slide__img">
+            <img src={image.url} alt='' />
+          </div>
         </div>
       {/each}
     {/if}
@@ -58,6 +52,6 @@
         </div>
       {/each}
     {/if}
-  </Carousel>
+    </Carousel>  
   {/if}
 </div>

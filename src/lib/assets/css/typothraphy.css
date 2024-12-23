@@ -188,10 +188,14 @@ p a:not(.btn):not(.logo) {
 .headline-highlight:before {
   content: '';
   position: absolute;
-  width: 100%;
+  right: 100%;
   left: 0;
   z-index: -1;
   background-color: light-dark(var(--teal), var(--deep-green));
+}
+h1.visible .headline-highlight:before,
+h2.visible .headline-highlight:before {
+  right: 0;
 }
 h1 .headline-highlight:before {
   height: 30px;

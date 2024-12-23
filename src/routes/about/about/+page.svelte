@@ -1,8 +1,11 @@
 <script>
-  import { colorScheme } from '$lib/store';
+  import { onMount } from 'svelte';
+  import { colorScheme, slidesCount } from '$lib/store';
+
   import RunningString from '$lib/components/RunningString/RunningString.svelte';
   import TextBlock from '$lib/components/TextBlock/TextBlock.svelte';
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
+  import Carousel from '$lib/components/Carousel/Carousel.svelte';
   
   import HeroBg from '$lib/assets/images/about/HeroBg.svg';
   import HeroBgMobile from '$lib/assets/images/about/HeroBgMobile.svg';
@@ -12,6 +15,10 @@
   import MissionRelationships from '$lib/assets/images/about/MissionRelationships.svg';
   import MissionOneSize from '$lib/assets/images/about/MissionOneSize.svg';
   import MissionAsk from '$lib/assets/images/about/MissionAsk.svg';
+
+  import Slide1 from '$lib/assets/images/team/slider/Slide1.png';
+  import Slide2 from '$lib/assets/images/team/slider/Slide2.png';
+  import Slide3 from '$lib/assets/images/team/slider/Slide3.png';
 
   import './about.css';
 
@@ -49,6 +56,49 @@
       }
     ]
   }
+
+  let carouselSlides = [
+    {
+      url: Slide1
+    },
+    {
+      url: Slide2
+    },
+    {
+      url: Slide3
+    },
+  ]
+
+  const debounce = (func, delay) => {
+		let timer;
+
+		return function () {
+			const context = this;
+			const args = arguments;
+			clearTimeout(timer);
+			timer = setTimeout(() => func.apply(context, args), delay);
+		};
+	};
+	
+	const setWindowWidth = () => {    		
+    let count = 0
+    if (window.innerWidth < 768) {
+      count = 1
+      } else if (window.innerWidth > 1279) {
+        count = 3
+      } else {
+        count = 2
+      }         
+      slidesCount.update(v => v = count);
+	};	
+
+  onMount(() => {		
+		window.addEventListener('resize', setWindowWidth);
+		
+		return () => {
+			window.removeEventListener('resize', setWindowWidth);
+		}
+	}); 
 </script>
 
 <svelte:head>
@@ -110,9 +160,8 @@
         <h2>Meet our team of problem-solvers.</h2>
         <a href="/about/team" class="btn btn--outline">Meet the Team</a>
       </div>
-
-      <div>Slider</div>
     </div>
+    <Carousel images={carouselSlides} />
   </div>
 
 </div>

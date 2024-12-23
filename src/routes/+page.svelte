@@ -1,6 +1,6 @@
 <script>
-  import { onMount } from 'svelte';
-  //import { windowWidth } from '$lib/store';
+  import { onMount } from 'svelte';  
+  import { slidesCount } from '$lib/store';
 
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
@@ -196,30 +196,54 @@
     ]
   }
 
-  //console.log(windowWidth);
+  let carouselDetails = [
+    {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      author: `John`,
+      position: `Marketing Director`
+    },
+    {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor`,
+      author: `Jill`,
+      position: `VP, Global Sales`
+    },
+    {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      author: `Jack`,
+      position: `Director, e-Commerce`
+    }
+  ]
 
-  let carouselDetails = {
-    slideToshow: 3,
-    slideToshowTablet: 2,
-    slideToshowMobile: 1,
-    testimonials: [
-      {
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-        author: `John`,
-        position: `Marketing Director`
-      },
-      {
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor`,
-        author: `Jill`,
-        position: `VP, Global Sales`
-      },
-      {
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-        author: `Jack`,
-        position: `Director, e-Commerce`
-      }
-    ]
-  }
+  const debounce = (func, delay) => {
+		let timer;
+
+		return function () {
+			const context = this;
+			const args = arguments;
+			clearTimeout(timer);
+			timer = setTimeout(() => func.apply(context, args), delay);
+		};
+	};
+	
+	const setWindowWidth = () => {    		
+    let count = 0
+    if (window.innerWidth < 768) {
+      count = 1
+      } else if (window.innerWidth > 1279) {
+        count = 3
+      } else {
+        count = 2
+      }         
+      slidesCount.update(v => v = count);
+	};	
+
+  onMount(() => {		
+		window.addEventListener('resize', setWindowWidth);
+		
+		return () => {
+			window.removeEventListener('resize', setWindowWidth);
+		}
+	}); 
 
 </script>
 
@@ -289,12 +313,8 @@
       </div>
     </div>
 
-  
-
-    <div class="container">
-      <Carousel 
-        {...carouselDetails}
-      />
+    <div class="custom-slider-wrap">
+      <Carousel testimonials={carouselDetails} />
     </div>
   </div>
 </div>
