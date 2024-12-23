@@ -11,6 +11,7 @@
   import RunningIcons from "$lib/components/RunningIcons/RunningIcons.svelte";
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
   import Carousel from '$lib/components/Carousel/Carousel.svelte';
+  import Popup from '$lib/components/Popup/Popup.svelte';
 
   import './index.css';
 
@@ -22,7 +23,7 @@
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
   import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
 
-  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4'
+  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
 
   const pageTitle =  `CCG`;
 
@@ -43,10 +44,10 @@
         type: 'outline'
       }
     ],
-    imgUrl: VideoPlay,
+    posterUrl: VideoPlay,
     videoUrl: PartnerWithUs,
-    popupBtnUrl: 'modal-link'
-  };
+    popupBtnMobile: true
+  }
 
   let resultsSectionDetails = {
     runningText: `Real Results. No Glitter.`,
@@ -82,7 +83,7 @@
         text: `Some text`
       }
     ]
-  };
+  }
 
   let whyCCGText = {
     preHeadeline: `Why CCG?`,
@@ -253,6 +254,7 @@
 </svelte:head>
 
 <div class="home">
+
   <TopSection {...topSectionDetails} />
 
   <ResultsSection {...resultsSectionDetails} />

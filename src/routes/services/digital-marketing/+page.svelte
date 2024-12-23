@@ -20,7 +20,7 @@
 
   const pageTitle = `Digital Marketing`
 
-  let sectionDetails = {
+  let sectionTopDetails = {
     preHeadeline: `Digital Marketing`,
     mainHeadline: `Turn ad spend into revenue. `,
     subHeadline:  `We focus on precise targeting to connect with your highest-value prospects exactly where they are.`,    
@@ -137,7 +137,7 @@
 </svelte:head>
 
 <div class="services">
-  <TopSection {...sectionDetails} imgUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
+  <TopSection {...sectionTopDetails} posterUrl={$colorScheme === 'dark' ? TopImageDark : TopImageLight} />
 
   <div class="section">
     <div class="container">

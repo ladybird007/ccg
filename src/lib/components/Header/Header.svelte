@@ -1,5 +1,5 @@
 <script lang="ts">  
-import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import { colorScheme, currentNavItem } from '$lib/store';
   import { slide } from 'svelte/transition';
   
@@ -95,8 +95,6 @@ import { onMount } from 'svelte';
       text: `Blog`
     }
   ]
-
-
 
   
   let menuVisible = false;

@@ -195,6 +195,9 @@ img {
     flex-direction: column;
     gap: var(--spacing-s);
   }
+  .tablet-visible {
+    display: none !important;
+  }
 }
 @media (max-width: 767px) {
   .mobile-hidden {
@@ -282,6 +285,9 @@ img {
   }
 }
 @media (min-width: 992px) {
+  .tablet-hidden {
+    display: none !important;
+  }
   .two-columns-text {
     gap: var(--spacing-l);
   }
@@ -311,6 +317,10 @@ img {
   }
   .row {
     gap: var(--spacing-l);
+  }
+
+  .desktop-hidden {
+    display: none !important;
   }
 }
 

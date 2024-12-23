@@ -1,8 +1,7 @@
-<script lang=ts>
-  import SmallOrangeCircle from '$lib/assets/images/icons/SmallOrangeCircle.svg';
+<script lang='ts'>
+  import { popopVisible } from '$lib/store';
   import './top-section.css';
-
-  interface TopSectionProps {
+  interface Props {
     mainHeadline?: string, 
     preHeadeline?: string,  
     headlineHighlight?: string, 
@@ -12,12 +11,17 @@
       text: string,
       type: string
     }[],
-    imgUrl?: string,
-    videoUrl: string,
-    popupBtnUrl?: string,
+    posterUrl?: string,
+    videoUrl?: string,
+    popupBtn?: boolean,
+    popupBtnMobile?: boolean
 	}
 
-  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, imgUrl, videoUrl, popupBtnUrl }:TopSectionProps = $props();
+  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, posterUrl, videoUrl, popupBtn, popupBtnMobile }:Props = $props();
+
+  function showPopupHandler() {
+    popopVisible.update(v => v = true);
+  }
 </script>
 
 <div class="section top-section">
@@ -25,8 +29,7 @@
     <div class="row top-section__row">
       <div class="section__content top-section__text">
         {#if preHeadeline}
-          <p class="text-simple">
-            <img src={SmallOrangeCircle} alt="">
+          <p class="text-simple pre-headline">
             {preHeadeline}            
           </p>
         {/if}
@@ -34,7 +37,7 @@
           <h1>
             {mainHeadline}
             {#if headlineHighlight}
-                <span class="headline-highlight">{headlineHighlight}</span>
+              <span class="headline-highlight">{headlineHighlight}</span>
             {/if}
           </h1>
         {/if}
@@ -51,17 +54,27 @@
           </div>
         {/if}
       </div>
-      {#if imgUrl}
+      {#if posterUrl}
         <div class="top-section__media">
-          {#if videoUrl}
-            <!-- svelte-ignore a11y_media_has_caption -->
-            <video class="js-video" width="100%" poster={imgUrl} controls autoplay>
-              <source src={videoUrl} type="video/mp4" />
-            </video>
-          {:else }
-            <img src={imgUrl} alt="">
-            {#if popupBtnUrl}
-              <span class="top-section__play-btn"></span>
+          {#if popupBtn}
+            <img src={posterUrl} alt="">
+            <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
+          {:else}
+            {#if popupBtnMobile}
+              <div class="tablet-hidden">
+                <img src={posterUrl} alt="">
+                <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
+              </div>
+              <div class="top-section__video tablet-visible">
+                <video width="100%" poster={posterUrl} muted autoplay loop>
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              </div>
+            {:else}
+              <div>
+                <img src={posterUrl} alt="">
+                <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
+              </div>
             {/if}
           {/if}
         </div>
@@ -69,4 +82,3 @@
     </div>
   </div>
 </div>
-  

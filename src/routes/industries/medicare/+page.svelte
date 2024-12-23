@@ -6,6 +6,7 @@
   import CounterSection from "$lib/components/CounterSection/CounterSection.svelte";
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
   import Blog from '$lib/components/Blog/Blog.svelte';
+  import Popup from '$lib/components/Popup/Popup.svelte';
 
   import VideoPlay from '$lib/assets/images/medicare/VideoPlay.jpg';
   import MedicareBlog from '$lib/assets/images/blog/MedicareBlog.png';
@@ -13,9 +14,11 @@
   import RowTicketsLight from '$lib/assets/images/medicare/RowTicketsLight.png';
   import RowTicketsDark from '$lib/assets/images/medicare/RowTicketsDark.png';
 
+  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
+
   const pageTitle = `Medicare`;
 
-  let sectionDetails ={
+  let sectionTopDetails ={
     preHeadeline: `Medicare Advantage Marketing`,
     mainHeadline: `Real Medicare Advantage Strategies`,
     subHeadline:  `We deliver Medicare Advantage marketing that's all about results. No gimmicks. Just straightforward, data-first strategies designed to find and keep your best members.`,
@@ -31,8 +34,9 @@
         type: 'outline'
       }
     ],
-    imgUrl: VideoPlay,
-    popupBtnUrl: 'modal-link'
+    posterUrl: VideoPlay,
+    videoUrl: PartnerWithUs,
+    popupBtn: true
   }
 
   let resultsSectionDetails = {
@@ -144,7 +148,7 @@
 </svelte:head>
   
 <div class="industries">
-  <TopSection {...sectionDetails} />
+  <TopSection {...sectionTopDetails} />
   <ResultsSection {...resultsSectionDetails} />
 
   <div class="section section--light-grey section--no-vertical-spacing">
@@ -170,3 +174,5 @@
     </div>
   </div>
 </div>
+
+<Popup posterUrl={sectionTopDetails.posterUrl} videoUrl={sectionTopDetails.videoUrl} />
