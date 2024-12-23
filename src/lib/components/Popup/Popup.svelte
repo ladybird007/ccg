@@ -9,14 +9,14 @@
 
   let { posterUrl, videoUrl }:Props = $props();
 
-  function showPopupHandler() {
+  function hidePopupHandler() {
     popopVisible.update(v => v = false);
   }
 </script>
 
 {#if $popopVisible} 
   <div class="popup">
-    <button class="popup__over" onclick={showPopupHandler} aria-label="play"></button>
+    <button class="popup__over" onclick={hidePopupHandler} aria-label="play"></button>
     <div class="popup__content">
       <video poster={posterUrl} autoplay controls>
         <source src={videoUrl} type="video/mp4" />

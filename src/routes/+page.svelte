@@ -320,3 +320,5 @@
     </div>
   </div>
 </div>
+
+<Popup posterUrl={topSectionDetails.posterUrl} videoUrl={topSectionDetails.videoUrl} />

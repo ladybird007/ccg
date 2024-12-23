@@ -18,7 +18,7 @@
 
   const pageTitle = `Medicare`;
 
-  let sectionTopDetails ={
+  let topSectionDetails ={
     preHeadeline: `Medicare Advantage Marketing`,
     mainHeadline: `Real Medicare Advantage Strategies`,
     subHeadline:  `We deliver Medicare Advantage marketing that's all about results. No gimmicks. Just straightforward, data-first strategies designed to find and keep your best members.`,
@@ -148,7 +148,7 @@
 </svelte:head>
   
 <div class="industries">
-  <TopSection {...sectionTopDetails} />
+  <TopSection {...topSectionDetails} />
   <ResultsSection {...resultsSectionDetails} />
 
   <div class="section section--light-grey section--no-vertical-spacing">
@@ -175,4 +175,4 @@
   </div>
 </div>
 
-<Popup posterUrl={sectionTopDetails.posterUrl} videoUrl={sectionTopDetails.videoUrl} />
+<Popup posterUrl={topSectionDetails.posterUrl} videoUrl={topSectionDetails.videoUrl} />

@@ -20,6 +20,7 @@
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, posterUrl, videoUrl, popupBtn, popupBtnMobile }:Props = $props();
 
   function showPopupHandler() {
+    console.log(popopVisible);
     popopVisible.update(v => v = true);
   }
 </script>
