@@ -73,7 +73,6 @@
             {:else}
               <div>
                 <img src={posterUrl} alt="">
-                <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
               </div>
             {/if}
           {/if}

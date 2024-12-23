@@ -14,12 +14,13 @@
   }
 </script>
 
-{#if popopVisible} 
+{#if $popopVisible} 
   <div class="popup">
-    <div class="popup__over" onclick={showPopupHandler}></div>
+    <button class="popup__over" onclick={showPopupHandler} aria-label="play"></button>
     <div class="popup__content">
       <video poster={posterUrl} autoplay controls>
         <source src={videoUrl} type="video/mp4" />
+        <track kind='captions'/> 
       </video>
     </div>
   </div>
