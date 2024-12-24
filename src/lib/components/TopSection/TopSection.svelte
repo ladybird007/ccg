@@ -62,11 +62,11 @@
             <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
           {:else}
             {#if popupBtnMobile}
-              <div class="tablet-hidden">
+              <div class="tablet-visible">
                 <img src={posterUrl} alt="">
                 <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
               </div>
-              <div class="top-section__video tablet-visible">
+              <div class="top-section__video tablet-hidden">
                 <video width="100%" poster={posterUrl} muted autoplay loop>
                   <source src={videoUrl} type="video/mp4" />
                 </video>

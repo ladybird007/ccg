@@ -1,6 +1,5 @@
 <script lang="ts">  
   import { page } from '$app/stores';
-  import { onMount } from 'svelte';
   import { colorScheme } from '$lib/store';
   import { slide } from 'svelte/transition';
   
@@ -10,6 +9,7 @@
   
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
+  // import { on } from 'svelte/events';
 
   let mainMenuLeft = [
     {
@@ -98,11 +98,11 @@
   ]
 
   
-  let menuVisible = false;
+  let menuMobileVisible = false;
   let activeSwitch = false;
+
   function switchColorScheme () {
     activeSwitch = !activeSwitch;
-
     const htmlTag = document.getElementsByTagName('html');
     if (activeSwitch) {
       htmlTag[0].style.setProperty("color-scheme", "dark");
@@ -117,29 +117,55 @@
       isExpanded2 = false,
       isExpanded3 = false;
 
-  function subMenuHandler(key:number) {
+  function handlerSubMenuOpen(key:number) {
+    let windowWidth = window.innerWidth;
+
     switch (key) {
       case 1:
         isExpanded2 = false,
         isExpanded3 = false;
-        isExpanded1 = true;
+        isExpanded1 = (windowWidth > 991 ? true : !isExpanded1);
         break;
       case 2:
         isExpanded1 = false,
         isExpanded3 = false;
-        isExpanded2 = true;
+        isExpanded2 = (windowWidth > 991 ? true : !isExpanded2);
         break;
       case 3:
         isExpanded1 = false,
         isExpanded2 = false;
-        isExpanded3 = true;
+        isExpanded3 = (windowWidth > 991 ? true : !isExpanded3);
         break;
       default:
         isExpanded1 = false,
         isExpanded2 = false,
         isExpanded3 = false;
     }
+    
   }
+
+  function handlerSubMenuClose(e) {
+    let windowWidth = window.innerWidth,
+        localTag = e.target.localName;
+
+    if (localTag === 'a') {
+      isExpanded1 = false,
+      isExpanded2 = false,
+      isExpanded3 = false;
+      if(menuMobileVisible) {
+        menuMobileVisible = false;
+      }
+    } else {
+      if (windowWidth > 991) {
+        isExpanded1 = false,
+        isExpanded2 = false,
+        isExpanded3 = false;
+        if(menuMobileVisible) {
+          menuMobileVisible = false;
+        }
+      }
+    }
+	}
   
   const darkHeaderPages = [
     'about/about',
@@ -158,11 +184,10 @@
     return Boolean(currectPath)
   }
 
-  
 
 </script>
 
-<header class="header" class:fixed={menuVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
+<header class="header" class:fixed={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
   <div class="container">
     <div class="row justify-space-between align-center">
       <div class="header__col">
@@ -171,8 +196,12 @@
         </a>
         <div class="navigation navigation--dropdown">
           <ul class="navigation__list">
-            <li class:active={setActiveClass('services')} on:mouseenter={() => subMenuHandler(1)}>
-              <button class="navigation__sub-menu-btn" class:opened={isExpanded1} >
+            <li class:active={setActiveClass('services')} on:mouseleave={handlerSubMenuClose}>
+              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded1} on:mouseenter={() => handlerSubMenuOpen(1)} >
+                Services
+                <SmallArrow />
+              </button>
+              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded1} on:click={() => handlerSubMenuOpen(1)}>
                 Services
                 <SmallArrow />
               </button>
@@ -181,52 +210,60 @@
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div class="sub-menu" transition:slide>
                   <ul>
-                    <li><a href="/services/digital-marketing">Digital Marketing</a></li>
-                    <li><a href="/services/strategy">Strategy</a></li>
-                    <li><a href="/services/marketing">Marketing</a></li>
-                    <li><a href="/services/web-design">Web Design</a></li>
-                    <li><a href="/services/ux-design">UX Design</a></li>
-                    <li><a href="/services/enterprise-software">Enterprise Software</a></li>
+                    <li><a href="/services/digital-marketing" on:click={handlerSubMenuClose}>Digital Marketing</a></li>
+                    <li><a href="/services/strategy" on:click={handlerSubMenuClose}>Strategy</a></li>
+                    <li><a href="/services/marketing" on:click={handlerSubMenuClose}>Marketing</a></li>
+                    <li><a href="/services/web-design" on:click={handlerSubMenuClose}>Web Design</a></li>
+                    <li><a href="/services/ux-design" on:click={handlerSubMenuClose}>UX Design</a></li>
+                    <li><a href="/services/enterprise-software" on:click={handlerSubMenuClose}>Enterprise Software</a></li>
                   </ul>
                 </div>
               {/if}
             </li>
-            <li class:active={setActiveClass('industries')}>
-              <button class="navigation__sub-menu-btn" class:opened={isExpanded2} on:mouseenter={() => subMenuHandler(2)}>
+            <li class:active={setActiveClass('industries')} on:mouseleave={handlerSubMenuClose}>
+              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded2} on:mouseenter={() => handlerSubMenuOpen(2)}>
+                Industries
+                <SmallArrow />
+              </button>
+              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded2} on:click={() => handlerSubMenuOpen(2)}>
                 Industries
                 <SmallArrow />
               </button>
               {#if isExpanded2} 
               <div class="sub-menu" transition:slide>
                 <ul>
-                  <li><a href="/industries/b2b">B2B</a></li>
-                  <li><a href="/industries/b2c">B2C</a></li>
-                  <li><a href="/industries/medical">Medical</a></li>
-                  <li><a href="/industries/medicare">Medicare</a></li>
+                  <li><a href="/industries/b2b" on:click={handlerSubMenuClose}>B2B</a></li>
+                  <li><a href="/industries/b2c" on:click={handlerSubMenuClose}>B2C</a></li>
+                  <li><a href="/industries/medical" on:click={handlerSubMenuClose}>Medical</a></li>
+                  <li><a href="/industries/medicare" on:click={handlerSubMenuClose}>Medicare</a></li>
                 </ul>
               </div>
               {/if}
             </li>
             <li class:active={setActiveClass('our-work')}>
-              <a href="/our-work">Our Work</a>
+              <a href="/our-work" on:click={handlerSubMenuClose}>Our Work</a>
             </li>
-            <li class:active={setActiveClass('about')}>
-              <button class="navigation__sub-menu-btn" class:opened={isExpanded3} on:mouseenter={() => subMenuHandler(3)}>
+            <li class:active={setActiveClass('about')} on:mouseleave={handlerSubMenuClose}>
+              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded3} on:mouseenter={() => handlerSubMenuOpen(3)}>
+                About
+                <SmallArrow />
+              </button>
+              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded3} on:click={() => handlerSubMenuOpen(3)}>
                 About
                 <SmallArrow />
               </button>
               {#if isExpanded3} 
               <div class="sub-menu" transition:slide>
                 <ul>
-                  <li><a href="/about/about">About</a></li>
-                  <li><a href="/about/team">Team</a></li>
-                  <li><a href="/about/approach">Our Approach</a></li>
+                  <li><a href="/about/about" on:click={handlerSubMenuClose}>About</a></li>
+                  <li><a href="/about/team" on:click={handlerSubMenuClose}>Team</a></li>
+                  <li><a href="/about/approach" on:click={handlerSubMenuClose}>Our Approach</a></li>
                 </ul>
               </div>
               {/if}
             </li>
             <li class:active={setActiveClass('blog')}>
-              <a href="/blog/post">Blog</a>
+              <a href="/blog/post" on:click={handlerSubMenuClose}>Blog</a>
             </li>
           </ul>
         </div>
@@ -236,14 +273,14 @@
         <div class="navigation">
           <ul class="navigation__list">
             <li class="desktop-visible" class:active={setActiveClass('contact-us')}>
-              <a href="/contact-us">Contact Us</a>
+              <a href="/contact-us" on:click={handlerSubMenuClose}>Contact Us</a>
             </li>
             <li><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
             <li>
               <button class="switch-theme" class:dark={activeSwitch} on:click="{() => switchColorScheme() }" aria-label='switch'></button>
             </li>
             <li class="header__mobile-btn">
-              <button class="mobile-menu-btn" aria-label="button" on:click="{() => menuVisible = !menuVisible }"><em></em></button>
+              <button class="mobile-menu-btn" aria-label="button" on:click="{() => menuMobileVisible = !menuMobileVisible }"><em></em></button>
             </li>
           </ul>
         </div>

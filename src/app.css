@@ -195,7 +195,7 @@ img {
     flex-direction: column;
     gap: var(--spacing-s);
   }
-  .tablet-visible {
+  .tablet-hidden {
     display: none !important;
   }
 }
@@ -285,7 +285,7 @@ img {
   }
 }
 @media (min-width: 992px) {
-  .tablet-hidden {
+  .tablet-visible {
     display: none !important;
   }
   .two-columns-text {
