@@ -192,14 +192,14 @@ p a:not(.btn):not(.logo) {
   left: 0;
   z-index: -1;
   background-color: light-dark(var(--teal), var(--deep-green));
+  transition: all 0.5s;
 }
-h1.visible .headline-highlight:before,
-h2.visible .headline-highlight:before {
+.drawing .headline-highlight:before {
   right: 0;
 }
 h1 .headline-highlight:before {
   height: 30px;
-  bottom: 10px;
+  bottom: 0;
 }
 h2 .headline-highlight:before {
   height: 18px;

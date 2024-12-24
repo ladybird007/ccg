@@ -1,6 +1,8 @@
 <script lang='ts'>
   import { popopVisible } from '$lib/store';
+  import { onMount } from 'svelte';
   import './top-section.css';
+
   interface Props {
     mainHeadline?: string, 
     preHeadeline?: string,  
@@ -20,13 +22,13 @@
   let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, posterUrl, videoUrl, popupBtn, popupBtnMobile }:Props = $props();
 
   function showPopupHandler() {
-    console.log(popopVisible);
     popopVisible.update(v => v = true);
   }
+
 </script>
 
 <div class="section top-section">
-  <div class="container">
+  <div class="container draw-on-visible">
     <div class="row top-section__row">
       <div class="section__content top-section__text">
         {#if preHeadeline}
