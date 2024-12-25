@@ -1,24 +1,48 @@
 <script lang=ts>
-    import './icon-text-card.css';
+  import { onMount } from 'svelte';
+  import './icon-text-card.css';
   
-    interface Props {
-      cards: {
-        icon?: string,
-        headline?: string, 
-        text?: string, 
-        buttons?:{
-          url: string,
-          text: string,
-          type: string
-        }[]
+  interface Props {
+    cards: {
+      icon?: string,
+      headline?: string, 
+      text?: string, 
+      buttons?:{
+        url: string,
+        text: string,
+        type: string
       }[]
-    }
+    }[]
+  }
 
-    let { cards }:Props = $props();
-  </script>
+  let { cards }:Props = $props();
+
+  function isVisible(elem) {
+    const elemTop = elem.offsetTop - (window.innerHeight / 2),
+          windowScroll = window.pageYOffset;
+
+    if (elemTop < windowScroll) {
+      elem.classList.add('visible');
+    }
+  };
+
+  onMount(() => {
+    window.scrollTo({top: 0});
+
+    // fade in 'card' on scroll
+    window.addEventListener('scroll', function() {
+      if (document.querySelector('.fade-in-card') !== 0) {
+        const fadeInCards = document.querySelectorAll('.fade-in-card');
+        fadeInCards.forEach((arrItem) => {
+          isVisible(arrItem);
+        });
+      }
+    });
+  })
+</script>
   
   {#each cards as card}
-    <div class="section__content card">
+    <div class="section__content card fade-in-card">
       <div class="card__content">
         {#if card.icon}
           <div class="card__icon">

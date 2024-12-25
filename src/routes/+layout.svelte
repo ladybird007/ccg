@@ -21,12 +21,18 @@
   onMount(() => {
     window.scrollTo({top: 0});
 
+    // drawing 'headline-highlight' background on scroll
     window.addEventListener('scroll', function() {
-      const driwingHeadlines = document.querySelectorAll('.headline-highlight');
-      driwingHeadlines.forEach((arrItem) => {
-        isVisible(arrItem);
-      });
+      if(document.querySelector('.headline-highlight') !== 0) {
+        const driwingHeadlines = document.querySelectorAll('.headline-highlight');
+        driwingHeadlines.forEach((arrItem) => {
+          isVisible(arrItem);
+        });
+      }
     });
+
+    
+
   })
 </script>
 

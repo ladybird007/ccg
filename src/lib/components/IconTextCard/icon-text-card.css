@@ -10,6 +10,16 @@
   gap: var(--spacing-s);
 }
 
+.fade-in-card {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: all 0.5s;
+}
+.fade-in-card.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 @media (max-width: 767px) {
   .why-ccg .card p {
     display: none;
