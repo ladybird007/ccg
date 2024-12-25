@@ -17,6 +17,7 @@
   import DigitalBlog from '$lib/assets/images/blog/DigitalBlog.png';
   import ImageTextRowLight from '$lib/assets/images/digitalMarketing/ImageTextBgLight.png';
   import ImageTextRowDark from '$lib/assets/images/digitalMarketing/ImageTextBgDark.png';
+  import ListShape from '$lib/assets/images/icons/ListShape.svg';
 
   const pageTitle = `Digital Marketing`
 
@@ -32,31 +33,31 @@
     type: `chart`,
     listItems: [
       {
+        customIcon: ListShape,
         text: `Search Engine Optimization`
       },
       {
+        customIcon: ListShape,
         text: `Pay-Per-Click Advertising (PPC)`
       },
       {
+        customIcon: ListShape,
         text: `Social Media Marketing`
       },
       {
+        customIcon: ListShape,
         text: `Email Marketing`
       },
       {
-        chart2icon: true,
         text: `Digital Out-of-Home (DOOH)`
       },
       {
-        chart2icon: true,
         text: `Connected TV (CTV)`
       },
       {
-        chart2icon: true,
         text: `Over-the-Top Advertising (OTT)`
       },
       {
-        chart2icon: true,
         text: `Data Analytics`
       }
     ]

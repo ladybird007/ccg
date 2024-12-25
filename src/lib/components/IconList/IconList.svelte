@@ -6,7 +6,7 @@
     mainHeadline?: string, 
     type?: string,
     listItems?:{
-      chart2icon?: boolean,
+      customIcon?: string,
       text?: string,
       link?: string
     }[]
@@ -31,25 +31,18 @@
   {/if}
   {#if listItems}
   <div class="icon-list__list-wrap">
-    <ul class="icon-list__list icon-list__list--{type} h4">
+    <ul class="icon-list__list {type} h4">
       {#each listItems as item}
-        {#if item.chart2icon}
-          <li class="chart2">
-            {#if item.link}
-              <a href={item.link}>{item.text}</a>
-            {:else}
-              {item.text}
-            {/if}
-          </li>
-        {:else}
-          <li>
-            {#if item.link}
-              <a href={item.link}>{item.text}</a>
-            {:else}
-              {item.text}
-            {/if}
-          </li>
-        {/if}
+        <li class:custom-icon={item.customIcon}>
+          {#if item.customIcon}
+            <img src={item.customIcon} alt="" />
+          {/if}
+          {#if item.link}
+            <a href={item.link}>{item.text}</a>
+          {:else}
+            {item.text}
+          {/if}
+        </li>
       {/each}
     </ul>
   </div>

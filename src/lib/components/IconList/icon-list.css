@@ -20,14 +20,14 @@
   display: block;
   flex-shrink: 0;
 }
-.icon-list__list--arrow li:before {
+.icon-list__list.arrow li:before {
   background-image: url(../../assets/images/icons/list-arrow.svg);
 }
-.icon-list__list--chart li:before {
+.icon-list__list.chart li:before {
   background-image: url(../../assets/images/icons/list-chart.svg);
 }
-.icon-list__list--chart li.chart2:before {
-  background-image: url(../../assets/images/icons/list-chart-2.svg);
+.icon-list__list .custom-icon:before {
+  display: none;
 }
 .icon-list__list a {
   display: inline;
