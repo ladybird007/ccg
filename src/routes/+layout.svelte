@@ -8,25 +8,24 @@
   let { children } = $props();
 
 
-  const isVisible = function (elems) {
-    elems.forEach((elem, index) => {
+ function isVisible(elem) {
+  const elemParent = elem.closest('.section'),
+        elemParentTop = elem.closest('.section').offsetTop - (window.innerHeight / 2),
+        windowScroll = window.pageYOffset;
 
-      const elemParent = elem.closest(".section"),
-            elemTop = elem.getBoundingClientRect().top,
-            windowScroll = window.pageYOffset;
-
-            console.log(index, elemTop);
-
-      if (elemTop > windowScroll) {
-        console.log(index, 'ttt')
-        elemParent.classList.add('drawing');
-      }
-    });
+    if (elemParentTop < windowScroll) {
+      elemParent.classList.add('visible');
+    }
   };
 
   onMount(() => {
+    window.scrollTo({top: 0});
+
     window.addEventListener('scroll', function() {
-      isVisible(document.querySelectorAll('.headline-highlight'))
+      const driwingHeadlines = document.querySelectorAll('.headline-highlight');
+      driwingHeadlines.forEach((arrItem) => {
+        isVisible(arrItem);
+      });
     });
   })
 </script>

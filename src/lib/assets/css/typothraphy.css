@@ -194,7 +194,7 @@ p a:not(.btn):not(.logo) {
   background-color: light-dark(var(--teal), var(--deep-green));
   transition: all 0.5s;
 }
-.drawing .headline-highlight:before {
+.visible .headline-highlight:before {
   right: 0;
 }
 h1 .headline-highlight:before {

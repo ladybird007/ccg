@@ -28,7 +28,7 @@
 </script>
 
 <div class="section top-section">
-  <div class="container draw-on-visible">
+  <div class="container">
     <div class="row top-section__row">
       <div class="section__content top-section__text">
         {#if preHeadeline}
