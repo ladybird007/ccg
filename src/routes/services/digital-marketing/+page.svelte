@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  import { onMount } from 'svelte';
   import { colorScheme } from '$lib/store';  
   import TopSection from '$lib/components/TopSection/TopSection.svelte';
   import IconList from '$lib/components/IconList/IconList.svelte';
@@ -80,6 +81,22 @@
       url: Icon4,
       alt: `klaviyo`
     },
+    {
+      url: Icon1,
+      alt: `google`
+    },
+    {
+      url: Icon2,
+      alt: `meta`
+    },
+    {
+      url: Icon3,
+      alt: `salesforce`
+    },
+    {
+      url: Icon4,
+      alt: `klaviyo`
+    },
   ]
 
   let imageTextRow = {
@@ -131,6 +148,36 @@
     ]
   }
 
+  let logoCardHeight = 0;
+  let hiddenLogosBtn = false;
+
+  const showAllLogos = () => {
+    hiddenLogosBtn = true;
+    setLogosHeight();
+  }
+
+  const setLogosHeight = () => {
+    const logoItem = document.querySelector('.logos__item'),
+          logosCount = document.querySelectorAll('.logos__item').length,
+          windowWidth = window.innerWidth,
+          gapVal = windowWidth > 1279 ? 24 : 16,
+          counter = windowWidth > 767 ? Math.round(logosCount / 4) : Math.round(logosCount / 3);
+
+    logoCardHeight = ( logoItem.offsetHeight + gapVal ) * counter - gapVal + 1;
+  }
+
+  onMount(() => {
+    logoCardHeight = document.querySelector('.logos__item').offsetHeight + 96;
+
+    window.addEventListener( 'resize', () => {
+      logoCardHeight = document.querySelector('.logos__item').offsetHeight + 96;
+
+      if (hiddenLogosBtn) {
+        setLogosHeight()
+      }
+    });
+  });
+
 </script>
 
 <svelte:head>
@@ -172,7 +219,7 @@
         <div class="text-center">
           <h4>We only use the best to power our data.</h4>
         </div>
-        <div class="logos">
+        <div class="logos" style="height: {logoCardHeight}px">
           {#each logosList as logo }
             <div class="logos__item">
               <div class="logos__img">
@@ -180,13 +227,9 @@
               </div>
             </div>
           {/each}
-          {#each logosList as logo }
-            <div class="logos__item">
-              <div class="logos__img">
-                <img src={logo.url} alt={logo.alt}>
-              </div>
-            </div>
-          {/each}
+          <div class="logos__btn" class:hidden={hiddenLogosBtn}>
+            <button class="btn btn--outline" on:click={showAllLogos}>View More</button>
+          </div>
         </div>
       </div>
     {/if}
