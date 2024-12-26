@@ -8,19 +8,21 @@
   overflow: hidden;
   color: inherit;
   font-weight: 300;
-  line-height: 1; 
+  line-height: 1.15; 
 }
 .section--green .running-string {
   color: var(--teal);
 }
 .running-string__inner {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   gap: 144px;
-  animation-name: infiniteScroll;
+  /* animation-name: infiniteScroll;
   animation-duration: 20s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; */
+  transition: all 0.5s;
 }
 .running-string__item {
   white-space: nowrap;
