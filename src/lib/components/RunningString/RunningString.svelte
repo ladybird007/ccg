@@ -11,20 +11,28 @@
 
   let lastScrollTop = 0;
 
+  let windowScroll1 = 0;
+  function textRun() {
+    windowScroll1++;
+    console.log(windowScroll1);
+    document.querySelector('.running-string__inner').style.transform = `translate3d(-${windowScroll1}px, 0, 0)`;
+  }
+
+
   function isVisible(elem) {
-    const windowScroll = window.pageYOffset;
+    let windowScroll = window.pageYOffset;
     let position = elem.getBoundingClientRect();
 
     if (position.top >= 0 && position.bottom <= window.innerHeight) {
       elem.classList.add('visible');
       
-      let st = window.pageYOffset || document.documentElement.scrollTop;
+      /*let st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        console.log('down');
+        // console.log('down');
       } else if (st < lastScrollTop) {
-        console.log('up');
+        // console.log('up')
       }
-      lastScrollTop = st <= 0 ? 0 : st;
+      lastScrollTop = st <= 0 ? 0 : st;*/
 
       elem.querySelector('.running-string__inner').style.transform = `translate3d(-${windowScroll}px, 0, 0)`;
     } else {
@@ -35,18 +43,33 @@
 
   onMount(() => {
 
+    let didScroll = false;
+
     window.addEventListener('scroll', function() {
+      didScroll = true;
+
+
       if(document.querySelector('.running-string') !== 0) {
         const RunningString = document.querySelectorAll('.running-string');
         RunningString.forEach((arrItem) => {
           isVisible(arrItem);
         });
       }
-    });
+    }, false);
+    
 
-    const marquees = [...document.querySelectorAll('.running-string__inner')];
-    marquees.forEach((marquee) => {
-      marquee.innerHTML = `${marquee.innerHTML}`.repeat(30);
+    setInterval(() => {
+      if ( didScroll ) {
+        didScroll = false;
+      } else {
+        textRun();
+      }
+    }, 250);
+
+
+    const runningInner = [...document.querySelectorAll('.running-string__inner')];
+    runningInner.forEach((inner) => {
+      inner.innerHTML = `${inner.innerHTML}`.repeat(30);
     });
 
 

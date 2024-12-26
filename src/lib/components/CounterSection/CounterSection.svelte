@@ -1,4 +1,5 @@
-<script lang=ts>
+<script lang="ts">
+  import { onMount } from 'svelte';
   import './counter-section.css';
 
   interface Props {
@@ -14,6 +15,42 @@
 	}
 
   let { sectionClass, preHeadeline, mainHeadline,  mainText, numbers }:Props = $props();
+
+
+  function counting(val, container) {
+    let count = 0;
+    let counting = setInterval(function(){
+      if(count < val) {
+        container.innerHTML = count
+        count++
+      } else {
+        clearInterval(counting)
+      }
+    }, 10);
+  }
+
+  function isVisible(elem) {
+    const elemTop = elem.offsetTop - (window.innerHeight / 2),
+          windowScroll = window.pageYOffset,
+          elemChild = elem.querySelector('.counter__number-val'),
+          dataNumber = elemChild.getAttribute('data-number')*1 + 1;
+    let counterVal = 0;
+
+    if (elemTop < windowScroll) {
+      counterVal = counting(dataNumber, elemChild);
+    }
+  };
+
+  onMount(() => {
+    window.addEventListener('scroll', function() {
+      const counters = document.querySelectorAll('.counter__item');
+      counters.forEach((counterEl) => {
+        isVisible(counterEl);
+      })
+      
+    });
+  })
+
 </script>
 
 <div class="section {sectionClass}">
@@ -41,7 +78,7 @@
           {#each numbers as item}
             <div class="counter__item">
               <div class="counter__number">
-                {item.number}
+                <span class="counter__number-val" data-number={item.number}>0</span>
                 {item.suffix}
               </div>
               <p class="text-simple">

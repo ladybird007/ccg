@@ -10,13 +10,13 @@
 
  function isVisible(elem) {
   const elemParent = elem.closest('.section'),
-        elemParentTop = elemParent.offsetTop - (window.innerHeight / 2),
+        elemParentTop = elem.closest('.section').offsetTop - (window.innerHeight / 2),
         windowScroll = window.pageYOffset;
 
-  if (elemParentTop < windowScroll) {
-    elemParent.classList.add('visible');
-  }
-};
+    if (elemParentTop < windowScroll) {
+      elemParent.classList.add('visible');
+    }
+  };
 
   onMount(() => {
     window.scrollTo({top: 0});
