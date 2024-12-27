@@ -23,17 +23,17 @@
       2: false
     })
 
-  function counting(val, container, val1) {
+  function counting(number, container, fractional) {
     let count = 0;
     let counting = setInterval(function(){
-      if(count < val) {
-        let text 
-        if (val > 0) {
-          text = count + val1
+      if(count < number) {
+        let sum = 0
+        if (fractional > 0) {
+          sum = count + fractional
         } else {
-          text = count
+          sum = count
         }
-        container.innerHTML = text
+        container.innerHTML = sum
         count++
       } else {
         clearInterval(counting)
@@ -42,16 +42,15 @@
   }
 
   function isVisible(elem, index) {
-    const elemTop = elem.offsetTop - (window.innerHeight / 2),
+    const elemTop = elem.offsetTop - (window.innerHeight),
           windowScroll = window.pageYOffset,
           elemChild = elem.querySelector('.counter__number-val'),
-          dataNumber = Math.floor(elemChild.getAttribute('data-number')) + 1;
-    let dataNumber1 = (elemChild.getAttribute('data-number')*1 - Math.floor(elemChild.getAttribute('data-number'))).toFixed(1);
-
+          dataNumber = Math.floor(elemChild.getAttribute('data-number'))*1 + 1;
+    let dataFractional = ((elemChild.getAttribute('data-number') - Math.floor(elemChild.getAttribute('data-number'))).toFixed(1))*1;
 
     if (elemTop < windowScroll) {
       if (!counts[index]) {
-        counting(dataNumber, elemChild, dataNumber1);
+        counting(dataNumber, elemChild, dataFractional);
         counts[index] = true
       }
     }
