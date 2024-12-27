@@ -17,11 +17,23 @@
   let { sectionClass, preHeadeline, mainHeadline,  mainText, numbers }:Props = $props();
 
 
-  function counting(val, container) {
+  let counts = $state({
+      0: false,
+      1: false,
+      2: false
+    })
+
+  function counting(val, container, val1) {
     let count = 0;
     let counting = setInterval(function(){
       if(count < val) {
-        container.innerHTML = count
+        let text 
+        if (val > 0) {
+          text = count + val1
+        } else {
+          text = count
+        }
+        container.innerHTML = text
         count++
       } else {
         clearInterval(counting)
@@ -29,25 +41,29 @@
     }, 10);
   }
 
-  function isVisible(elem) {
+  function isVisible(elem, index) {
     const elemTop = elem.offsetTop - (window.innerHeight / 2),
           windowScroll = window.pageYOffset,
           elemChild = elem.querySelector('.counter__number-val'),
-          dataNumber = elemChild.getAttribute('data-number')*1 + 1;
-    let counterVal = 0;
+          dataNumber = Math.floor(elemChild.getAttribute('data-number')) + 1;
+    let dataNumber1 = (elemChild.getAttribute('data-number')*1 - Math.floor(elemChild.getAttribute('data-number'))).toFixed(1);
+
 
     if (elemTop < windowScroll) {
-      counterVal = counting(dataNumber, elemChild);
+      if (!counts[index]) {
+        counting(dataNumber, elemChild, dataNumber1);
+        counts[index] = true
+      }
     }
   };
 
+  
   onMount(() => {
     window.addEventListener('scroll', function() {
       const counters = document.querySelectorAll('.counter__item');
-      counters.forEach((counterEl) => {
-        isVisible(counterEl);
+      counters.forEach((counterEl, index) => {
+        isVisible(counterEl, index);
       })
-      
     });
   })
 
