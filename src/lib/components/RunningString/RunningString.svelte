@@ -11,13 +11,20 @@
 
   let lastScrollTop = 0;
 
-  let windowScroll1 = 0;
-  function textRun() {
-    windowScroll1++;
-    console.log(windowScroll1);
-    document.querySelector('.running-string__inner').style.transform = `translate3d(-${windowScroll1}px, 0, 0)`;
-  }
+  function move() {
+    const elem = document.querySelector('.running-string__inner');
+    let elemIndex = 0,
+          elemStep = 3,
+          elemWidth = elem.clientWidth + 1;
 
+    elemIndex = elemIndex < elemWidth ? elemIndex + elemStep : 1;
+
+    // console.log(elemWidth)
+
+
+    // elem.style.transform = `translateX(-${elemIndex}px)`;
+    
+  }
 
   function isVisible(elem) {
     let windowScroll = window.pageYOffset;
@@ -34,7 +41,7 @@
       }
       lastScrollTop = st <= 0 ? 0 : st;*/
 
-      elem.querySelector('.running-string__inner').style.transform = `translate3d(-${windowScroll}px, 0, 0)`;
+      elem.querySelector('.running-string__inner').style.transform = `translateX(-${windowScroll}px)`;
     } else {
       elem.classList.remove('visible');
     }
@@ -48,23 +55,21 @@
     window.addEventListener('scroll', function() {
       didScroll = true;
 
+      const RunningString = document.querySelectorAll('.running-string');
+      RunningString.forEach((arrItem) => {
+        isVisible(arrItem);
+      });
 
-      if(document.querySelector('.running-string') !== 0) {
-        const RunningString = document.querySelectorAll('.running-string');
-        RunningString.forEach((arrItem) => {
-          isVisible(arrItem);
-        });
-      }
     }, false);
     
-
+    const runStringInner = document.querySelector('.running-string__inner');
     setInterval(() => {
       if ( didScroll ) {
         didScroll = false;
       } else {
-        textRun();
+        requestAnimationFrame(move);
       }
-    }, 250);
+    }, 2500);
 
 
     const runningInner = [...document.querySelectorAll('.running-string__inner')];
