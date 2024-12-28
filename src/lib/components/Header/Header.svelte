@@ -148,21 +148,12 @@
     let windowWidth = window.innerWidth,
         localTag = e.target.localName;
 
-    if (localTag === 'a') {
+    if ((localTag === 'a') || (windowWidth > 991)) {
       isExpanded1 = false,
       isExpanded2 = false,
       isExpanded3 = false;
       if(menuMobileVisible) {
         menuMobileVisible = false;
-      }
-    } else {
-      if (windowWidth > 991) {
-        isExpanded1 = false,
-        isExpanded2 = false,
-        isExpanded3 = false;
-        if(menuMobileVisible) {
-          menuMobileVisible = false;
-        }
       }
     }
 	}
@@ -187,7 +178,7 @@
 
 </script>
 
-<header class="header" class:fixed={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
+<header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
   <div class="container">
     <div class="row justify-space-between align-center">
       <div class="header__col">
@@ -275,7 +266,7 @@
             <li class="desktop-visible" class:active={setActiveClass('contact-us')}>
               <a href="/contact-us" on:click={handlerSubMenuClose}>Contact Us</a>
             </li>
-            <li><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
+            <li class="navigation__btn-wrap"><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
             <li>
               <button class="switch-theme" class:dark={activeSwitch} on:click="{() => switchColorScheme() }" aria-label='switch'></button>
             </li>

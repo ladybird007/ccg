@@ -44,6 +44,8 @@
   background-color: light-dark(var(--white), #2D2D2D);
 }
 .speak-with__text {
+  position: relative;
+  z-index: 2;
   width: 250px;
   padding-top: var(--spacing-s);
   padding-bottom: var(--spacing-s);
@@ -69,12 +71,19 @@
 }
 
 @media (max-width: 991px) {
-  .speak-with{
+  .speak-with {
     margin-left: auto;
     margin-right: auto;
   }
 }
-
+@media (max-width: 480px) {
+  .speak-with__text {
+    padding-left: var(--spacing-xs);
+  }
+  .speak-with__photo {
+    width: 175px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1279px) {
   .contact .section__content {
     width: 420px;
