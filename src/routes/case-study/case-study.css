@@ -9,7 +9,7 @@
   background-color: var(--deep-green);
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  background-image: url(../../lib/assets/images/case-study/testtimonials-bg.svg);
+  background-image: url(../../lib/assets/images/caseStudy/testtimonials-bg.svg);
   color: var(--white);
 }
 .testimonials__meta {

@@ -3,11 +3,11 @@
   import '$lib/assets/css/form.css';
   import './contact-us.css';
 
-  import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
-  import HeroBgMobile from '$lib/assets/images/contact-us/HeroBgMobile.svg';
-  import Location from '$lib/assets/images/contact-us/Location.svg';
-  import Phone from '$lib/assets/images/contact-us/Phone.svg';
-  import Email from '$lib/assets/images/contact-us/Email.svg';
+  import HeroBg from '$lib/assets/images/contactUs/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/contactUs/HeroBgMobile.svg';
+  import Location from '$lib/assets/images/contactUs/Location.svg';
+  import Phone from '$lib/assets/images/contactUs/Phone.svg';
+  import Email from '$lib/assets/images/contactUs/Email.svg';
 
   const pageTitle = `Contact US`;
 </script>

@@ -2,9 +2,9 @@
   import '$lib/assets/css/form.css';
   import '../contact-us/contact-us.css';
 
-  import HeroBg from '$lib/assets/images/contact-us/HeroBg.svg';
-  import HeroBgMobile from '$lib/assets/images/contact-us/HeroBgMobile.svg';
-  import Brianna from '$lib/assets/images/book-call/Brianna.png';
+  import HeroBg from '$lib/assets/images/contactUs/HeroBg.svg';
+  import HeroBgMobile from '$lib/assets/images/contactUs/HeroBgMobile.svg';
+  import Brianna from '$lib/assets/images/bookCall/Brianna.png';
 
   const pageTitle = `Book a Strategy Call`;
 </script>

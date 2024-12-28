@@ -10,17 +10,17 @@
 
   import './case-study.css';
 
-  import HeroBg from '$lib/assets/images/case-study/HeroBg.svg';
-  import ChallengeImgLight from '$lib/assets/images/case-study/ChallengeImgLight.png';
-  import ChallengeImgDark from '$lib/assets/images/case-study/ChallengeImgDark.png';
-  import SolutionImgLight from '$lib/assets/images/case-study/SolutionImgLight.png';
-  import SolutionImgDark from '$lib/assets/images/case-study/SolutionImgDark.png';
-  import LaptopLight from '$lib/assets/images/case-study/LaptopDark.png';
-  import LaptopDark from '$lib/assets/images/case-study/LaptopDark.png';
+  import HeroBg from '$lib/assets/images/caseStudy/HeroBg.svg';
+  import ChallengeImgLight from '$lib/assets/images/caseStudy/ChallengeImgLight.png';
+  import ChallengeImgDark from '$lib/assets/images/caseStudy/ChallengeImgDark.png';
+  import SolutionImgLight from '$lib/assets/images/caseStudy/SolutionImgLight.png';
+  import SolutionImgDark from '$lib/assets/images/caseStudy/SolutionImgDark.png';
+  import LaptopLight from '$lib/assets/images/caseStudy/LaptopDark.png';
+  import LaptopDark from '$lib/assets/images/caseStudy/LaptopDark.png';
 
-  import Slide1 from '$lib/assets/images/case-study/slider/Slide1.png';
-  import Slide2 from '$lib/assets/images/case-study/slider/Slide2.png';
-  import Slide3 from '$lib/assets/images/case-study/slider/Slide3.png';
+  import Slide1 from '$lib/assets/images/caseStudy/slider/Slide1.png';
+  import Slide2 from '$lib/assets/images/caseStudy/slider/Slide2.png';
+  import Slide3 from '$lib/assets/images/caseStudy/slider/Slide3.png';
 
   const pageTitle = `Legacy Cabinets`;
 
