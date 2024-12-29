@@ -20,7 +20,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url(../../../lib/assets/images/accordion/small-plus.svg) no-repeat 50% 50%;
+  background: url(../../../../lib/assets/images/accordion/small-plus.svg) no-repeat 50% 50%;
   transition: all 0.3s;
 }
 .simple-accordion .open .accordion-item-header:after {

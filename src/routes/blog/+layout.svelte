@@ -3,7 +3,6 @@
   import Blog from '$lib/components/Blog/Blog.svelte';
 
   import './blog.css';
-    import BlogArrow from '$lib/assets/images/icons/BlogArrow.svelte';
 
   let { children } = $props();
 

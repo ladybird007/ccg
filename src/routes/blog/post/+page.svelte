@@ -1,6 +1,6 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags/Tags.svelte";
-    import { tick } from "svelte";
+  import BlogTopSection from "$lib/components/BlogTopSection/BlogTopSection.svelte";
 
   let postDetails = {
     title: `A New Age of New-to-Medicare Marketing`,
@@ -12,16 +12,19 @@
       date: `Jul 12 2024`,
       time: `3 min read`
     },
-    tags: [
-      {
-        text: `Strategic Consulting`,
-        url: `/services/strategy`
-      },
-      {
-        text: `UI/UX`,
-        url: `/services/ux-design`
-      }
-    ],
+    tagsData: {
+      tagsColor: 'orange',
+      tags: [
+        {
+          text: `Strategic Consulting`,
+          url: `/services/strategy`
+        },
+        {
+          text: `UI/UX`,
+          url: `/services/ux-design`
+        }
+      ]
+    }
   }
 </script>
 
@@ -29,17 +32,7 @@
   <title>{postDetails.title}</title>
 </svelte:head>
 
-<div class="section section--light-grey">
-  <div class="container container--small section__content">
-    <Tags tags={postDetails.tags} tagsColor='orange' />
-    <h1>{postDetails.title}</h1>
-    <div class="post-meta">
-      <span>by <a href={postDetails.author.url}>{postDetails.author.name}</a></span>
-      <span class="text-grey text-light">{postDetails.meta.date}</span>
-      <span class="text-grey text-light">{postDetails.meta.time}</span>
-    </div>
-  </div>
-</div>
+<BlogTopSection {...postDetails} />
 
 <div class="section post-content">
   <div class="container container--small section__content">
@@ -141,9 +134,9 @@
       </p>
     </div>
 
-    {#if postDetails.tags}
+    {#if postDetails.tagsData}
       <div class="post-tags">
-        <span>Tags:</span> <Tags tags={postDetails.tags} />
+        <span>Tags:</span> <Tags tags={postDetails.tagsData.tags} />
       </div>
     {/if}
   </div>

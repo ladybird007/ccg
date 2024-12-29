@@ -67,40 +67,7 @@
     {
       url: Slide3
     },
-  ]
-
-  const debounce = (func, delay) => {
-		let timer;
-
-		return function () {
-			const context = this;
-			const args = arguments;
-			clearTimeout(timer);
-			timer = setTimeout(() => func.apply(context, args), delay);
-		};
-	};
-	
-	const setWindowWidth = () => {    		
-    let count = 0
-    if (window.innerWidth < 768) {
-      count = 1
-      } else if (window.innerWidth > 1279) {
-        count = 3
-      } else {
-        count = 2
-      }         
-      slidesCount.update(v => v = count);
-	};	
-
-  
-
-  onMount(() => {		
-		window.addEventListener('resize', setWindowWidth);
-		
-		return () => {
-			window.removeEventListener('resize', setWindowWidth);
-		}
-	}); 
+  ] 
 </script>
 
 <svelte:head>

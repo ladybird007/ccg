@@ -1,6 +1,4 @@
 <script lang=ts>
-  import type { Component } from 'svelte';
-
   import './team-card.css';
 
   import BlogArrow from '$lib/assets/images/icons/BigArrow.svelte';

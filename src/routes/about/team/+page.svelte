@@ -38,128 +38,148 @@
       class: `leadership`,
       imgUrl: BartonCummings,
       name: `Barton Cummings`, 
-      position: `President`
+      position: `President`,
+      link: `team/BartonCummings`
     },
     {
       class: `leadership`,
       imgUrl: RaynBradley,
       name: `Ryan Bradley`, 
-      position: `Interactive Director`
+      position: `Interactive Director`,
+      link: `team/RaynBradley`
     },
     {
       class: `leadership accounts`,
       imgUrl: KelseyBlakney,
       name: `Kelsey Blakney`, 
-      position: `Accounts Director`
+      position: `Accounts Director`,
+      link: `team/KelseyBlakney`
     },
     {
       class: `leadership UX`,
       imgUrl: GarrettCummings,
       name: `Garrett Cummings`, 
-      position: `UX Director`
+      position: `UX Director`,
+      link: `team/GarrettCummings`
     },
     {
       class: `leadership creative`,
       imgUrl: MarcEngel,
       name: `Marc Engel`, 
-      position: `Executive Creative Director`
+      position: `Executive Creative Director`,
+      link: `team/MarcEngel`
     },
     {
       class: `leadership`,
       imgUrl: BriannaWeekly,
       name: `Brianna Weekley`, 
-      position: `Strategy Director`
+      position: `Strategy Director`,
+      link: `team/BriannaWeekly`
     },
     {
       class: `digital`,
       imgUrl: MuhammadAiKahlout,
       name: `Muhammad Al-Kahlout`, 
-      position: `Digital Marketing Director`
+      position: `Digital Marketing Director`, 
+      link: `team/MuhammadAiKahlout`
     },
     {
       class: `leadership digital creative`,
       imgUrl: SamHumphries,
       name: `Sam Humphries`, 
       position: `Digital Creative Director`,
-      link: `/about/SamHumphries`
+      link: `team/SamHumphries`
     },
     {
       class: `digital`,
       imgUrl: NathanOwens,
       name: `Nathan Owens`, 
-      position: `Senior Software Developer`
+      position: `Senior Software Developer`,
+      link: `team/NathanOwens`
     },
     {
       class: `creative`,
       imgUrl: AnnaRamia,
       name: `Anna Ramia`, 
-      position: `Senior Art Director`
+      position: `Senior Art Director`,
+      link: `team/AnnaRamia`
     },
     {
       class: `creative`,
       imgUrl: EmilyAlexander,
       name: `Emily Alexander`, 
-      position: `Senior Art Director`
+      position: `Senior Art Director`,
+      link: `team/EmilyAlexander`
     },
     {
       class: `accounts`,
       imgUrl: LeslieJohnson,
       name: `Leslie Johnson`, 
-      position: `Account Executive`
+      position: `Account Executive`,
+      link: `team/LeslieJohnson`
     },
     {
       class: `accounts`,
       imgUrl: BrittanyBathie,
       name: `Brittany Bathie`, 
-      position: `Account Executive`
+      position: `Account Executive`,
+      link: `team/BrittanyBathie`
     },
     {
       class: `accounts`,
       imgUrl: NinaDiamantis,
       name: `Nina Diamantis`, 
-      position: `Account Executive`
+      position: `Account Executive`,
+      link: `team/NinaDiamantis`
     },
     {
       class: `UX`,
       imgUrl: CarolynRolbiecki,
       name: `Carolyn Rolbiecki`, 
-      position: `UX Designer`
+      position: `UX Designer`,
+      link: `team/CarolynRolbiecki`
     },
     {
       class: `UX`,
       imgUrl: LaurenHillgarten,
       name: `Lauren Hillgartner`, 
-      position: `UI/UX Designer`
+      position: `UI/UX Designer`,
+      link: `team/LaurenHillgarten`
     },
     {
       class: `digital`,
       imgUrl: MaddieJarman,
       name: `Maddie Jarman`, 
-      position: `Marketing Coordinator`
+      position: `Marketing Coordinator`,
+      link: `team/MaddieJarman`
     },
     {
       class: `digital`,
       imgUrl: KatieRankin,
       name: `Katie Rankin`, 
-      position: `Digital Marketing Manager`
+      position: `Digital Marketing Manager`,
+      link: `team/KatieRankin`
     },
     {
       class: `interactive`,
       imgUrl: DanielleKossler,
       name: `Danielle Kossler`, 
-      position: `Software Developer`
+      position: `Software Developer`,
+      link: `team/DanielleKossler`
     },
     {
       class: `creative`,
       imgUrl: AbbyWilliams,
       name: `Abby Williams`, 
-      position: `Graphic Designer`
+      position: `Graphic Designer`,
+      link: `team/AbbyWilliams`
     },
     {
       class: `accounts`,
       imgUrl: SpancerDavis,
       name: `Spencer Davis`, 
-      position: `Accounting`
+      position: `Accounting`,
+      link: `team/SpancerDavis`
     }
   ];
 

@@ -37,6 +37,10 @@
   display: flex;
 }
 
+.post .tags {
+  margin-bottom: 0;
+}
+
 .post-disclaimers {
   padding-top: var(--spacing-m);
   border-top: 1px solid var(--cool-gray);
