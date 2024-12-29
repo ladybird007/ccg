@@ -33,10 +33,8 @@
       {#if author}
         <span>by <a href={author.url}>{author.name}</a></span>
       {/if}
-      {#if meta.date}
+      {#if meta}
         <span class="text-grey text-light">{meta.date}</span>
-      {/if}
-      {#if meta.time}
         <span class="text-grey text-light">{meta.time}</span>
       {/if}
     </div>

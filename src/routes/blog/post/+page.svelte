@@ -1,6 +1,6 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags/Tags.svelte";
-  import BlogTopSection from "$lib/components/BlogTopSection/BlogTopSection.svelte";
+  import PostTopSection from "$lib/components/PostTopSection/PostTopSection.svelte";
 
   let postDetails = {
     title: `A New Age of New-to-Medicare Marketing`,
@@ -32,7 +32,7 @@
   <title>{postDetails.title}</title>
 </svelte:head>
 
-<BlogTopSection {...postDetails} />
+<PostTopSection {...postDetails} />
 
 <div class="section post-content">
   <div class="container container--small section__content">

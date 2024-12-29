@@ -1,6 +1,6 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags/Tags.svelte";
-  import BlogTopSection from "$lib/components/BlogTopSection/BlogTopSection.svelte";
+  import PostTopSection from "$lib/components/PostTopSection/PostTopSection.svelte";
 
   import Laptop from "$lib/assets/images/blog/Laptop.png";
   import PostImg1 from "$lib/assets/images/blog/PostImg1.png";
@@ -42,7 +42,7 @@
   <title>{postDetails.title}</title>
 </svelte:head>
 
-<BlogTopSection {...postDetails} />
+<PostTopSection {...postDetails} />
 
 <div class="section section--small-gap section--no-vertical-spacing post-content">
   {#if postDetails.heroImg}
