@@ -1,13 +1,3 @@
-@keyframes infiniteScroll {
-  0% {transform: translateX(0)}
-  100% {transform: translate3D(-50%, 0, 0)}
-}
-
-@keyframes infiniteScrollFReverce {
-  0% {transform: translateX(0)}
-  100% {transform: translateX(50%)}
-}
-
 .running-string {
   width: 100%;
   overflow: hidden;
@@ -20,31 +10,35 @@
 }
 .running-string__inner {
   position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 144px;
-  transition: all 0.3s;
-  /* animation-name: infiniteScroll;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition: all 0.5s; *//
+  white-space: nowrap;
 }
 .running-string__item {
-  white-space: nowrap;
+  display: inline-block;
 }
 @media (max-width: 767px) {
   .running-string {
     font-size: 47px;
+  }
+  .running-string__item {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .running-string {
     font-size: 80px;
   }
+  .running-string__item {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 @media (min-width: 1280px) {
   .running-string {
     font-size: 99px;
+  }
+  .running-string__item {
+    padding-left: 72px;
+    padding-right: 72px;
   }
 }
