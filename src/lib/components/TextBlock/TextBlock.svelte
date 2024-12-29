@@ -21,16 +21,18 @@
       {preHeadeline}
     </p>
   {/if}
-  {#if mainHeadline}
-    <h2>
-      {@html mainHeadline}
-    </h2>
-  {/if}
-  {#if mainText}
-    <p class="text-emphasis">
-      {@html mainText}
-    </p>
-  {/if}
+  <div>
+    {#if mainHeadline}
+      <h2>
+        {@html mainHeadline}
+      </h2>
+    {/if}
+    {#if mainText}
+      <p class="text-emphasis">
+        {@html mainText}
+      </p>
+    {/if}
+  </div>
   {#if buttons}
     <div class="buttons">
       {#each buttons as button}

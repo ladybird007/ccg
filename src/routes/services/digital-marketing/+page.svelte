@@ -194,7 +194,7 @@
         <h2>
           Create scroll-stopping content.
         </h2>
-        <div class="two-columns-text">
+        <div class="two-columns-text text-family">
           <p>
             Using broad blanket digital strategies is like flushing dollars away. We don't do that. 
             Our advanced tech stack and expert digital strategists ensure every dollar works hard for you, 
@@ -219,7 +219,7 @@
         <div class="text-center">
           <h4>We only use the best to power our data.</h4>
         </div>
-        <div class="logos" style="height: {logoCardHeight}px">
+        <div class="logos {$colorScheme}" style="height: {logoCardHeight}px">
           {#each logosList as logo }
             <div class="logos__item">
               <div class="logos__img">

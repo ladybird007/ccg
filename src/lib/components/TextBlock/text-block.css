@@ -1,3 +1,9 @@
+.text-block h2 + p {
+  margin-top: var(--spacing-s);
+}
+.text-block .text-emphasis {
+  line-height: 1.6;
+}
 @media (max-width: 767px) {
   .text-block .text-emphasis {
     font-size: 16px;

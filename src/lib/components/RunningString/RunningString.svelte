@@ -8,10 +8,11 @@
   gsap.registerPlugin(Observer);
 
   interface Props {
+    colorText?: string,
     runningText: string
   }
   
-  let  { runningText }: Props = $props();
+  let  { runningText, colorText }: Props = $props();
 
   onMount(() => {      
     const rollConst = roll(".rollingText", {duration: 20});               
@@ -54,7 +55,7 @@
  
 </script>
 
-<div class="running-string">
+<div class="running-string {colorText}">
   <div class="running-string__inner">
     <span class="running-string__item rollingText">
       {runningText}  

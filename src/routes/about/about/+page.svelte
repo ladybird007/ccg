@@ -52,7 +52,7 @@
       {
         icon: MissionAsk,
         headline: `Ask Why & Dig In`,
-        text: `Curiosity drives us forward. We don’t settle for surface-level understanding. Instead, we ask probing questions, dig into the details, and seek deeper insights. Our commitment to continuous learning fuels our growth and drives results.`
+        text: `Curiosity drives us forward. We don't settle for surface-level understanding. Instead, we ask probing questions, dig into the details, and seek deeper insights. Our commitment to continuous learning fuels our growth and drives results.`
       }
     ]
   }
@@ -122,7 +122,7 @@
         <h2>
           Since 1991, CCG has been at the forefront of business evolution, blending the best of consulting and marketing.
         </h2>
-        <div class="two-columns-text">
+        <div class="two-columns-text text-family">
           <p>
             With a proven track record of creating results-first strategies, we bring together 
             a team of dynamic problem solvers with expertise across digital, traditional, web design, 
@@ -139,7 +139,7 @@
   </div>
 
   <div class="section mission">
-    <RunningString runningText={'Radically Honest, Creative, & Smart, Not Smug'} />
+    <RunningString colorText={'teal'} runningText={'Radically Honest, Creative, & Smart, Not Smug'} />
     <div class="container container--small text-center">
       <TextBlock {...MissionText} />
     </div>

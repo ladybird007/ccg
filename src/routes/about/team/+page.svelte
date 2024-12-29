@@ -256,9 +256,7 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
     <div class="container">
       <div class="filters-button-group button-group tags">
         <button class="button tag tag--grey is-checked" data-filter="*">All</button>

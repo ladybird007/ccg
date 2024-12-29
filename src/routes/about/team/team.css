@@ -7,6 +7,10 @@
   padding-left: calc(var(--spacing-s) / 2);
   padding-right: calc(var(--spacing-s) / 2);
 }
+
+.team-single p:not(:last-child) {
+  margin-bottom: var(--spacing-s);
+}
 @media (max-width: 1279px) {
   .team {
     margin-top: var(--spacing-m);

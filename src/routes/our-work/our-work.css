@@ -21,6 +21,13 @@
   max-width: 100%;
 }
 
+.client-card__logo {
+  max-width: calc(100% - 56px);
+}
+.client-card__logo svg {
+  max-width: 100%;
+  height: auto;
+}
 
 
 
@@ -63,6 +70,7 @@
   .clients {
     margin-left: -32px;
     margin-right: -32px;
+    margin-top: var(--spacing-xs);
   }
   .clients .grid-sizer,
   .clients .client-card {

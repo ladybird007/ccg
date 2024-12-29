@@ -27,7 +27,7 @@
 
 </script>
 
-<div class="section top-section">
+<div class="top-section section">
   <div class="container">
     <div class="row top-section__row">
       <div class="section__content top-section__text">

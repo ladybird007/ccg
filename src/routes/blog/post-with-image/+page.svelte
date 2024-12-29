@@ -44,8 +44,8 @@
     <h1>{postDetails.title}</h1>
     <div class="post-meta">
       <span>by <a href={postDetails.author.url}>{postDetails.author.name}</a></span>
-      <span class="text-grey">{postDetails.meta.date}</span>
-      <span class="text-grey">{postDetails.meta.time}</span>
+      <span class="text-grey text-light">{postDetails.meta.date}</span>
+      <span class="text-grey text-light">{postDetails.meta.time}</span>
     </div>
   </div>
 </div>
@@ -181,8 +181,10 @@
       </p>
     </div>
 
-    <div class="post-tags">
-      <Tags tags={postDetails.tags}  />
-    </div>
+    {#if postDetails.tags}
+      <div class="post-tags">
+        <span>Tags:</span> <Tags tags={postDetails.tags} />
+      </div>
+    {/if}
   </div>
 </div>

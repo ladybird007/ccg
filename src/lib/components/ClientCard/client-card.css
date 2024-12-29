@@ -70,3 +70,9 @@
   width: 40px;
   height: auto;
 }
+
+@media (max-width: 797px) {
+  .client-card {
+    padding-bottom: var(--spacing-m);
+  }
+}

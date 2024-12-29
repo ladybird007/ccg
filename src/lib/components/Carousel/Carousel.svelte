@@ -1,6 +1,6 @@
 <script lang=ts>
   // @ts-nocheck
-  import { slidesCount } from '$lib/store';
+  import { colorScheme, slidesCount } from '$lib/store';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import Carousel from "svelte-carousel";  
@@ -24,7 +24,7 @@
 </script>
 
 
-<div class="custom-carousel" class:images={images}>  
+<div class="custom-carousel {$colorScheme}" class:images={images}>  
   {#if browser} 
   <Carousel
     bind:this={carousel}

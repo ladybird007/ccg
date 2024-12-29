@@ -39,15 +39,15 @@
   box-shadow: 0 2px var(--orange);
 }
 @media (max-width: 991px) {
-  .icon-list__text {
-    margin-bottom: var(--spacing-m);
-  }
   .icon-list__text br {
     display: none;
   } 
   .icon-list__list li {
-    padding-top: var(--spacing-s);
-    padding-bottom: var(--spacing-s);
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+  }
+  .icon-list .row {
+    gap: var(--spacing-s);
   }
 }
 @media (max-width: 767px) {
@@ -60,9 +60,6 @@
   }
 }
 @media (min-width: 992px) {
-  .icon-list {
-    display: flex;
-  }
   .icon-list__text {
     width: 25%;
   }
@@ -72,5 +69,10 @@
   }
   .icon-list__list li {
     padding: 22px var(--spacing-s);
+  }
+}
+@media (min-width: 1280px) {
+  .icon-list .row {
+    gap: var(--spacing-s);
   }
 }

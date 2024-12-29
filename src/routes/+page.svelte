@@ -22,6 +22,8 @@
   import RowChoosePlan from '$lib/assets/images/home/RowChoosePlan.png';
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
   import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
+  import RowGreenBg from '$lib/assets/images/home/RowGreenBg.svg';
+  import RowTealBg from '$lib/assets/images/home/RowTealBg.svg';
 
   import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
 
@@ -123,7 +125,7 @@
         text: `Together, we've helped our partners generate millions of dollars in revenue.`,
         buttons: [
           {
-            url: '/our-work',
+            url: '/case-study',
             text: 'View Case Studies',
             type: 'outline'
           }
@@ -168,6 +170,7 @@
     rows: [
       {
         addClassCol: `teal`,
+        colImgBgUrl: RowTealBg,
         imgUrl: RowChoosePlan,
         preHeadeline: `Medicare Advantage Marketing`,
         mainHeadline: `We speak Medicare Advantage.`,
@@ -182,6 +185,7 @@
       },
       {
         addClassCol: `green`,
+        colImgBgUrl: RowGreenBg,
         imgUrl: RowPartnership,
         preHeadeline: `B2B Marketing`,
         mainHeadline: `Where Precision Meets Partnership`,
@@ -299,7 +303,7 @@
       <p class="text-simple pre-headline">Case Studies</p>
       <h2>Don't just take our word for it.</h2>
       
-      <div class="row align-center">
+      <div class="row align-center case-studies-section__row">
         <div class="col">
           <img src={RowCaseStudies} alt="">
         </div>
@@ -307,7 +311,7 @@
           <h3>
             310% Increase in YOY AEP Lead Volume for Viva Medicare 
           </h3>
-          <p>
+          <p class="text-family">
             Learn how we drove remarkable lead volume despite navigating an unprecedented economy.
           </p>
           <a href="/case-study" class="btn btn--outline">View Case Study</a>

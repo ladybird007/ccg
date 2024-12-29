@@ -28,14 +28,17 @@
     flex-shrink: 0;
   }
   .case-studies-section .col--text {
-    padding-left: var(--spacing-l);
+    padding-right: var(--spacing-l);
   }
 }
 @media (min-width: 1280px) {
   .why-ccg .row {
     gap: var(--spacing-2xl);
   }
-  .case-studies .row {
-    margin-top: var(--spacing-m);
+  .case-studies-section {
+    gap: var(--spacing-xl);
+  }
+  .case-studies-section .row {
+    margin-top: calc(var(--spacing-m) + var(--spacing-xxs));
   }
 }

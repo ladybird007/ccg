@@ -1,5 +1,8 @@
+.custom-carousel {
+  position: relative;
+}
 .custom-carousel .sc-carousel__content-container {
-  padding-bottom: var(--spacing-l);
+  padding-bottom: 107px;
 }
 .custom-carousel .sc-carousel__arrow-container {
   position: absolute;
@@ -12,7 +15,7 @@
 .custom-carousel .sc-carousel-button.sc-carousel-arrow__circle {
   width: 35px;
   height: 35px;
-  background-color: var(--cool-gray);
+  background-color: light-dark(var(--cool-gray), rgba(194, 194, 194, 0.3));
   transition: all 0.3s;
   outline: none;
 }
@@ -24,7 +27,15 @@
   border: none !important;
   width: 100%;
   height: 100%;
-  background: url(../../assets/images/icons/slider-arrow.svg) no-repeat 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(../../assets/images/icons/slider-arrow.svg);
+}
+.dark.custom-carousel .sc-carousel-arrow__arrow {
+  opacity: 0.3;
+}
+.dark.custom-carousel .sc-carousel-arrow__arrow:hover {
+  opacity: 1;
 }
 .custom-carousel .sc-carousel-arrow__arrow-prev {
   transform: rotate(180deg) !important;
@@ -56,12 +67,28 @@
   display: block;
 }
 
+.custom-carousel.images:before {
+  content: "";
+  position: absolute;
+  bottom: var(--spacing-l);
+  left: 0;
+  height: 299px;
+  width: 132px;
+  background: url(../../assets/images/bg/fixed-shape.svg) no-repeat 0 100% / contain;
+  z-index: -1;
+}
+
 @media (max-width: 1279px) {
   .custom-carousel .sc-carousel__arrow-container:first-child {
     right: calc(50% + var(--spacing-xs) / 2);
   }
   .custom-carousel .sc-carousel__arrow-container:last-child {
     left: calc(50% + var(--spacing-xs) / 2);
+  }
+
+  .custom-carousel {
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
   }
 }
 @media (max-width: 767px) {
@@ -106,15 +133,7 @@
     position: relative;
     padding-left: calc(var(--spacing-2xl) + 132px);
   }
-  .custom-carousel.images:before {
-    content: "";
-    position: absolute;
-    bottom: var(--spacing-l);
-    left: 0;
-    height: 299px;
-    width: 132px;
-    background: url(../../assets/images/bg/fixed-shape.svg) no-repeat 0 100% / contain;
-  }
+  
   .custom-carousel .sc-carousel__arrow-container:first-child {
     right: calc(50% - (1170px / 2) + var(--spacing-2xl) + 35px + var(--spacing-xs));
     

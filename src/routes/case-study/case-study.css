@@ -4,8 +4,6 @@
 
 
 .section.testimonials {
-  padding-top: var(--spacing-2xl);
-  padding-bottom: var(--spacing-2xl);
   background-color: var(--deep-green);
   background-repeat: no-repeat;
   background-position: 100% 100%;
@@ -31,13 +29,34 @@
   .challenge-section .image-text__col--text {
     padding-bottom: 0;
   }
+  .testimonials.section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
 }
 @media (min-width: 992px) {
   .challenge-section .image-text {
     flex-direction: row-reverse;
   }
-  .challenge-section .image-text__col--text {
-    padding-left: var(--spacing-s);
+}
+@media (min-width: 992px) and (max-width: 1279px) {
+  .testimonials.section {
+    padding-top: calc(2 * var(--spacing-l));
+    padding-bottom: calc(2 * var(--spacing-l));
+  }
+}
+@media (min-width: 1280px) {
+  .testimonials.section {
+    padding-top: calc(2 * var(--spacing-2xl));
+    padding-bottom: calc(2 * var(--spacing-2xl));
+  }
+  .solution-section .image-text__col--img {
+    justify-content: flex-start;
+  }
+  .solution-section .image-text__col--text {
     padding-right: 0;
+  }
+  .challenge-section .image-text__col--text {
+    padding-left: 0;
   }
 }

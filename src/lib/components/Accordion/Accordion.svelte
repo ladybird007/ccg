@@ -53,7 +53,7 @@
         {/if}
 				<div class="section__content accordion-desc">
           <div class="text-family accordion-text">
-            {@html item.text}
+            <p>{@html item.text}</p>
           </div>
           {#if item.iconList}
             <h3>Here’s how we do it:</h3>

@@ -76,6 +76,11 @@
     margin-right: auto;
   }
 }
+@media (max-width: 767px) {
+  .contact-data li {
+    margin-top: var(--spacing-s);
+  }
+}
 @media (max-width: 480px) {
   .speak-with__text {
     padding-left: var(--spacing-xs);

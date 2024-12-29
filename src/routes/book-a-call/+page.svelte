@@ -129,7 +129,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="align-center">
+                <div class="row justify-content-center">
                   <input type="submit" value="Submit" class="btn btn--primary">
                 </div>
               </div>

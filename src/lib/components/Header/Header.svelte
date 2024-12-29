@@ -168,6 +168,10 @@
     'our-work'
   ]
 
+  const lightGrayHeaderPages = [
+    'services'
+  ]
+
   const setActiveClass = (val: string) => $page.url.pathname.includes(val); 
 
   const setDarkHeaderBg = (val: string[]) => {
@@ -178,7 +182,7 @@
 
 </script>
 
-<header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)}>  
+<header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)} class:light-grey={setDarkHeaderBg(lightGrayHeaderPages)}>  
   <div class="container">
     <div class="row justify-space-between align-center">
       <div class="header__col">

@@ -4,6 +4,9 @@
 .mission__values {
   max-width: 950px;
 }
+.mission strong {
+  font-family: 'Shift Bold', sans-serif;
+}
 @media (max-width: 991px) {
   .mission__cards {
     display: flex;

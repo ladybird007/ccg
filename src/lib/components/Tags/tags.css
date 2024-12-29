@@ -20,12 +20,12 @@
   font-family: 'Soehne', sans-serif;
 }
 
-.tags.grey .tag {
-  color: var(--cool-gray-dark);
-  background-color: rgba(112, 112, 112, 0.08);
+.tags .tag {
+  color: light-dark(var(--cool-gray-dark), #D5D3D3);
+  background-color: light-dark(rgba(112, 112, 112, 0.08), rgba(255, 255, 255, 0.2));
   border-color: rgba(112, 112, 112, 0.08);
 }
-.tags.grey .tag:hover {
+.tags .tag:hover {
   background-color: rgba(112, 112, 112, 0.2);
   border-color: rgba(112, 112, 112, 0.2);
 }

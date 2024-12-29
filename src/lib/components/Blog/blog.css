@@ -43,7 +43,7 @@
 .blog-list__arrow svg path {
   transition: all 0.3s;
 }
-.blog-block:not(.in-line) blog-list__item:not(:last-child) {
+.blog-block:not(.in-line) .blog-list__item:not(:last-child) {
   border-bottom: 1px solid var(--cool-gray);
 }
 .blog-block.in-line .blog-list__item {

@@ -25,7 +25,7 @@
   const pageTitle = `Legacy Cabinets`;
 
   let counterSectionDetails = {
-    sectionClass: `section--light-grey`,
+    sectionClass: `section--light-grey counter-section`,
     mainText: `Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.`,
     numbers: [
       {
@@ -145,7 +145,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section section--small-gap">
     <div class="container">
       <TextBlock {...transformationsText} />
     </div>
@@ -164,7 +164,7 @@
     </div>
   </div>
 
-  <div class="section section--no-vertical-spacing seaction--light-grey">
+  <div class="section section--no-vertical-spacing section--light-grey solution-section">
     <div class="container">
       <ImageTextRow {...solutionImageTextRow} imgUrl={$colorScheme === 'dark' ? SolutionImgDark : SolutionImgLight} />
     </div>

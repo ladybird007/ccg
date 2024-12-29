@@ -5,6 +5,7 @@
   font-weight: 300;
   line-height: 1.15; 
 }
+.running-string.teal,
 .section--green .running-string {
   color: var(--teal);
 }

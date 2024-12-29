@@ -77,6 +77,9 @@
   background-color: var(--deep-navy);
   color: var(--white);
 }
+.header.light-grey {
+  background-color: light-dark(var(--white-pale), var(--dark-bg));
+}
 .header.dark .switch-theme {
   border-color: var(--white);
 }
@@ -90,6 +93,11 @@
 .navigation__sub-menu-btn {
   color: inherit;
 }
+
+.header .btn {
+  height: 46px;
+}
+
 .navigation__sub-menu-btn {
   font-family: inherit;
   font-size: inherit;
@@ -121,9 +129,6 @@
 .navigation__sub-menu-btn svg {
   transition: all 0.3s;
 }
-.navigation__sub-menu-btn.opened svg {
-  transform: rotate(180deg);
-}
 .navigation__list {
   display: flex;
   align-items: center;
@@ -135,7 +140,7 @@
 }
 
 .sub-menu li + li {
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-xxs);
 }
 .sub-menu a {
   white-space: nowrap;
@@ -190,11 +195,17 @@
   opacity: 0;
 }
 
+.navigation a:not(.btn):not(.logo):hover,
+.navigation__sub-menu-btn:hover,
+.navigation__sub-menu-btn.opened {
+  color: var(--orange);
+}
+
 @media (max-width: 991px) {
   .header.colored {
     height: 100vh;
     color: var(--white);
-    background-color: var(--teal-dark);
+    background-color: var(--deep-green);
   }
   .header .container {
     position: relative;
@@ -418,11 +429,6 @@
   .navigation__list > li:not(.navigation__btn-wrap) {
     padding-top: calc(var(--spacing-xxs) + 1px);
     padding-bottom: calc(var(--spacing-xxs) + 1px);
-  }
-  .navigation a:not(.btn):not(.logo):hover,
-  .navigation__sub-menu-btn:hover,
-  .navigation__sub-menu-btn.opened {
-    color: var(--orange);
   }
   .sub-menu {
     position: absolute;
