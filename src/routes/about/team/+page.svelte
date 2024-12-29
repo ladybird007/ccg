@@ -1,4 +1,6 @@
 <script lang='ts'>
+
+
   import { onMount } from "svelte";
   import TeamCard from "$lib/components/TeamCard/TeamCard.svelte";
 
@@ -162,6 +164,7 @@
   ];
 
   onMount(() => {
+
     const grid = document.querySelector('.grid');
     let iso;
 
@@ -277,6 +280,4 @@
       {/if}
     </div>
   </div>
-
-  
 </div>

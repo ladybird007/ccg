@@ -68,6 +68,7 @@
   padding-top: var(--spacing-s);
   padding-bottom: var(--spacing-s);
   transition: all 0.3s;
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
 }
 .header + div {
   padding-top: 112px;

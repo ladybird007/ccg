@@ -20,6 +20,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"gsap": "^3.12.5",
 		"isotope-layout": "^3.0.6",
 		"svelte-collapsible": "^0.3.1"
 	}
