@@ -1,0 +1,43 @@
+.fixed-btn {
+  position: fixed;
+  z-index: 12;
+  
+  border-radius: 50%;
+  background-color: light-dark(#010202, var(--teal));
+  color: light-dark(var(--white), var(--deep-navy));
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+@media (max-width: 1279px) {
+  .fixed-btn {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .fixed-btn {
+    bottom: var(--spacing-s);
+    right: var(--spacing-s);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .fixed-btn {
+    bottom: var(--spacing-m);
+    right: var(--spacing-m);
+  }
+}
+@media (min-width: 1280px) {
+  .fixed-btn {
+    width: 120px;
+    height: 120px;
+    bottom: var(--spacing-2xl);
+    right: var(--spacing-2xl);
+  }
+  .fixed-btn:hover {
+    opacity: 0.75;
+  }
+  
+}

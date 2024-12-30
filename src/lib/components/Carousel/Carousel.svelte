@@ -20,7 +20,7 @@
 
   let { images, testimonials }:Props = $props();    
 
-  let carousel;  
+  let carousel = $state(null);
   
   const debounce = (func, delay) => {
 		let timer;

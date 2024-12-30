@@ -1,6 +1,4 @@
 <script lang='ts'>
-
-
   import { onMount } from "svelte";
   import TeamCard from "$lib/components/TeamCard/TeamCard.svelte";
 
