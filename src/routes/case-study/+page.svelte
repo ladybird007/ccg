@@ -124,7 +124,7 @@
   <div class="section testimonials">
     <div class="container">
       <p class="text-callout">
-        Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.”
+        <span class="testimonials__quote">“</span>Legacy Cabinets partnered with CCG to simplify their complex product line and elevate their online user experience. By streamlining navigation and enhancing product discovery, we transformed their website, ultimately driving higher user satisfaction and engagement.”
       </p>
       <div class="testimonials__meta">
         <span class="text-semibold">John</span>

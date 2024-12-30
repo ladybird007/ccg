@@ -4,6 +4,7 @@
 
 
 .section.testimonials {
+  padding-left: var(--spacing-s);
   background-color: var(--deep-green);
   background-repeat: no-repeat;
   background-position: 100% 100%;
@@ -15,6 +16,16 @@
   font-size: 18px;
   display: inline-flex;
   gap: var(--spacing-s);
+}
+.testimonials__quote {
+  font-size: 65px;
+  position: absolute;
+  top: 0;
+  line-height: 1;
+  right: calc(100% + var(--spacing-xxs));
+}
+.testimonials .text-callout {
+  position: relative;
 }
 
 @media (max-width: 991px) {

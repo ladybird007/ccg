@@ -22,8 +22,8 @@
   import RowChoosePlan from '$lib/assets/images/home/RowChoosePlan.png';
   import RowPartnership from '$lib/assets/images/home/RowPartnership.png';
   import RowCaseStudies from '$lib/assets/images/home/RowCaseStudies.png';
-  import RowGreenBg from '$lib/assets/images/home/RowGreenBg.svg';
-  import RowTealBg from '$lib/assets/images/home/RowTealBg.svg';
+  import RowGreenBg from '$lib/assets/images/home/RowGreenBg.png';
+  import RowTealBg from '$lib/assets/images/home/RowTealBg.png';
 
   import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
 

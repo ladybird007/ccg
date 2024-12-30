@@ -148,6 +148,7 @@
     ]
   }
 
+  
   let logoCardHeight = 0;
   let hiddenLogosBtn = false;
 
@@ -165,12 +166,16 @@
 
     logoCardHeight = ( logoItem.offsetHeight + gapVal ) * counter - gapVal + 1;
   }
+  
 
   onMount(() => {
-    logoCardHeight = document.querySelector('.logos__item').offsetHeight + 96;
+    const logosBtnHeight = document.querySelector('.logos__btn').clientHeight;
+
+    logoCardHeight = document.querySelector('.logos__item').offsetHeight + logosBtnHeight;
 
     window.addEventListener( 'resize', () => {
-      logoCardHeight = document.querySelector('.logos__item').offsetHeight + 96;
+      const logosBtnHeight = document.querySelector('.logos__btn').clientHeight;
+      logoCardHeight = document.querySelector('.logos__item').offsetHeight + logosBtnHeight;
 
       if (hiddenLogosBtn) {
         setLogosHeight()

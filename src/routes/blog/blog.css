@@ -103,7 +103,25 @@
   display: flex;
   gap: var(--spacing-s);
 }
-
+.post-quote {
+  position: relative;
+}
+.post-quote:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -124px;
+  content: '';
+  width: 131px;
+  height: 248px;
+  background: url(../../lib/assets/images/blog/post-quote-bg.svg) no-repeat 0 0 / contain;
+}
+@media (max-width: 1218px) {
+  .post-quote {
+    padding-left: 100px;
+  }
+}
 @media (max-width: 767px) {
   .post-content {
     font-size: 16px;
