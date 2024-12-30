@@ -14,7 +14,7 @@
   import RowTicketsLight from '$lib/assets/images/medicare/RowTicketsLight.png';
   import RowTicketsDark from '$lib/assets/images/medicare/RowTicketsDark.png';
 
-  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
+  import Medicare from '$lib/assets/video/Medicare.mp4';
 
   const pageTitle = `Medicare`;
 
@@ -35,7 +35,7 @@
       }
     ],
     posterUrl: VideoPlay,
-    videoUrl: PartnerWithUs,
+    videoUrl: Medicare,
     popupBtn: true
   }
 
