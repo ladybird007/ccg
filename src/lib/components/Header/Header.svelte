@@ -1,116 +1,26 @@
-<script lang="ts">  
+<script lang="ts">
   import { page } from '$app/stores';
   import { colorScheme } from '$lib/store';
   import { slide } from 'svelte/transition';
-  
+
   import Address from '../Address/Address.svelte';
 
   import './header.css';
-  
+
   import Logo from '$lib/assets/images/Logo.svg';
   import SmallArrow from '$lib/assets/images/icons/SmallArrow.svelte';
-  // import { on } from 'svelte/events';
 
-  let mainMenuLeft = [
-    {
-      key: `services`,
-      url: false,
-      text: `Services`,
-      subMenu: [
-        {
-          url: `/services/digital-marketing`,
-          text: `Digital Marketing`
-        },
-        {
-          url: `/services/strategy`,
-          text: `Strategy`
-        },
-        {
-          url: `/services/marketing`,
-          text: `Marketing`
-        },
-        {
-          url: `/services/web-design`,
-          text: `Web Design`
-        },
-        {
-          url: `/services/ux-esign`,
-          text: `UX Design`
-        },
-        {
-          url: `/services/enterprise-software`,
-          text: `Enterprise Software`
-        }
-      ]
-    },
-    {
-      key: `industries`,
-      url: false,
-      text: `Industries`,
-      subMenu: [
-        {
-          url: `/industries/b2b`,
-          text: `B2B`
-        },
-        {
-          url: `/industries/b2c`,
-          text: `B2C`
-        },
-        {
-          url: `/industries/medical`,
-          text: `Medical`
-        },
-        {
-          url: `/industries/medicare`,
-          text: `Medicare`
-        }
-      ]
-    },
-    {
-      key: `our-work`,
-      url: `/our-work`,
-      text: `Our Work`
-    },
-    {
-      key: `about`,
-      url: false,
-      text: `About`,
-      subMenu: [
-        {
-          url: `/about/about`,
-          text: `About`
-        },
-        {
-          url: `/about/team`,
-          text: `Team`
-        },
-        {
-          url: `/about/our-approach`,
-          text: `Approach`
-        }
-      ]
-    },
-    {
-      key: `blog`,
-      url: `/blog/post`,
-      text: `Blog`
-    }
-  ]
-
-  
   let menuMobileVisible = false;
-  let activeSwitch = false;
 
   function switchColorScheme () {
-    activeSwitch = !activeSwitch;
     const htmlTag = document.getElementsByTagName('html');
-    if (activeSwitch) {
+    if ($colorScheme === 'light') {
       htmlTag[0].style.setProperty("color-scheme", "dark");
       colorScheme.update(v => v = 'dark');
     } else {
       htmlTag[0].style.setProperty("color-scheme", "light");
       colorScheme.update(v => v = 'light');
-    }        
+    }
   }
 
   let isExpanded1 = false,
@@ -141,7 +51,7 @@
         isExpanded2 = false,
         isExpanded3 = false;
     }
-    
+
   }
 
   function handlerSubMenuClose(e) {
@@ -157,7 +67,7 @@
       }
     }
 	}
-  
+
   const darkHeaderPages = [
     'about/about',
     'about/team',
@@ -172,17 +82,15 @@
     'services'
   ]
 
-  const setActiveClass = (val: string) => $page.url.pathname.includes(val); 
+  const setActiveClass = (val: string) => $page.url.pathname.includes(val);
 
   const setDarkHeaderBg = (val: string[]) => {
     const currectPath = val.find(i => $page.url.pathname.includes(i));
     return Boolean(currectPath)
   }
-
-
 </script>
 
-<header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)} class:light-grey={setDarkHeaderBg(lightGrayHeaderPages)}>  
+<header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)} class:light-grey={setDarkHeaderBg(lightGrayHeaderPages)}>
   <div class="container">
     <div class="row justify-space-between align-center">
       <div class="header__col">
@@ -200,8 +108,8 @@
                 Services
                 <SmallArrow />
               </button>
-	
-              {#if isExpanded1}            
+
+              {#if isExpanded1}
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div class="sub-menu" transition:slide>
                   <ul>
@@ -224,7 +132,7 @@
                 Industries
                 <SmallArrow />
               </button>
-              {#if isExpanded2} 
+              {#if isExpanded2}
               <div class="sub-menu" transition:slide>
                 <ul>
                   <li><a href="/industries/b2b" on:click={handlerSubMenuClose}>B2B</a></li>
@@ -247,7 +155,7 @@
                 About
                 <SmallArrow />
               </button>
-              {#if isExpanded3} 
+              {#if isExpanded3}
               <div class="sub-menu" transition:slide>
                 <ul>
                   <li><a href="/about/about" on:click={handlerSubMenuClose}>About</a></li>
@@ -263,7 +171,7 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="header__col header__col--absolute">
         <div class="navigation">
           <ul class="navigation__list">
@@ -272,7 +180,7 @@
             </li>
             <li class="navigation__btn-wrap"><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
             <li>
-              <button class="switch-theme" class:dark={activeSwitch} on:click="{() => switchColorScheme() }" aria-label='switch'></button>
+              <button class="switch-theme {$colorScheme}" on:click="{() => switchColorScheme() }" aria-label='switch'></button>
             </li>
             <li class="header__mobile-btn">
               <button class="mobile-menu-btn" aria-label="button" on:click="{() => menuMobileVisible = !menuMobileVisible }"><em></em></button>

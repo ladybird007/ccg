@@ -1,6 +1,6 @@
 <script lang=ts>
-  import { gsap } from "gsap";
-  import { Observer } from "gsap/Observer";
+  import { gsap } from 'gsap/dist/gsap.js'
+  import { Observer }  from "gsap/dist/Observer";
   import { onMount } from 'svelte';
   import './running-string.css';
   gsap.registerPlugin(Observer);
@@ -13,7 +13,7 @@
   let  { runningText, colorText }: Props = $props();
 
   onMount(() => {      
-    const rollConst = roll(".rollingText", { duration: 20 }, false);
+    const rollConst = roll(".rollingText", { duration: 60 }, false);
     function roll(targets: string, vars: any, reverse: boolean) {
       const tl = gsap.timeline({
         repeat: -1,
@@ -53,11 +53,9 @@
 </script>
 
 <div class="running-string {colorText}">
-  <div class="running-string__inner">
-    <span class="running-string__item rollingText">
-      {runningText}
-      {runningText}
-      {runningText}
-    </span>
+  <div class="running-string__inner rollingText">
+    <span class="running-string__item">{runningText}</span>
+    <span class="running-string__item">{runningText}</span>
+    <span class="running-string__item">{runningText}</span>
   </div>
 </div>

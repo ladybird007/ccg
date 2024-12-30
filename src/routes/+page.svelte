@@ -25,7 +25,7 @@
   import RowGreenBg from '$lib/assets/images/home/RowGreenBg.png';
   import RowTealBg from '$lib/assets/images/home/RowTealBg.png';
 
-  import PartnerWithUs from '$lib/assets/video/PartnerWithUs.mp4';
+  import CCGWebHero from '$lib/assets/video/CCGWebHero.mp4';
 
   const pageTitle =  `CCG`;
 
@@ -47,7 +47,7 @@
       }
     ],
     posterUrl: VideoPlay,
-    videoUrl: PartnerWithUs,
+    videoUrl: CCGWebHero,
     popupBtnMobile: true
   }
 

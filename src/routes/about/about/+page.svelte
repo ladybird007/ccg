@@ -18,9 +18,11 @@
   import MissionOneSize from '$lib/assets/images/about/MissionOneSize.svg';
   import MissionAsk from '$lib/assets/images/about/MissionAsk.svg';
 
-  import Slide1 from '$lib/assets/images/team/slider/Slide1.png';
-  import Slide2 from '$lib/assets/images/team/slider/Slide2.png';
-  import Slide3 from '$lib/assets/images/team/slider/Slide3.png';
+  import Slide1 from '$lib/assets/images/team/slider/Slide1.jpeg';
+  import Slide2 from '$lib/assets/images/team/slider/Slide2.jpeg';
+  import Slide3 from '$lib/assets/images/team/slider/Slide3.jpeg';
+  import Slide4 from '$lib/assets/images/team/slider/Slide4.jpeg';
+  import Slide5 from '$lib/assets/images/team/slider/Slide5.jpeg';
 
   const pageTitle =  `About`;
 
@@ -66,6 +68,12 @@
     },
     {
       url: Slide3
+    },
+    {
+      url: Slide4
+    },
+    {
+      url: Slide5
     },
   ] 
 </script>

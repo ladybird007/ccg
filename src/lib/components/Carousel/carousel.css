@@ -56,7 +56,6 @@
 
 .custom-carousel .slide__img {
   width: 100%;
-  height: 276px;
   border: 1px solid var(--black);
 }
 .custom-carousel .slide__img img {

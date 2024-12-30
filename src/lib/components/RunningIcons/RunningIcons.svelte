@@ -1,11 +1,9 @@
 <script lang=ts>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { Observer } from "gsap/Observer";
+  import { gsap } from 'gsap/dist/gsap.js'
+  import { Observer }  from "gsap/dist/Observer";
   import { onMount } from 'svelte';
   import { colorScheme } from '$lib/store';
   import './running-icons.css';
-  gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(Observer);
 
   import MiMotion from '$lib/assets/images/clients/MiMotion.svelte';
@@ -36,7 +34,7 @@
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      const rollConst = roll(".rollingIcons", {duration: 40}, false);
+      const rollConst = roll(".rollingIcons", {duration: 60}, false);
       Observer.create({
         onChangeY(self) {
           let factor = 2.5;
