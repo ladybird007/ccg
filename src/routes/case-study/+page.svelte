@@ -18,9 +18,9 @@
   import LaptopLight from '$lib/assets/images/caseStudy/LaptopDark.png';
   import LaptopDark from '$lib/assets/images/caseStudy/LaptopDark.png';
 
-  import Slide1 from '$lib/assets/images/caseStudy/slider/Slide1.png';
-  import Slide2 from '$lib/assets/images/caseStudy/slider/Slide2.png';
-  import Slide3 from '$lib/assets/images/caseStudy/slider/Slide3.png';
+  import Slide1 from '$lib/assets/images/caseStudy/slider/slide1.jpeg';
+  import Slide2 from '$lib/assets/images/caseStudy/slider/slide2.jpeg';
+  import Slide3 from '$lib/assets/images/caseStudy/slider/slide3.jpeg';
 
   const pageTitle = `Legacy Cabinets`;
 

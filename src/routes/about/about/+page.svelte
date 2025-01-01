@@ -18,11 +18,11 @@
   import MissionOneSize from '$lib/assets/images/about/MissionOneSize.svg';
   import MissionAsk from '$lib/assets/images/about/MissionAsk.svg';
 
-  import Slide1 from '$lib/assets/images/team/slider/Slide1.jpeg';
-  import Slide2 from '$lib/assets/images/team/slider/Slide2.jpeg';
-  import Slide3 from '$lib/assets/images/team/slider/Slide3.jpeg';
-  import Slide4 from '$lib/assets/images/team/slider/Slide4.jpeg';
-  import Slide5 from '$lib/assets/images/team/slider/Slide5.jpeg';
+  import Slide1 from '$lib/assets/images/team/slider/slide1.jpeg';
+  import Slide2 from '$lib/assets/images/team/slider/slide2.jpeg';
+  import Slide3 from '$lib/assets/images/team/slider/slide3.jpeg';
+  import Slide4 from '$lib/assets/images/team/slider/slide4.jpeg';
+  import Slide5 from '$lib/assets/images/team/slider/slide5.jpeg';
 
   const pageTitle =  `About`;
 
