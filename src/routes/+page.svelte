@@ -217,6 +217,11 @@
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
       author: `Jack`,
       position: `Director, e-Commerce`
+    },
+    {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor`,
+      author: `Jill`,
+      position: `VP, Global Sales`
     }
   ]
 

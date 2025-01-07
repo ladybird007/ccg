@@ -63,6 +63,7 @@
     let:loaded     
     dots={false}    
     particlesToShow={$slidesCount}
+    infinite={false}
   > 
     {#if images}
       {#each images as image}

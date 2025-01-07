@@ -90,6 +90,9 @@
     {
       url: Slide3
     },
+    {
+      url: Slide2
+    }
   ]
 </script>
 

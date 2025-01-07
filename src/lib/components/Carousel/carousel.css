@@ -12,15 +12,19 @@
   padding: 0 !important;
 }
 
+.custom-carousel .sc-carousel-button.sc-carousel-arrow__circle.sc-carousel-arrow__circle_disabled {
+  background-color: light-dark(var(--cool-gray), rgba(194, 194, 194, 0.3));
+  cursor: inherit;
+}
 .custom-carousel .sc-carousel-button.sc-carousel-arrow__circle {
   width: 35px;
   height: 35px;
-  background-color: light-dark(var(--cool-gray), rgba(194, 194, 194, 0.3));
+  background-color: var(--orange);
   transition: all 0.3s;
   outline: none;
 }
-.custom-carousel .sc-carousel-button.sc-carousel-arrow__circle:hover {
-  background-color: var(--orange);
+.custom-carousel .sc-carousel-button.sc-carousel-arrow__circle:not(.sc-carousel-arrow__circle_disabled):hover {
+  
   opacity: 0.7;
 }
 .custom-carousel .sc-carousel-arrow__arrow {
