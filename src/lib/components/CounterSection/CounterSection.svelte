@@ -38,7 +38,7 @@
       } else {
         clearInterval(counting)
       }
-    }, 10);
+    }, 50);
   }
 
   function isVisible(elem: string, index: number) {
