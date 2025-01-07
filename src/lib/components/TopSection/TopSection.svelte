@@ -1,5 +1,6 @@
 <script lang='ts'>
   import { popopVisible } from '$lib/store';
+  import { onMount } from 'svelte';
   import ScrollButton from '../ScrollButton/ScrollButton.svelte';
   import './top-section.css';
 
@@ -25,6 +26,16 @@
   function showPopupHandler() {
     popopVisible.update(v => v = true);
   }
+
+  onMount(() => {
+    const video = document.getElementById("bg-video");
+
+    if(video) {
+      setTimeout(function() {
+        video.play();
+      }, 500);
+    }
+  })
 
 </script>
 
@@ -70,7 +81,7 @@
                 <button class="top-section__play-btn" onclick={showPopupHandler} aria-label="button"></button>
               </div>
               <div class="top-section__video tablet-hidden">
-                <video width="100%" poster={posterUrl} muted autoplay loop>
+                <video id="bg-video" width="100%" poster={posterUrl} muted loop>
                   <source src={videoUrl} type="video/mp4" />
                 </video>
               </div>
