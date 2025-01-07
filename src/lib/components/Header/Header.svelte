@@ -220,7 +220,7 @@
       </div>
 
       <div class="header__mobile-contacts">
-        <a href="/book-a-call" class="btn btn--primary">Book a Strategy Call</a>
+        <a href="/book-a-call" class="btn btn--primary" on:click={handlerSubMenuClose}>Book a Strategy Call</a>
         <Address />
       </div>
     </div>

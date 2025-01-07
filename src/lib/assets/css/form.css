@@ -46,6 +46,17 @@
   border-color: #5CBCB9;
   box-shadow: var(--shadow-focus), 0 0 1px 1px #5CBCB9;
 }
+
+.form input[type=number],
+.form input::-webkit-outer-spin-button,
+.form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .from__headline {
   margin-bottom: var(--spacing-m);
 }

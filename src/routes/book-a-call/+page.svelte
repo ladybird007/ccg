@@ -50,11 +50,11 @@
               <div class="form__grid">
                 <div class="form__row">
                   <div>
-                    <label for="first-name">First name*</label>
+                    <label for="first-name">First Name*</label>
                     <input type="text" name="fisrt-name" placeholder="Sam" required />
                   </div>
                   <div>
-                    <label for="last-name">Last name*</label>
+                    <label for="last-name">Last Name*</label>
                     <input type="text" name="last-name" placeholder="Humphries" required />
                   </div>
                 </div>

@@ -57,7 +57,7 @@
             <form action="#">
               <div class="form__grid">
                 <div>
-                  <label for="full-name">Full name*</label>
+                  <label for="full-name">Full Name*</label>
                   <input type="text" name="full-name" placeholder="Sam Humphries" required />
                 </div>
                 <div>
