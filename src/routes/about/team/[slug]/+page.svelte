@@ -81,7 +81,7 @@
     <div class="container">
       <div class="row team-single__details">
         <div class="col team-single__text">
-          <p class="text-simple pre-headline">About</p>
+          <a href="/about" class="text-simple pre-headline">About</a>
           <h1>{userInfo.firstName} {userInfo.lastName}</h1>
           <h3>{userInfo.position}</h3>
           <div class="team-single__photo-mobile">

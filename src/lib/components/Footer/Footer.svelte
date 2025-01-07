@@ -27,7 +27,7 @@
       <div class="footer__bottom row justify-space-between">
         <div class="col">
           <ul class="footer__menu text-light">
-            <li><a href="/about/about">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/industries/medicare">Industries</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contact-us">Contact</a></li>

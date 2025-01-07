@@ -77,7 +77,7 @@
 	}
 
   const darkHeaderPages = [
-    'about/about',
+    'about',
     'about/team',
     'about/approach',
     'book-a-call',
@@ -185,7 +185,7 @@
               {#if isExpanded3}
               <div class="sub-menu" transition:slideOrFly use:clickOutside on:click_outside={handleClickOutside}>
                 <ul>
-                  <li><a href="/about/about" on:click={handlerSubMenuClose}>About</a></li>
+                  <li><a href="/about" on:click={handlerSubMenuClose}>About</a></li>
                   <li><a href="/about/team" on:click={handlerSubMenuClose}>Team</a></li>
                   <li><a href="/about/approach" on:click={handlerSubMenuClose}>Our Approach</a></li>
                 </ul>

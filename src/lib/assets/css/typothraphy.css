@@ -163,6 +163,7 @@ p a:not(.btn):not(.logo) {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  color: inherit;
 }
 .text-simple.pre-headline:before {
   content: "";

@@ -252,7 +252,7 @@
 <div class="our-team">
   <div class="hero-section">
     <div class="container section__content">
-      <p class="text-simple pre-headline">About</p>
+      <a href="/about" class="text-simple pre-headline">About</a>
       <h1>{pageTitle}</h1>
     </div>
     <img class="hero-section__img hero-section__img--diagrams" src={HeroBg} alt="">
