@@ -1,7 +1,8 @@
-.fixed-btn {
-  position: fixed;
-  z-index: 12;
-  
+.scroll-btn {
+  position: absolute;
+  z-index: 9;
+  right: var(--spacing-s);
+  transform: translateY(50%);
   border-radius: 50%;
   background-color: light-dark(#010202, var(--teal));
   color: light-dark(var(--white), var(--deep-navy));
@@ -12,31 +13,28 @@
 }
 
 @media (max-width: 1279px) {
-  .fixed-btn {
+  .scroll-btn {
     width: 80px;
     height: 80px;
   }
 }
 @media (max-width: 767px) {
-  .fixed-btn {
-    bottom: var(--spacing-s);
-    right: var(--spacing-s);
+  .scroll-btn {
+    bottom: var(--spacing-m-neg);
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .fixed-btn {
-    bottom: var(--spacing-m);
-    right: var(--spacing-m);
+  .scroll-btn {
+    bottom: calc(0 - var(--spacing-l));
   }
 }
 @media (min-width: 1280px) {
-  .fixed-btn {
+  .scroll-btn {
     width: 120px;
     height: 120px;
-    bottom: var(--spacing-2xl);
-    right: var(--spacing-2xl);
+    bottom: calc(0 - var(--spacing-2xl));
   }
-  .fixed-btn:hover {
+  .scroll-btn:hover {
     opacity: 0.75;
   }
   

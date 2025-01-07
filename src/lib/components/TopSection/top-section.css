@@ -1,3 +1,6 @@
+.top-section .container {
+  position: relative;
+}
 .top-section__row {
   position: relative;
 }

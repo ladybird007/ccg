@@ -48,7 +48,8 @@
     ],
     posterUrl: VideoPlay,
     videoUrl: CCGWebHero,
-    popupBtnMobile: true
+    popupBtnMobile: true,
+    scrollBtn: true
   }
 
   let resultsSectionDetails = {

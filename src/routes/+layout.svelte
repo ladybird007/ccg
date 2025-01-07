@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import Header from '$lib/components/Header/Header.svelte';
   import Footer from '$lib/components/Footer/Footer.svelte';
-  import FixedButton from '$lib/components/FixedButton/FixedButton.svelte';
 
   import '../app.css';
 
@@ -40,5 +39,3 @@
 {@render children()}
 
 <Footer />
-
-<FixedButton />

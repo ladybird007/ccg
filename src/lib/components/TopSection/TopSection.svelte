@@ -1,6 +1,6 @@
 <script lang='ts'>
   import { popopVisible } from '$lib/store';
-  import { onMount } from 'svelte';
+  import ScrollButton from '../ScrollButton/ScrollButton.svelte';
   import './top-section.css';
 
   interface Props {
@@ -16,10 +16,11 @@
     posterUrl?: string,
     videoUrl?: string,
     popupBtn?: boolean,
-    popupBtnMobile?: boolean
+    popupBtnMobile?: boolean,
+    scrollBtn?: boolean
 	}
 
-  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, posterUrl, videoUrl, popupBtn, popupBtnMobile }:Props = $props();
+  let { mainHeadline, preHeadeline,  headlineHighlight, subHeadline, buttons, posterUrl, videoUrl, popupBtn, popupBtnMobile, scrollBtn }:Props = $props();
 
   function showPopupHandler() {
     popopVisible.update(v => v = true);
@@ -82,5 +83,8 @@
         </div>
       {/if}
     </div>
+    {#if scrollBtn}
+      <ScrollButton />
+    {/if}
   </div>
 </div>
