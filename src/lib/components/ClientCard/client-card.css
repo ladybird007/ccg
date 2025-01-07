@@ -46,7 +46,7 @@
   transition: all 0.3s;
 }
 .client-card:hover {
-  cursor: url(../../assets/images/icons/cursor.svg) 2 2, pointer;
+  cursor: pointer;
 }
 .client-card:hover .client-card__banner:after {
   opacity: 1;

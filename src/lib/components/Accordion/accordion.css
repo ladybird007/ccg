@@ -83,6 +83,11 @@
   min-width: calc(200px + var(--spacing-m));
   padding-right: var(--spacing-m);
 }
+
+.approach .open .accordion-title {
+  color: var(--orange);
+}
+
 @media (max-width: 1279px) {
   .accordion-arrow {
     display: none;
