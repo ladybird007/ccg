@@ -65,6 +65,8 @@
   right: 0;
   height: 112px;
   z-index: 10;
+  display: flex;
+  align-items: center;
   padding-top: var(--spacing-s);
   padding-bottom: var(--spacing-s);
   transition: all 0.3s;
@@ -139,9 +141,6 @@
   gap: var(--spacing-xxs);
 }
 
-.sub-menu li + li {
-  margin-top: var(--spacing-xxs);
-}
 .sub-menu a {
   white-space: nowrap;
 }
@@ -264,6 +263,9 @@
     font-weight: 300;
     padding-left: var(--spacing-s);
     margin-top: 12px;
+  }
+  .sub-menu li + li {
+    margin-top: var(--spacing-xxs);
   }
   .mobile-menu-btn {
     position: relative;
@@ -411,6 +413,11 @@
     gap: calc(var(--spacing-s) + var(--spacing-xxs));
   }
 
+  .navigation__list > li > a,
+  .navigation__sub-menu-btn {
+    padding-bottom: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+  }
   .navigation a:not(.btn):not(.logo):after,
   .navigation__sub-menu-btn:after {
     content: '';
@@ -427,20 +434,20 @@
   .navigation__sub-menu-btn.opened:after {
     right: 0;
   }
-  .navigation__list > li:not(.navigation__btn-wrap) {
-    padding-top: calc(var(--spacing-xxs) + 1px);
-    padding-bottom: calc(var(--spacing-xxs) + 1px);
-  }
   .sub-menu {
     position: absolute;
     left: 0;
-    top: calc(100% - 2px);
-    padding: var(--spacing-xs);
-    border-radius: var(--border-radius-container);
+    top: calc(100%);
+    padding: var(--spacing-s);
+    border-radius: var(--border-radius-card);
     background-color: #fff;
     box-shadow: var(--shadow-xl);
-    border: 1px solid var(--deep-navy-pale);
     color: var(--deep-navy);
+  }
+  .sub-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
   }
   .switch-theme:after {
     background-image: url(../../assets/images/icons/switch-sun.svg);

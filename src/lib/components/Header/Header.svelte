@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import { colorScheme } from '$lib/store';
-  import { slide } from 'svelte/transition';
+  import { fly, slide } from 'svelte/transition';
+  import { mediaQueryStore } from './media-query-store.ts';
+  import {clickOutside} from './click-outside.js';
 
   import Address from '../Address/Address.svelte';
 
@@ -34,22 +37,23 @@
       case 1:
         isExpanded2 = false,
         isExpanded3 = false;
-        isExpanded1 = (windowWidth > 991 ? true : !isExpanded1);
+        isExpanded1 = (windowWidth > 1279 ? true : !isExpanded1);
         break;
       case 2:
         isExpanded1 = false,
         isExpanded3 = false;
-        isExpanded2 = (windowWidth > 991 ? true : !isExpanded2);
+        isExpanded2 = (windowWidth > 1279 ? true : !isExpanded2);
         break;
       case 3:
         isExpanded1 = false,
         isExpanded2 = false;
-        isExpanded3 = (windowWidth > 991 ? true : !isExpanded3);
+        isExpanded3 = (windowWidth > 1279 ? true : !isExpanded3);
         break;
       default:
         isExpanded1 = false,
         isExpanded2 = false,
         isExpanded3 = false;
+        document.body.addEventListener('click', handlerMenuClose)
     }
 
   }
@@ -58,14 +62,18 @@
     let windowWidth = window.innerWidth,
         localTag = e.target.localName;
 
-    if ((localTag === 'a') || (windowWidth > 991)) {
-      isExpanded1 = false,
-      isExpanded2 = false,
-      isExpanded3 = false;
+    if ((localTag === 'a') || (windowWidth > 1279)) {
+      handlerAllMenuClose();
       if(menuMobileVisible) {
         menuMobileVisible = false;
       }
     }
+	}
+
+  function handlerAllMenuClose() {
+    isExpanded1 = false,
+    isExpanded2 = false,
+    isExpanded3 = false;
 	}
 
   const darkHeaderPages = [
@@ -88,6 +96,25 @@
     const currectPath = val.find(i => $page.url.pathname.includes(i));
     return Boolean(currectPath)
   }
+	
+  const small = mediaQueryStore('(max-width: 1279px)');
+	function slideOrFly(node) {
+		return $small ? slide(node) : fly(node, { y: 50 });
+	}
+
+  function handleClickOutside(event) {
+		handlerAllMenuClose();
+	}
+
+  onMount(() => {		
+		window.addEventListener('resize', () => {
+      isExpanded1 = false;
+      isExpanded2 = false;
+      isExpanded3 = false;
+      slideOrFly;
+    });
+	});
+
 </script>
 
 <header class="header" class:colored={menuMobileVisible} class:dark={setDarkHeaderBg(darkHeaderPages)} class:light-grey={setDarkHeaderBg(lightGrayHeaderPages)}>
@@ -100,18 +127,18 @@
         <div class="navigation navigation--dropdown">
           <ul class="navigation__list">
             <li class:active={setActiveClass('services')} on:mouseleave={handlerSubMenuClose}>
-              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded1} on:mouseenter={() => handlerSubMenuOpen(1)} >
+              <button class="navigation__sub-menu-btn desktop-visible" class:opened={isExpanded1} on:mouseenter={() => handlerSubMenuOpen(1)} >
                 Services
                 <SmallArrow />
               </button>
-              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded1} on:click={() => handlerSubMenuOpen(1)}>
+              <button class="navigation__sub-menu-btn desktop-hidden" class:opened={isExpanded1} on:click={() => handlerSubMenuOpen(1)}>
                 Services
                 <SmallArrow />
               </button>
 
               {#if isExpanded1}
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div class="sub-menu" transition:slide>
+                <div class="sub-menu" transition:slideOrFly use:clickOutside on:click_outside={handleClickOutside}>
                   <ul>
                     <li><a href="/services/digital-marketing" on:click={handlerSubMenuClose}>Digital Marketing</a></li>
                     <li><a href="/services/strategy" on:click={handlerSubMenuClose}>Strategy</a></li>
@@ -124,16 +151,16 @@
               {/if}
             </li>
             <li class:active={setActiveClass('industries')} on:mouseleave={handlerSubMenuClose}>
-              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded2} on:mouseenter={() => handlerSubMenuOpen(2)}>
+              <button class="navigation__sub-menu-btn desktop-visible" class:opened={isExpanded2} on:mouseenter={() => handlerSubMenuOpen(2)}>
                 Industries
                 <SmallArrow />
               </button>
-              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded2} on:click={() => handlerSubMenuOpen(2)}>
+              <button class="navigation__sub-menu-btn desktop-hidden" class:opened={isExpanded2} on:click={() => handlerSubMenuOpen(2)}>
                 Industries
                 <SmallArrow />
               </button>
               {#if isExpanded2}
-              <div class="sub-menu" transition:slide>
+              <div class="sub-menu" transition:slideOrFly use:clickOutside on:click_outside={handleClickOutside}>
                 <ul>
                   <li><a href="/industries/b2b" on:click={handlerSubMenuClose}>B2B</a></li>
                   <li><a href="/industries/b2c" on:click={handlerSubMenuClose}>B2C</a></li>
@@ -147,16 +174,16 @@
               <a href="/our-work" on:click={handlerSubMenuClose}>Our Work</a>
             </li>
             <li class:active={setActiveClass('about')} on:mouseleave={handlerSubMenuClose}>
-              <button class="navigation__sub-menu-btn tablet-hidden" class:opened={isExpanded3} on:mouseenter={() => handlerSubMenuOpen(3)}>
+              <button class="navigation__sub-menu-btn desktop-visible" class:opened={isExpanded3} on:mouseenter={() => handlerSubMenuOpen(3)}>
                 About
                 <SmallArrow />
               </button>
-              <button class="navigation__sub-menu-btn tablet-visible" class:opened={isExpanded3} on:click={() => handlerSubMenuOpen(3)}>
+              <button class="navigation__sub-menu-btn desktop-hidden" class:opened={isExpanded3} on:click={() => handlerSubMenuOpen(3)}>
                 About
                 <SmallArrow />
               </button>
               {#if isExpanded3}
-              <div class="sub-menu" transition:slide>
+              <div class="sub-menu" transition:slideOrFly use:clickOutside on:click_outside={handleClickOutside}>
                 <ul>
                   <li><a href="/about/about" on:click={handlerSubMenuClose}>About</a></li>
                   <li><a href="/about/team" on:click={handlerSubMenuClose}>Team</a></li>
