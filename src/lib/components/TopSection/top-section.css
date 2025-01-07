@@ -104,7 +104,7 @@
   }
 }
 @media (min-width: 1280px) {
- .services .top-section {
+ .top-section.section {
     padding-top: var(--spacing-l);
     padding-bottom: var(--spacing-l);
   }

@@ -2,7 +2,8 @@
   position: absolute;
   z-index: 9;
   right: var(--spacing-s);
-  transform: translateY(50%);
+  transform: translateY(-50%);
+  top: 100%;
   border-radius: 50%;
   background-color: light-dark(#010202, var(--teal));
   color: light-dark(var(--white), var(--deep-navy));
@@ -20,19 +21,18 @@
 }
 @media (max-width: 767px) {
   .scroll-btn {
-    bottom: var(--spacing-m-neg);
+    top: calc(100% + var(--spacing-m))
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .scroll-btn {
-    bottom: calc(0 - var(--spacing-l));
+    top: calc(100% + var(--spacing-l))
   }
 }
 @media (min-width: 1280px) {
   .scroll-btn {
     width: 120px;
     height: 120px;
-    bottom: calc(0 - var(--spacing-2xl));
   }
   .scroll-btn:hover {
     opacity: 0.75;
