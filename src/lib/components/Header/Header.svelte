@@ -195,6 +195,9 @@
             <li class:active={setActiveClass('blog')}>
               <a href="/blog/post" on:click={handlerSubMenuClose}>Blog</a>
             </li>
+            <li class="desktop-hidden" class:active={setActiveClass('contact-us')}>
+              <a href="/contact-us" on:click={handlerSubMenuClose}>Contact Us</a>
+            </li>
           </ul>
         </div>
       </div>
