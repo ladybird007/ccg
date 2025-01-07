@@ -4,7 +4,7 @@
   import { colorScheme } from '$lib/store';
   import { fly, slide } from 'svelte/transition';
   import { mediaQueryStore } from './media-query-store.ts';
-  import {clickOutside} from './click-outside.js';
+  import {clickOutside} from './click-outside.ts';
 
   import Address from '../Address/Address.svelte';
 
