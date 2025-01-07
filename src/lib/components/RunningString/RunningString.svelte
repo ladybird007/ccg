@@ -13,7 +13,7 @@
   let  { runningText, colorText }: Props = $props();
 
   onMount(() => {      
-    const rollConst = roll(".rollingText", { duration: 60 }, false);
+    const rollConst = roll(".rollingText", { duration: 100 }, false);
     function roll(targets: string, vars: any, reverse: boolean) {
       const tl = gsap.timeline({
         repeat: -1,

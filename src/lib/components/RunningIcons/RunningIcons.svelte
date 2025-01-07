@@ -34,7 +34,7 @@
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      const rollConst = roll(".rollingIcons", {duration: 60}, false);
+      const rollConst = roll(".rollingIcons", {duration: 100}, false);
       Observer.create({
         onChangeY(self) {
           let factor = 2.5;
