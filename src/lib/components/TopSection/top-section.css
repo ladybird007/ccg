@@ -31,6 +31,21 @@
   transform: scale(1.1);
 }
 
+.home .top-section__video {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home .top-section__video video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100%;
+}
+
 @media (max-width: 767px) {
   .top-section__row {
     flex-direction: column;
