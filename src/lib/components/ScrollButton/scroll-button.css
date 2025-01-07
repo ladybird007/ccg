@@ -35,7 +35,7 @@
     height: 120px;
   }
   .scroll-btn:hover {
-    opacity: 0.75;
+    background-color: light-dark(var(--deep-navy-dark), var(--teal-dark));
   }
   
 }
