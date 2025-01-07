@@ -152,7 +152,7 @@
   <ResultsSection {...resultsSectionDetails} />
 
   <div class="section section--light-grey section--no-vertical-spacing">
-    <div class="container container--wide">
+    <div class="container container--full-width">
       {#if imageTextRowsDetails}
         {#each imageTextRowsDetails.rows as rowItem, index}
           {#if index === 1}

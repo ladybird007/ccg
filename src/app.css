@@ -36,6 +36,9 @@ body {
 .container--wide {
   max-width: 1512px;
 }
+.container--full-width {
+  max-width: 100%;
+}
 
 .row {
   display: flex;

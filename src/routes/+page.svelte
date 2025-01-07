@@ -260,7 +260,7 @@
   
 
   <div class="section section--light-grey section--no-vertical-spacing">
-    <div class="container container--wide">
+    <div class="container container--full-width">
       {#if imageTextRows}
         {#each imageTextRows.rows as rowItem}
           <ImageTextRow {...rowItem} />

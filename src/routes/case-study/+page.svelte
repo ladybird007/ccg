@@ -109,7 +109,7 @@
   <CounterSection {...counterSectionDetails}/> 
 
   <div class="section section--no-vertical-spacing challenge-section">
-    <div class="container">
+    <div class="container container--full-width">
       <ImageTextRow {...challengeImageTextRow} imgUrl={$colorScheme === 'dark' ? ChallengeImgDark : ChallengeImgLight} />
     </div>
   </div>
@@ -133,8 +133,8 @@
     </div>
   </div>
 
-  <div class="section section--no-vertical-spacing section--light-grey solution-section">
-    <div class="container">
+  <div class="section section--no-vertical-spacing section--light-grey">
+    <div class="container container--full-width">
       <ImageTextRow {...solutionImageTextRow} imgUrl={$colorScheme === 'dark' ? SolutionImgDark : SolutionImgLight} />
     </div>
   </div>

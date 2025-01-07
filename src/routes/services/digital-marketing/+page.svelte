@@ -241,7 +241,7 @@
   </div>
 
   <div class="section section--light-grey section--no-vertical-spacing">
-    <div class="container container--wide">
+    <div class="container container--full-width">
       {#if imageTextRow}
         {#each imageTextRow.rows as rowItem}
           <ImageTextRow {...rowItem} colImgBgUrl={$colorScheme === 'dark' ? ImageTextRowDark : ImageTextRowLight} />

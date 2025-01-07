@@ -61,13 +61,4 @@
     padding-top: calc(2 * var(--spacing-2xl));
     padding-bottom: calc(2 * var(--spacing-2xl));
   }
-  .solution-section .image-text__col--img {
-    justify-content: flex-start;
-  }
-  .solution-section .image-text__col--text {
-    padding-right: 0;
-  }
-  .challenge-section .image-text__col--text {
-    padding-left: 0;
-  }
 }
