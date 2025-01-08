@@ -3,6 +3,7 @@
 }
 .counter__item {
   flex: 1;
+  flex-shrink: 0;
 }
 
 .counter__number {
@@ -66,9 +67,9 @@
     font-size: 160px;
   }
   .counter__item:not(:first-child) {
-    padding-left: calc(2 * var(--spacing-s));
+    padding-left: var(--spacing-m);
   }
   .counter__item:not(:last-child) {
-    padding-right: calc(2 * var(--spacing-s));
+    padding-right: var(--spacing-m);
   }
 }

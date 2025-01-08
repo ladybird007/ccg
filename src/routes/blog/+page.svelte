@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts">  
   import { onMount } from "svelte";
   import "../our-work/our-work.css";
 
@@ -171,20 +171,20 @@
   ];
 
   onMount(() => {
-  let grid = document.querySelector('.grid');
-  let iso; 
 
-  imagesLoaded( grid, function() {
-    // init Isotope after all images have loaded
-    iso = new Isotope( grid, {
-      itemSelector: '.client-card',
-      percentPosition: true,
-      masonry: {
-        columnWidth: '.grid-sizer'
-      }
+    let grid = document.querySelector('.grid');
+    let iso = new Isotope( grid, {
+        itemSelector: '.client-card',
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.grid-sizer'
+        }
+      }); 
+
+    imagesLoaded( grid ).on( 'progress', function() {
+      iso.layout();
     });
-  });
-
+  
 
     // filter functions
     let filterFns = {

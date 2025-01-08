@@ -93,8 +93,7 @@
           {#each numbers as item}
             <div class="counter__item">
               <div class="counter__number">
-                <span class="counter__number-val" data-number={item.number}>0</span>
-                {item.suffix}
+                <span class="counter__number-val" data-number={item.number}>0</span>{item.suffix}
               </div>
               <p class="text-simple">
                 {item.text}

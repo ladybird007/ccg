@@ -184,19 +184,18 @@
 
   onMount(() => {
 
-    const grid = document.querySelector('.grid');
-    let iso;
-
-    imagesLoaded( grid, function() {
-    // init Isotope after all images have loaded
-      iso = new Isotope( grid, {
+    let grid = document.querySelector('.grid');
+    let iso = new Isotope( grid, {
         layoutMode: 'fitRows',
         itemSelector: '.team-card',
         percentPosition: true,
         masonry: {
           columnWidth: '.grid-sizer'
         }
-      });
+    });
+
+    imagesLoaded( grid ).on( 'progress', function() {
+      iso.layout();
     });
 
     // filter functions

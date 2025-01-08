@@ -1,9 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import "./our-work.css";
-
   import ClientCard from '$lib/components/ClientCard/ClientCard.svelte';
-
+  
   import HeroBg from '$lib/assets/images/work/HeroBg.svg';
   import HeroBgMobile from '$lib/assets/images/work/HeroBgMobile.svg';
 
@@ -141,21 +140,19 @@
      
   ]
 
- onMount(() => {
-  let grid = document.querySelector('.grid');
-  let iso; 
-
-  imagesLoaded( grid, function() {
-    // init Isotope after all images have loaded
-    iso = new Isotope( grid, {
+  onMount(() => {
+    let grid = document.querySelector('.grid');
+    let iso = new Isotope( grid, {
       itemSelector: '.client-card',
       percentPosition: true,
       masonry: {
         columnWidth: '.grid-sizer'
       }
-    });
-  });
+    }); 
 
+    imagesLoaded( grid ).on( 'progress', function() {
+      iso.layout();
+    });
 
     // filter functions
     let filterFns = {
@@ -207,7 +204,7 @@
 </script>
 
 <svelte:head>
-  <title>{pageTitle}</title>
+  <title>{pageTitle}</title>  
 </svelte:head>
 
 <div class="our-work">

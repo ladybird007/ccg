@@ -165,6 +165,9 @@ p a:not(.btn):not(.logo) {
   gap: 12px;
   color: inherit;
 }
+a.text-simple.pre-headline:hover {
+  color: var(--orange);
+}
 .text-simple.pre-headline:before {
   content: "";
   width: 16px;
