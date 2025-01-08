@@ -9,6 +9,7 @@
   interface Props {
     class?: string,
     imgUrl?: string,
+    videoUrl?: string,
     logo?: Component,
     headline?: string, 
     tags?:{
@@ -21,19 +22,26 @@
 </script>
   
 <div class="client-card {cards.class}">
-  {#if cards.imgUrl}
-    <div class="client-card__banner">
-      <img src={cards.imgUrl} alt={cards.headline}>
-      <div class="client-card__logo-wrap">
-        <span class="client-card__logo">
-          <cards.logo />
-        </span>
-        <span class="client-card__arrow">
-          <BlogArrow />
-        </span>
+  
+  <div class="client-card__banner">
+    {#if cards.videoUrl} 
+      <div class="client-card__video">
+        <video width="100%" height="100%" poster={cards.imgUrl} muted loop autoplay>
+          <source src={cards.videoUrl} type="video/mp4" />
+        </video> 
       </div>
+    {:else if cards.imgUrl}
+      <img src={cards.imgUrl} alt={cards.headline}>
+    {/if}
+    <div class="client-card__logo-wrap">
+      <span class="client-card__logo">
+        <cards.logo />
+      </span>
+      <span class="client-card__arrow">
+        <BlogArrow />
+      </span>
     </div>
-  {/if}
+  </div>
 
   <div class="client-card__content">
     {#if cards.headline}

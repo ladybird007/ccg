@@ -16,6 +16,8 @@
   import VivaHealth from '$lib/assets/images/clients/VivaHealth.svelte';
 
   import ClientMedicareCosmetics from '$lib/assets/images/work/ClientMedicareCosmetics.png';
+  import ClientMedicareCosmeticsVideo from '$lib/assets/video/work/ClientMedicareCosmeticsVideo.mp4';
+
 
   import ClientGlobalHealth from '$lib/assets/images/work/ClientGlobalHealth.png';
 
@@ -100,6 +102,7 @@
     {
       class: `strategic-consulting video`,
       imgUrl: ClientMedicareCosmetics,
+      videoUrl: ClientMedicareCosmeticsVideo,
       logo: VivaHealth,
       headline: `Medicare Commercials Spots`,
       tags: [
