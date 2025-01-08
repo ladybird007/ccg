@@ -1,12 +1,18 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags/Tags.svelte";
   import PostTopSection from "$lib/components/PostTopSection/PostTopSection.svelte";
+  import RunningString from '$lib/components/RunningString/RunningString.svelte';
+  import Blog from '$lib/components/Blog/Blog.svelte';
+
+  import Laptop from "$lib/assets/images/blog/Laptop.png";
+  import PostImg1 from "$lib/assets/images/blog/PostImg1.png";
+  import PostImg2 from "$lib/assets/images/blog/PostImg2.png";
 
   let postDetails = {
     title: `A New Age of New-to-Medicare Marketing`,
     author: {
       name: `Sam Humphries`,
-      url: `/about/SamHumphries`
+      url: `/about/team/SamHumphries`
     },
     meta: {
       date: `Jul 12 2024`,
@@ -24,8 +30,36 @@
           url: `/services/ux-design`
         }
       ]
-    }
-  }
+    },
+    heroImg: Laptop,
+    postImgs: {
+      img1: PostImg1,
+      img2: PostImg2
+    },
+    caption: `Caption text can go here.`
+  };
+
+  let nextPosts = {
+    addClass: `in-line`,
+    blogList: [
+      {
+        title: `From Concept to Reality: Showcasing Impactful Design Case Studies`,
+        linkToPage: `/blog/post`,
+        category: `Digital Marketing`,
+        categoryLink: `/blog`,
+        date: `Oct 21`,
+        time: `2 min read`
+      },
+      {
+        title: `Designing for Humans: UX/UI Insights from Our Expert Team`,
+        linkToPage: `/blog/post-with-image`,
+        category: `Social Media`,
+        categoryLink: `/blog`,
+        date: `Oct 14`,
+        time: `2 min read`
+      }
+    ]
+  };
 </script>
 
 <svelte:head>
@@ -35,7 +69,14 @@
 <div class="post">
   <PostTopSection {...postDetails} />
 
-  <div class="section post-content">
+  <div class="section section--small-gap section--no-vertical-spacing post-content">
+    {#if postDetails.heroImg}
+    <div class="post-hero">
+      <div class="container">
+        <img src={Laptop} alt="">
+      </div>
+    </div>
+    {/if}
     <div class="container container--small section__content">
       <p class="text-callout">
         In a landscape marked by fierce competition and slow-climbing switching rates, 
@@ -87,6 +128,13 @@
         </p>
       </div>
 
+      <div class="post-quote">
+        <p class="text-callout">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+        </p>
+      </div>
+
       <div>
         <h2>2. Level up your digital.</h2>
         <p>
@@ -95,6 +143,23 @@
           traditional marketing with a robust digital strategy that uses demographic, 
           behavioral and intent data to find them where they are.
         </p>
+
+        {#if postDetails.postImgs}
+          <div class="post-row">
+            <div class="post-img">
+              <img src={postDetails.postImgs.img1} alt="">
+            </div>
+            <div class="post-img">
+              <img src={postDetails.postImgs.img2} alt="">
+            </div>
+          </div>
+        {/if}
+        
+        {#if postDetails.caption}
+          <div class="post-caption">
+            {postDetails.caption}
+          </div>
+        {/if}
       </div>
 
       <div>
@@ -142,4 +207,12 @@
       {/if}
     </div>
   </div>
+
+  <div class="section">
+    <RunningString runningText={`Read What's Next`} />
+    <div class="container">
+      <Blog {...nextPosts} />
+    </div>
+  </div>
 </div>
+

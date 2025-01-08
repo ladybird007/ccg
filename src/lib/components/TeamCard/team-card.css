@@ -1,4 +1,4 @@
-.team-card {
+.team-card__link {
   color: inherit;
 }
 .team-card__photo {
@@ -84,6 +84,9 @@
 }
 
 @media (max-width: 1279px) {
+  .team-card {
+    padding-bottom: var(--spacing-m);
+  }
   .team-card h3 {
     margin-bottom: var(--spacing-xxs);
   }
@@ -100,6 +103,9 @@
   }
 }
 @media (min-width: 1280px) {
+  .team-card {
+    padding-bottom: var(--spacing-l);
+  }
   .team-card h3 {
     margin-bottom: var(--spacing-xs);
     font-size: 28px;

@@ -28,6 +28,7 @@
 
   let clientCards = [
     {
+      url: `#`,
       class: `traditional-marketing strategic-consulting`,
       imgUrl: ClientMiMotion,
       logo: MiMotion,
@@ -44,6 +45,7 @@
       ]
     },
     {
+      url: `#`,
       class: `medicare traditional-marketing digital-marketing ui-ux`,
       imgUrl: ClientVivaHealth,
       logo: VivaHealth,
@@ -68,6 +70,7 @@
       ]
     },
     {
+      url: `#`,
       class: `digital-marketing strategic-consulting`,
       imgUrl: ClientGlobalHealth,
       logo: VivaHealth,
@@ -84,6 +87,7 @@
       ]
     },
     {
+      url: `#`,
       class: `Strategic Consulting ui-ux`,
       imgUrl: ClientIndustrialSupplier,
       logo: MiMotion,
@@ -100,6 +104,24 @@
       ]
     },
     {
+      url: `#`,
+      class: `strategic-consulting ui-ux`,
+      imgUrl: ClientLegacy,
+      logo: Legacy,
+      headline: `Legacy Cabinets Website`,
+      tags: [ 
+        {
+          url: `/`,
+          text: `Strategic Consultiing`
+        },
+        {
+          url: `/services/ux-design`,
+          text: `UI/UX`
+        }
+      ]
+    },
+    {
+      url: `#`,
       class: `strategic-consulting video`,
       imgUrl: ClientMedicareCosmetics,
       videoUrl: ClientMedicareCosmeticsVideo,
@@ -116,27 +138,12 @@
         }
       ]
     },
-    {
-      class: `strategic-consulting ui-ux`,
-      imgUrl: ClientLegacy,
-      logo: Legacy,
-      headline: `Legacy Cabinets Website`,
-      tags: [
-        {
-          url: `/`,
-          text: `Strategic Consultiing`
-        },
-        {
-          url: `/services/ux-design`,
-          text: `UI/UX`
-        }
-      ]
-    },
+     
   ]
 
  onMount(() => {
   let grid = document.querySelector('.grid');
-  let iso;
+  let iso; 
 
   imagesLoaded( grid, function() {
     // init Isotope after all images have loaded

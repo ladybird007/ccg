@@ -132,17 +132,6 @@ img {
 .btn.btn--outline:hover {
   box-shadow: inset 0 0 0 1px currentColor;
 }
-.btn .btn__icon {
-  position: relative;
-  overflow: hidden;
-  width: 0;
-  margin-left: 0;
-  transition: all 0.3s;
-}
-.btn:hover .btn__icon {
-  width: 10px;
-  margin-left: var(--spacing-xs);
-}
 
 .buttons {
   display: flex;
@@ -196,11 +185,11 @@ img {
 
 @media (max-width: 1279px) {
   .desktop-visible {
-      display: none !important;
+    display: none !important;
   }
 
   .section__content {
-      gap: var(--spacing-s);
+    gap: var(--spacing-s);
   }
 
   .row {
@@ -209,6 +198,10 @@ img {
 
   .two-columns-text p {
     line-height: 1.3;
+  }
+
+  .btn .btn__icon {
+    display: none;
   }
 
 }
@@ -271,6 +264,10 @@ img {
     top: auto;
     bottom: -40px;
   }
+
+  .hero-section__img--square {
+    width: 150px;
+  }
 }
 @media (min-width: 768px) {
   .buttons {
@@ -325,25 +322,37 @@ img {
 }
 @media (min-width: 1280px) {
   .hero-section {
-      padding-top: var(--spacing-l);
-      padding-bottom: var(--spacing-l);
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
   }
   .hero-section__img--dots {
     top: 15px;
   }
   .section {
-      padding-top: var(--spacing-2xl);
-      padding-bottom: var(--spacing-2xl);
-      gap: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+    gap: var(--spacing-2xl);
   }
   .section--small-gap {
     gap: var(--spacing-l);
   }
   .section__content {
-      gap: var(--spacing-m);
+    gap: var(--spacing-m);
   }
   .row {
     gap: var(--spacing-l);
+  }
+
+  .btn .btn__icon {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+  .btn:hover .btn__icon {
+    width: 10px;
+    margin-left: var(--spacing-xs);
   }
 
   .desktop-hidden {

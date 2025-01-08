@@ -83,7 +83,7 @@
               <div class="top-section__video tablet-hidden">
                 <video id="bg-video" width="100%" poster={posterUrl} muted loop>
                   <source src={videoUrl} type="video/mp4" />
-                </video>
+                </video> 
               </div>
             {:else}
               <div>

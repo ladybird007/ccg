@@ -7,32 +7,6 @@
 
 /* ---- .grid-item ---- */
 
-.grid-sizer,
-.client-card {
-  width: 33.333%;
-}
-
-.client-card {
-  float: left;
-}
-
-.client-card img {
-  display: block;
-  max-width: 100%;
-}
-
-.client-card__logo {
-  max-width: calc(100% - 56px);
-}
-.client-card__logo svg {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-
 .clients:after {
   content: '';
   display: block;

@@ -15,9 +15,6 @@
   .team {
     margin-top: var(--spacing-m);
   }
-  .team .team-card {
-    padding-bottom: var(--spacing-m);
-  }
 }
 @media (max-width: 767px) {
   .our-team .hero-section .section__content {
@@ -41,8 +38,5 @@
   .team .grid-sizer,
   .team .team-card {
     width: 25%;
-  }
-  .team .team-card {
-    padding-bottom: var(--spacing-l);
   }
 }

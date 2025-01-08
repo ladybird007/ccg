@@ -80,6 +80,7 @@
     'about',
     'about/team',
     'about/approach',
+    'blog',
     'book-a-call',
     'case-study',
     'contact-us',
@@ -193,7 +194,7 @@
               {/if}
             </li>
             <li class:active={setActiveClass('blog')}>
-              <a href="/blog/post" on:click={handlerSubMenuClose}>Blog</a>
+              <a href="/blog" on:click={handlerSubMenuClose}>Blog</a>
             </li>
             <li class="desktop-hidden" class:active={setActiveClass('contact-us')}>
               <a href="/contact-us" on:click={handlerSubMenuClose}>Contact Us</a>
