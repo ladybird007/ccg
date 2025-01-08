@@ -1,4 +1,6 @@
 <script>
+  import Button from '$lib/components/Button/Button.svelte';
+
   import '$lib/assets/css/form.css';
   import '../contact-us/contact-us.css';
 
@@ -36,7 +38,11 @@
               <p class="text-family">
                 We're real people. Never bots. Reach out for an introductory call.
               </p>
-              <a href="/contact-us" class="btn btn--outline">Contact Brianna</a>
+              <Button
+                text={`Contact Brianna`}
+                link={`/contact-us`}
+                typeClass={`outline`}
+              />
             </div>
             <div class="speak-with__photo">
               <img src={Brianna} alt="">
@@ -130,7 +136,12 @@
                   </ul>
                 </div>
                 <div class="row justify-content-center">
-                  <input type="submit" value="Submit" class="btn btn--primary">
+                  <Button
+                    tagButton={true}
+                    text={`Submit`}
+                    typeClass={`primary`}
+                    function={() => {}}
+                  />
                 </div>
               </div>
             </form>

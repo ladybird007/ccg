@@ -1,6 +1,7 @@
 <script lang='ts'>
   import { onMount } from "svelte";
   import TeamCard from "$lib/components/TeamCard/TeamCard.svelte";
+  import Button from "$lib/components/Button/Button.svelte";
 
   import '$lib/components/Tags/tags.css';
   import './team.css';
@@ -270,7 +271,11 @@
           <p class="text-family">
             When you work with us, you're not just getting a service—you're partnering with real experts. The people you see and talk to are the ones driving your strategies forward. With us, there's no juniors. All we offer is expertise.
           </p>
-          <a href="/our-work" class="btn btn--outline">Our Approach</a>
+          <Button
+            text={`Our Approach`}
+            link={`/our-work`}
+            typeClass={`outline`}
+          />
         </div>
       </div>
     </div>

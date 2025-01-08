@@ -1,6 +1,8 @@
 <script lang=ts>
   import { onMount } from 'svelte';
   import './icon-text-card.css';
+
+  import Button from '$lib/components/Button/Button.svelte';
   
   interface Props {
     cards: {
@@ -63,7 +65,11 @@
       {#if card.buttons}
         <div class="buttons">
           {#each card.buttons as button}
-            <a href={button.url} class="btn btn--{button.type}">{@html button.text}</a>
+            <Button
+              text={button.text}
+              link={button.url}
+              typeClass={button.type}
+            />
           {/each}
         </div>
       {/if}

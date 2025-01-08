@@ -1,4 +1,5 @@
 <script lang=ts>
+  import Button from '$lib/components/Button/Button.svelte';
   import './text-block.css';
 
   interface Props {
@@ -36,7 +37,11 @@
   {#if buttons}
     <div class="buttons">
       {#each buttons as button}
-        <a href={button.url} class="btn btn--{button.type}">{@html button.text}</a>
+        <Button
+          text={button.text}
+          link={button.url}
+          typeClass={button.type}
+        />
       {/each}
     </div>
   {/if}

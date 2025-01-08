@@ -1,7 +1,4 @@
-<script>
-  import { onMount } from 'svelte';  
-  import { slidesCount } from '$lib/store';
-
+<script> 
   import TopSection from "$lib/components/TopSection/TopSection.svelte";
   import ResultsSection from "$lib/components/ResultsSection/ResultsSection.svelte";
   import TextBlock from "$lib/components/TextBlock/TextBlock.svelte";
@@ -12,6 +9,7 @@
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
   import Carousel from '$lib/components/Carousel/Carousel.svelte';
   import Popup from '$lib/components/Popup/Popup.svelte';
+  import Button from "$lib/components/Button/Button.svelte";
 
   import './index.css';
 
@@ -291,7 +289,11 @@
           <p class="text-family">
             Learn how we drove remarkable lead volume despite navigating an unprecedented economy.
           </p>
-          <a href="/case-study" class="btn btn--outline">View Case Study</a>
+          <Button
+              text={`View Case Study`}
+              link={`/case-study`}
+              typeClass={`outline`}
+          />
         </div>
       </div>
     </div>

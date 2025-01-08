@@ -6,6 +6,7 @@
   import ImageTextRow from "$lib/components/ImageTextRow/ImageTextRow.svelte";
   import RunningString from "$lib/components/RunningString/RunningString.svelte";
   import Blog from '$lib/components/Blog/Blog.svelte';
+  import Button from '$lib/components/Button/Button.svelte';
   import '../services.css';
 
   import TopImageLight from '$lib/assets/images/digitalMarketing/topImageLight.svg';
@@ -225,7 +226,7 @@
           <h4>We only use the best to power our data.</h4>
         </div>
         <div class="logos {$colorScheme}" style="height: {logoCardHeight}px">
-          {#each logosList as logo }
+          {#each logosList as logo}
             <div class="logos__item">
               <div class="logos__img">
                 <img src={logo.url} alt={logo.alt}>
@@ -233,7 +234,12 @@
             </div>
           {/each}
           <div class="logos__btn" class:hidden={hiddenLogosBtn}>
-            <button class="btn btn--outline" on:click={showAllLogos}>View More</button>
+            <Button
+              tagButton={true}
+              text={`View More`}
+              typeClass={`outline`}
+              function={showAllLogos}
+            />
           </div>
         </div>
       </div>

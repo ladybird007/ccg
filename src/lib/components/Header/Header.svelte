@@ -6,7 +6,8 @@
   import { mediaQueryStore } from './media-query-store.ts';
   import {clickOutside} from './click-outside.ts';
 
-  import Address from '../Address/Address.svelte';
+  import Address from '$lib/components/Address/Address.svelte';
+  import Button from "$lib/components/Button/Button.svelte";
 
   import './header.css';
 
@@ -103,7 +104,7 @@
 		return $small ? slide(node) : fly(node, { y: 50 });
 	}
 
-  function handleClickOutside(event) {
+  function handleClickOutside() {
 		handlerAllMenuClose();
 	}
 
@@ -209,7 +210,13 @@
             <li class="desktop-visible" class:active={setActiveClass('contact-us')}>
               <a href="/contact-us" on:click={handlerSubMenuClose}>Contact Us</a>
             </li>
-            <li class="navigation__btn-wrap"><a class="btn btn--primary" href="/book-a-call">Book a <span class="desktop-visible">Strategy</span> Call</a></li>
+            <li class="navigation__btn-wrap">
+              <Button
+                text={`Book a <span class="desktop-visible">Strategy</span> Call`}
+                link={`/book-a-call`}
+                typeClass={`primary`}
+              />
+            </li>
             <li>
               <button class="switch-theme {$colorScheme}" on:click="{() => switchColorScheme() }" aria-label='switch'></button>
             </li>
@@ -221,7 +228,12 @@
       </div>
 
       <div class="header__mobile-contacts">
-        <a href="/book-a-call" class="btn btn--primary" on:click={handlerSubMenuClose}>Book a Strategy Call</a>
+        <Button
+          text={`Book a Strategy Call`}
+          link={`/book-a-call`}
+          typeClass={`primary`}
+          function={handlerSubMenuClose}
+        />
         <Address />
       </div>
     </div>

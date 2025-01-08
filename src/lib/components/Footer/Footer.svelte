@@ -1,5 +1,6 @@
 <script>
-  import Address from '../Address/Address.svelte';
+  import Address from '$lib/components/Address/Address.svelte';
+  import Button from '$lib/components/Button/Button.svelte';
 
   import Linkedin from '$lib/assets/images/socials/Linkedin.svelte';
   import Youtube from '$lib/assets/images/socials/Youtube.svelte';
@@ -21,7 +22,11 @@
           </h3>
         </div>
         <div class="col">
-          <a href="/book-a-call" class="btn btn--primary">Book a Strategy Call</a>
+          <Button
+            text={`Book a Strategy Call`}
+            link={`/book-a-call`}
+            typeClass={`primary`}
+          />
         </div>
       </div>
       <div class="footer__bottom row justify-space-between">

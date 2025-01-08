@@ -4,6 +4,7 @@
 }
 
 .team .team-card {
+  float: left;
   padding-left: calc(var(--spacing-s) / 2);
   padding-right: calc(var(--spacing-s) / 2);
 }

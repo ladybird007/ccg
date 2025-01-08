@@ -1,11 +1,11 @@
 <script>
-  import { onMount } from 'svelte';
-  import { colorScheme, slidesCount } from '$lib/store';
+  import { colorScheme } from '$lib/store';
 
   import RunningString from '$lib/components/RunningString/RunningString.svelte';
   import TextBlock from '$lib/components/TextBlock/TextBlock.svelte';
   import IconTextCard from "$lib/components/IconTextCard/IconTextCard.svelte";
   import Carousel from '$lib/components/Carousel/Carousel.svelte';
+  import Button from '$lib/components/Button/Button.svelte';
 
   import './about.css';
   
@@ -135,7 +135,11 @@
       </p>
       <div class="row justify-space-between">
         <h2>Meet our team of problem-solvers.</h2>
-        <a href="/about/team" class="btn btn--outline">Meet the Team</a>
+        <Button
+          text={`Meet the Team`}
+          link={`/about/team`}
+          typeClass={`outline`}
+        />
       </div>
     </div>
     <Carousel images={carouselSlides} />

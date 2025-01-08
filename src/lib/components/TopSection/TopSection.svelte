@@ -1,7 +1,8 @@
 <script lang='ts'>
   import { popopVisible } from '$lib/store';
   import { onMount } from 'svelte';
-  import ScrollButton from '../ScrollButton/ScrollButton.svelte';
+  import ScrollButton from '$lib/components/ScrollButton/ScrollButton.svelte';
+  import Button from '$lib/components/Button/Button.svelte';
   import './top-section.css';
 
   interface Props {
@@ -64,7 +65,11 @@
         {#if buttons}
           <div class="buttons">
             {#each buttons as button}
-              <a href={button.url} class="btn btn--{button.type}">{@html button.text}</a>
+              <Button
+                text={button.text}
+                link={button.url}
+                typeClass={button.type}
+              />
             {/each}
           </div>
         {/if}

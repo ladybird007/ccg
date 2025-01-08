@@ -1,5 +1,6 @@
 <script>
   import ClientsSection from '$lib/components/ClientsSection/ClientsSection.svelte';
+  import Button from '$lib/components/Button/Button.svelte';
   import '$lib/assets/css/form.css';
   import './contact-us.css';
 
@@ -77,7 +78,12 @@
                   <textarea name="message" placeholder="From a brand refresh to an industry-disrupting app, let us know what you have in mind. We fully scope and guarantee our quotes so there are never any surprises."></textarea>
                 </div>
                 <div>
-                  <input type="submit" value="Submit" class="btn btn--primary">
+                  <Button
+                    tagButton={true}
+                    text={`Submit`}
+                    typeClass={`primary`}
+                    function={() => {}}
+                  />
                 </div>
               </div>
             </form>
